@@ -1,0 +1,420 @@
+@use '../variables' as *;
+
+// ==============================================
+// BUTTON COMPONENT
+// Based on NJT Design System
+// ==============================================
+
+.btn {
+  // Base styles
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: $spacing-0;
+  
+  // Sizing
+  min-width: 80px;
+  height: $spacing-1000; // 40px
+  padding: $spacing-300; // 12px
+  
+  // Typography
+  font-family: $font-family-primary;
+  font-size: $font-size-base; // 16px
+  font-weight: $font-weight-bold; // 700
+  line-height: 1;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  
+  // Visual
+  border: none;
+  border-radius: $radius-base; // 8px
+  cursor: pointer;
+  
+  // Transitions
+  transition: all $transition-speed $transition-ease;
+  
+  // Reset styles
+  appearance: none;
+  user-select: none;
+  
+  // Focus outline (for accessibility)
+  &:focus {
+    outline: none;
+  }
+  
+  // Remove default button styles
+  &::-moz-focus-inner {
+    border: 0;
+  }
+
+  // ==================
+  // PRIMARY BUTTON (default)
+  // ==================
+  &--primary {
+    background-color: $accent-400; // #37f0bf (enabled)
+    color: $teal-1600; // #0b3d3e
+    border: 1px solid transparent;
+    
+    // Hover state
+    &:hover:not(:disabled):not(.btn--loading) {
+      background-color: $accent-600; // #33cc9d
+    }
+    
+    // Active/Pressed state
+    &:active:not(:disabled):not(.btn--loading) {
+      background-color: $accent-700; // #2ebf96
+      border-width: 3px;
+    }
+    
+    // Focused state
+    &:focus-visible:not(:disabled):not(.btn--loading) {
+      background-color: $accent-600; // #33cc9d
+      box-shadow: 
+        0 0 0 2px $accent-400, // Outer ring
+        inset 0 0 0 2px #ffffff; // Inner ring
+    }
+    
+    // Disabled state
+    &:disabled,
+    &.btn--disabled {
+      background-color: $cold-grey-800; // #7e8797
+      color: $cold-grey-100; // #f5f7fa
+      cursor: not-allowed;
+      opacity: 1;
+    }
+    
+    // Loading state
+    &.btn--loading {
+      background-color: $accent-400; // #37f0bf
+      color: transparent;
+      pointer-events: none;
+      position: relative;
+      
+      .btn__spinner {
+        display: flex;
+      }
+    }
+  }
+
+  // ==================
+  // SECONDARY BUTTON
+  // ==================
+  &--secondary {
+    background-color: transparent;
+    color: $teal-1600;
+    border: 2px solid $teal-1600;
+    
+    // Hover state
+    &:hover:not(:disabled):not(.btn--loading) {
+      background-color: $teal-alpha-10;
+      border-color: $teal-1400;
+    }
+    
+    // Active/Pressed state
+    &:active:not(:disabled):not(.btn--loading) {
+      background-color: $teal-alpha-20;
+      border-width: 3px;
+    }
+    
+    // Focused state
+    &:focus-visible:not(:disabled):not(.btn--loading) {
+      background-color: $teal-alpha-10;
+      box-shadow: 
+        0 0 0 2px $accent-400,
+        inset 0 0 0 2px #ffffff;
+    }
+    
+    // Disabled state
+    &:disabled,
+    &.btn--disabled {
+      background-color: transparent;
+      border-color: $cold-grey-800;
+      color: $cold-grey-800;
+      cursor: not-allowed;
+    }
+    
+    // Loading state
+    &.btn--loading {
+      color: transparent;
+      pointer-events: none;
+      position: relative;
+      
+      .btn__spinner {
+        display: flex;
+      }
+    }
+  }
+
+  // ==================
+  // TERTIARY BUTTON (text only)
+  // ==================
+  &--tertiary {
+    background-color: transparent;
+    color: $teal-1600;
+    border: none;
+    padding: $spacing-200 $spacing-400;
+    
+    // Hover state
+    &:hover:not(:disabled):not(.btn--loading) {
+      background-color: $teal-alpha-10;
+      color: $teal-1400;
+    }
+    
+    // Active/Pressed state
+    &:active:not(:disabled):not(.btn--loading) {
+      background-color: $teal-alpha-20;
+    }
+    
+    // Focused state
+    &:focus-visible:not(:disabled):not(.btn--loading) {
+      background-color: $teal-alpha-10;
+      box-shadow: 0 0 0 2px $accent-400;
+    }
+    
+    // Disabled state
+    &:disabled,
+    &.btn--disabled {
+      color: $cold-grey-800;
+      cursor: not-allowed;
+    }
+    
+    // Loading state
+    &.btn--loading {
+      color: transparent;
+      pointer-events: none;
+      position: relative;
+      
+      .btn__spinner {
+        display: flex;
+      }
+    }
+  }
+
+  // ==================
+  // DANGER/ERROR BUTTON
+  // ==================
+  &--danger {
+    background-color: $semantic-red-900; // #e32100
+    color: #ffffff;
+    border: 1px solid transparent;
+    
+    // Hover state
+    &:hover:not(:disabled):not(.btn--loading) {
+      background-color: $semantic-red-1000; // #d40d00
+    }
+    
+    // Active/Pressed state
+    &:active:not(:disabled):not(.btn--loading) {
+      background-color: $semantic-red-1100; // #8e0000
+      border-width: 3px;
+    }
+    
+    // Focused state
+    &:focus-visible:not(:disabled):not(.btn--loading) {
+      background-color: $semantic-red-1000;
+      box-shadow: 
+        0 0 0 2px $semantic-red-alpha-20,
+        inset 0 0 0 2px #ffffff;
+    }
+    
+    // Disabled state
+    &:disabled,
+    &.btn--disabled {
+      background-color: $cold-grey-800;
+      color: $cold-grey-100;
+      cursor: not-allowed;
+    }
+    
+    // Loading state
+    &.btn--loading {
+      background-color: $semantic-red-900;
+      color: transparent;
+      pointer-events: none;
+      position: relative;
+      
+      .btn__spinner {
+        display: flex;
+      }
+    }
+  }
+
+  // ==================
+  // SUCCESS BUTTON
+  // ==================
+  &--success {
+    background-color: $semantic-green-800; // #3eaa89
+    color: #ffffff;
+    border: 1px solid transparent;
+    
+    // Hover state
+    &:hover:not(:disabled):not(.btn--loading) {
+      background-color: $semantic-green-1000; // #268d6b
+    }
+    
+    // Active/Pressed state
+    &:active:not(:disabled):not(.btn--loading) {
+      background-color: $semantic-green-1100; // #217d5d
+      border-width: 3px;
+    }
+    
+    // Focused state
+    &:focus-visible:not(:disabled):not(.btn--loading) {
+      background-color: $semantic-green-1000;
+      box-shadow: 
+        0 0 0 2px $semantic-green-alpha-20,
+        inset 0 0 0 2px #ffffff;
+    }
+    
+    // Disabled state
+    &:disabled,
+    &.btn--disabled {
+      background-color: $cold-grey-800;
+      color: $cold-grey-100;
+      cursor: not-allowed;
+    }
+    
+    // Loading state
+    &.btn--loading {
+      background-color: $semantic-green-800;
+      color: transparent;
+      pointer-events: none;
+      position: relative;
+      
+      .btn__spinner {
+        display: flex;
+      }
+    }
+  }
+
+  // ==================
+  // BUTTON SIZES
+  // ==================
+  
+  // Small button
+  &--small {
+    height: $spacing-800; // 32px
+    padding: $spacing-200 $spacing-400; // 8px 16px
+    font-size: $font-size-sm; // 14px
+    min-width: 64px;
+  }
+  
+  // Large button
+  &--large {
+    height: $spacing-1200; // 48px
+    padding: $spacing-400 $spacing-800; // 16px 32px
+    font-size: $font-size-lg; // 18px
+    min-width: 120px;
+  }
+
+  // ==================
+  // BUTTON WIDTH VARIANTS
+  // ==================
+  
+  // Full width
+  &--full {
+    width: 100%;
+  }
+  
+  // Icon only (square)
+  &--icon {
+    min-width: $spacing-1000;
+    width: $spacing-1000;
+    padding: $spacing-200;
+    
+    &.btn--small {
+      min-width: $spacing-800;
+      width: $spacing-800;
+      padding: $spacing-200;
+    }
+    
+    &.btn--large {
+      min-width: $spacing-1200;
+      width: $spacing-1200;
+      padding: $spacing-300;
+    }
+  }
+
+  // ==================
+  // LOADING SPINNER
+  // ==================
+  
+  &__spinner {
+    display: none;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    border: 2px solid transparent;
+    border-top-color: currentColor;
+    border-radius: 50%;
+    animation: btn-spin 0.6s linear infinite;
+  }
+  
+  // Inverted spinner for primary buttons
+  &--primary &__spinner,
+  &--success &__spinner,
+  &--danger &__spinner {
+    border-top-color: $teal-1600;
+  }
+  
+  // White spinner for secondary buttons
+  &--secondary &__spinner {
+    border-top-color: $teal-1600;
+  }
+}
+
+// ==================
+// ANIMATIONS
+// ==================
+
+@keyframes btn-spin {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+// ==================
+// BUTTON GROUP
+// ==================
+
+.btn-group {
+  display: inline-flex;
+  gap: $spacing-200;
+  
+  &--vertical {
+    flex-direction: column;
+    
+    .btn {
+      width: 100%;
+    }
+  }
+  
+  &--attached {
+    gap: 0;
+    
+    .btn {
+      border-radius: 0;
+      
+      &:first-child {
+        border-top-left-radius: $radius-base;
+        border-bottom-left-radius: $radius-base;
+      }
+      
+      &:last-child {
+        border-top-right-radius: $radius-base;
+        border-bottom-right-radius: $radius-base;
+      }
+      
+      &:not(:last-child) {
+        border-right: 1px solid rgba(255, 255, 255, 0.2);
+      }
+    }
+  }
+}
+

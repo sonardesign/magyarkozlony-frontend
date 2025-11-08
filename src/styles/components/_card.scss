@@ -1,0 +1,43 @@
+@use '../variables' as *;
+
+.content {
+  padding: $spacing-1200 0;
+  background-color: $bg-light;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: $spacing-600;
+  margin-top: $spacing-1000;
+}
+
+.card {
+  background-color: $bg-color;
+  border-radius: $radius-large;
+  padding: $spacing-600;
+  box-shadow: $shadow-md;
+  transition: transform $transition-speed $transition-ease, box-shadow $transition-speed $transition-ease;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: $shadow-lg;
+  }
+
+  &__title {
+    color: $primary-color;
+    margin-bottom: $spacing-300;
+  }
+
+  &__text {
+    color: $text-light;
+    line-height: 1.8;
+  }
+}
+
+@media (max-width: 768px) {
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+}
+

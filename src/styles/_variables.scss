@@ -1,0 +1,10 @@
+// ==============================================
+// MAIN VARIABLES FILE
+// Forwards all variable modules
+// ==============================================
+
+// Forward Size Variables (makes them available to importers)
+@forward './variables-size';
+
+// Forward Color Variables (makes them available to importers)
+@forward './variables-colors';

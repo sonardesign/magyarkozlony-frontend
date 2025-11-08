@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Button Component Demo - NJT Design System</title>
+  <link rel="stylesheet" href="/src/styles/main.scss">
+  <style>
+    .demo-section {
+      margin-bottom: 48px;
+    }
+    .demo-section h2 {
+      margin-bottom: 24px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid #e9edf2;
+    }
+    .demo-row {
+      display: flex;
+      gap: 24px;
+      align-items: center;
+      margin-bottom: 24px;
+      flex-wrap: wrap;
+    }
+    .demo-label {
+      min-width: 100px;
+      font-size: 12px;
+      font-weight: 700;
+      color: #1c1f26;
+      text-transform: uppercase;
+    }
+  </style>
+</head>
+<body>
+  <main class="main">
+    <div class="container" style="padding-top: 40px; padding-bottom: 40px;">
+      <h1>Button Component Demo</h1>
+      <p style="margin-bottom: 40px; color: #606b7a;">All button variants based on NJT Design System</p>
+
+      <!-- PRIMARY BUTTONS -->
+      <section class="demo-section">
+        <h2>Primary Buttons</h2>
+        
+        <div class="demo-row">
+          <span class="demo-label">Enabled</span>
+          <button class="btn btn--primary">Button label</button>
+        </div>
+        
+        <div class="demo-row">
+          <span class="demo-label">Hover</span>
+          <button class="btn btn--primary" style="background-color: #33cc9d;">Button label</button>
+        </div>
+        
+        <div class="demo-row">
+          <span class="demo-label">Pressed</span>
+          <button class="btn btn--primary" style="background-color: #2ebf96; border-width: 3px;">Button label</button>
+        </div>
+        
+        <div class="demo-row">
+          <span class="demo-label">Focused</span>
+          <button class="btn btn--primary" style="background-color: #33cc9d; box-shadow: 0 0 0 2px #37f0bf, inset 0 0 0 2px #ffffff;">Button label</button>
+        </div>
+        
+        <div class="demo-row">
+          <span class="demo-label">Disabled</span>
+          <button class="btn btn--primary" disabled>Button label</button>
+        </div>
+        
+        <div class="demo-row">
+          <span class="demo-label">Loading</span>
+          <button class="btn btn--primary btn--loading">
+            Button label
+            <span class="btn__spinner"></span>
+          </button>
+        </div>
+      </section>
+
+      <!-- SECONDARY BUTTONS -->
+      <section class="demo-section">
+        <h2>Secondary Buttons</h2>
+        
+        <div class="demo-row">
+          <span class="demo-label">Enabled</span>
+          <button class="btn btn--secondary">Button label</button>
+        </div>
+        
+        <div class="demo-row">
+          <span class="demo-label">Hover</span>
+          <button class="btn btn--secondary" onmouseover="this.style.backgroundColor='rgba(11, 61, 62, 0.1)'" onmouseout="this.style.backgroundColor='transparent'">Button label</button>
+        </div>
+        
+        <div class="demo-row">
+          <span class="demo-label">Disabled</span>
+          <button class="btn btn--secondary" disabled>Button label</button>
+        </div>
+        
+        <div class="demo-row">
+          <span class="demo-label">Loading</span>
+          <button class="btn btn--secondary btn--loading">
+            Button label
+            <span class="btn__spinner"></span>
+          </button>
+        </div>
+      </section>
+
+      <!-- TERTIARY BUTTONS -->
+      <section class="demo-section">
+        <h2>Tertiary Buttons (Text Only)</h2>
+        
+        <div class="demo-row">
+          <span class="demo-label">Enabled</span>
+          <button class="btn btn--tertiary">Button label</button>
+        </div>
+        
+        <div class="demo-row">
+          <span class="demo-label">Hover</span>
+          <button class="btn btn--tertiary" style="background-color: rgba(11, 61, 62, 0.1);">Button label</button>
+        </div>
+        
+        <div class="demo-row">
+          <span class="demo-label">Disabled</span>
+          <button class="btn btn--tertiary" disabled>Button label</button>
+        </div>
+      </section>
+
+      <!-- DANGER BUTTONS -->
+      <section class="demo-section">
+        <h2>Danger Buttons</h2>
+        
+        <div class="demo-row">
+          <span class="demo-label">Enabled</span>
+          <button class="btn btn--danger">Delete</button>
+        </div>
+        
+        <div class="demo-row">
+          <span class="demo-label">Hover</span>
+          <button class="btn btn--danger" style="background-color: #d40d00;">Delete</button>
+        </div>
+        
+        <div class="demo-row">
+          <span class="demo-label">Disabled</span>
+          <button class="btn btn--danger" disabled>Delete</button>
+        </div>
+      </section>
+
+      <!-- SUCCESS BUTTONS -->
+      <section class="demo-section">
+        <h2>Success Buttons</h2>
+        
+        <div class="demo-row">
+          <span class="demo-label">Enabled</span>
+          <button class="btn btn--success">Confirm</button>
+        </div>
+        
+        <div class="demo-row">
+          <span class="demo-label">Hover</span>
+          <button class="btn btn--success" style="background-color: #268d6b;">Confirm</button>
+        </div>
+        
+        <div class="demo-row">
+          <span class="demo-label">Disabled</span>
+          <button class="btn btn--success" disabled>Confirm</button>
+        </div>
+      </section>
+
+      <!-- BUTTON SIZES -->
+      <section class="demo-section">
+        <h2>Button Sizes</h2>
+        
+        <div class="demo-row">
+          <span class="demo-label">Small</span>
+          <button class="btn btn--primary btn--small">Small Button</button>
+        </div>
+        
+        <div class="demo-row">
+          <span class="demo-label">Medium (Default)</span>
+          <button class="btn btn--primary">Medium Button</button>
+        </div>
+        
+        <div class="demo-row">
+          <span class="demo-label">Large</span>
+          <button class="btn btn--primary btn--large">Large Button</button>
+        </div>
+      </section>
+
+      <!-- BUTTON WIDTH VARIANTS -->
+      <section class="demo-section">
+        <h2>Width Variants</h2>
+        
+        <div class="demo-row" style="flex-direction: column; align-items: flex-start; width: 100%;">
+          <span class="demo-label">Full Width</span>
+          <button class="btn btn--primary btn--full">Full Width Button</button>
+        </div>
+        
+        <div class="demo-row">
+          <span class="demo-label">Icon Only</span>
+          <button class="btn btn--primary btn--icon" aria-label="Icon button">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+              <path d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z"/>
+            </svg>
+          </button>
+        </div>
+      </section>
+
+      <!-- BUTTON GROUPS -->
+      <section class="demo-section">
+        <h2>Button Groups</h2>
+        
+        <div class="demo-row">
+          <span class="demo-label">Horizontal</span>
+          <div class="btn-group">
+            <button class="btn btn--secondary">Left</button>
+            <button class="btn btn--secondary">Middle</button>
+            <button class="btn btn--secondary">Right</button>
+          </div>
+        </div>
+        
+        <div class="demo-row">
+          <span class="demo-label">Attached</span>
+          <div class="btn-group btn-group--attached">
+            <button class="btn btn--secondary">Left</button>
+            <button class="btn btn--secondary">Middle</button>
+            <button class="btn btn--secondary">Right</button>
+          </div>
+        </div>
+        
+        <div class="demo-row" style="align-items: flex-start;">
+          <span class="demo-label">Vertical</span>
+          <div class="btn-group btn-group--vertical">
+            <button class="btn btn--secondary">Top</button>
+            <button class="btn btn--secondary">Middle</button>
+            <button class="btn btn--secondary">Bottom</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- INTERACTIVE EXAMPLES -->
+      <section class="demo-section">
+        <h2>Interactive Examples</h2>
+        
+        <div class="demo-row">
+          <span class="demo-label">Try Them!</span>
+          <button class="btn btn--primary" onclick="alert('Primary clicked!')">Click Me</button>
+          <button class="btn btn--secondary" onclick="alert('Secondary clicked!')">Click Me</button>
+          <button class="btn btn--tertiary" onclick="alert('Tertiary clicked!')">Click Me</button>
+        </div>
+        
+        <div class="demo-row">
+          <span class="demo-label">Loading Demo</span>
+          <button class="btn btn--primary" onclick="simulateLoading(this)">
+            <span>Submit</span>
+            <span class="btn__spinner"></span>
+          </button>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <script type="module" src="/src/main.js"></script>
+  <script>
+    // Simulate loading state
+    function simulateLoading(button) {
+      button.classList.add('btn--loading');
+      button.disabled = true;
+      
+      setTimeout(() => {
+        button.classList.remove('btn--loading');
+        button.disabled = false;
+        alert('Action completed!');
+      }, 2000);
+    }
+  </script>
+</body>
+</html>
+

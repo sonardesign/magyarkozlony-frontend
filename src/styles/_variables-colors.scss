@@ -1,0 +1,243 @@
+// ==============================================
+// COLOR VARIABLES
+// Based on NJT Design System
+// ==============================================
+  
+
+// ==================
+// BRAND COLORS - TEAL
+// ==================
+$teal-100: #edf4f2;
+$teal-200: #d2e8e3;
+$teal-300: #b7dcd3;
+$teal-400: #9cd0c4;
+$teal-500: #81c4b4;
+$teal-600: #66b8a5;
+$teal-700: #4bac95;
+$teal-800: #30a086;
+$teal-900: #2b947d;
+$teal-1000: #278774;
+$teal-1100: #227b6b;
+$teal-1200: #1e6f62;
+$teal-1300: #196259;
+$teal-1400: #145650;
+$teal-1500: #104947;
+$teal-1600: #0b3d3e;
+$teal-1700: #093637;
+$teal-1800: #082f30;
+$teal-1900: #062828;
+$teal-2000: #042121;
+
+// Teal Alpha (Transparency variants)
+$teal-alpha-5: #0b3d3e0d;
+$teal-alpha-10: #0b3d3e1a;
+$teal-alpha-20: #0b3d3e33;
+$teal-alpha-30: #0b3d3e4d;
+$teal-alpha-40: #0b3d3e66;
+$teal-alpha-50: #0b3d3e80;
+$teal-alpha-60: #0b3d3e99;
+$teal-alpha-70: #0b3d3eb2;
+$teal-alpha-80: #0b3d3ecc;
+$teal-alpha-90: #0b3d3ee5;
+$teal-alpha-100: #0b3d3e;
+
+// ==================
+// ACCENT COLORS
+// ==================
+$accent-200: #d9fcf0;
+$accent-300: #9ef6d8;
+$accent-400: #37f0bf;
+$accent-500: #38e0ac;
+$accent-600: #33cc9d;
+$accent-700: #2ebf96;
+
+// Accent Alpha (Transparency variants)
+$accent-alpha-5: #37f0bf0d;
+$accent-alpha-10: #37f0bf1a;
+$accent-alpha-20: #37f0bf33;
+$accent-alpha-30: #37f0bf4d;
+$accent-alpha-40: #37f0bf66;
+$accent-alpha-50: #37f0bf80;
+$accent-alpha-60: #37f0bf99;
+$accent-alpha-70: #37f0bfb2;
+$accent-alpha-80: #37f0bfcc;
+$accent-alpha-90: #37f0bfe5;
+$accent-alpha-100: #37f0bf;
+
+// ==================
+// NEUTRAL COLORS - COLD GREY
+// ==================
+$cold-grey-100: #f5f7fa;
+$cold-grey-200: #eef2f6;
+$cold-grey-300: #e9edf2;
+$cold-grey-400: #d1d7df;
+$cold-grey-500: #bfc6d1;
+$cold-grey-600: #b2b9c6;
+$cold-grey-700: #a3abba;
+$cold-grey-800: #7e8797;
+$cold-grey-900: #707a8a;
+$cold-grey-1000: #606b7a;
+$cold-grey-1100: #404753;
+$cold-grey-1200: #353b46;
+$cold-grey-1300: #2b3039;
+$cold-grey-1400: #282c35;
+$cold-grey-1500: #242830;
+$cold-grey-1600: #20242c;
+$cold-grey-1700: #1c1f26;
+$cold-grey-1800: #181b22;
+$cold-grey-1900: #15181f;
+$cold-grey-2000: #0f1115;
+
+// Cold Grey Alpha (Transparency variants)
+$cold-grey-alpha-5: #606b7a0d;
+$cold-grey-alpha-10: #606b7a1a;
+$cold-grey-alpha-20: #606b7a33;
+$cold-grey-alpha-100: #606b7a;
+
+// ==================
+// SEMANTIC COLORS - BLUE
+// ==================
+$semantic-blue-100: #ebfaff;
+$semantic-blue-200: #dff5fc;
+$semantic-blue-300: #c5eefa;
+$semantic-blue-400: #aee6f8;
+$semantic-blue-500: #77d5f4;
+$semantic-blue-600: #37c5f0;
+$semantic-blue-700: #00b8f0;
+$semantic-blue-800: #00acef;
+$semantic-blue-900: #009ee1;
+$semantic-blue-1000: #008bce;
+$semantic-blue-1100: #007abb;
+$semantic-blue-1200: #005a9b;
+$semantic-blue-1300: #004f87;
+$semantic-blue-1400: #004678;
+$semantic-blue-1500: #003b66;
+$semantic-blue-1600: #003357;
+$semantic-blue-1700: #002a47;
+$semantic-blue-1800: #002138;
+$semantic-blue-1900: #001829;
+$semantic-blue-2000: #000f1a;
+
+// Semantic Blue Alpha
+$semantic-blue-alpha-5: #008bce0d;
+$semantic-blue-alpha-10: #008bce1a;
+$semantic-blue-alpha-20: #008bce33;
+$semantic-blue-alpha-100: #008bce;
+
+// ==================
+// SEMANTIC COLORS - GREEN
+// ==================
+$semantic-green-100: #edfaf6;
+$semantic-green-200: #e1f3ee;
+$semantic-green-300: #ceebe2;
+$semantic-green-400: #b6e1d3;
+$semantic-green-500: #88ceb8;
+$semantic-green-600: #72c4aa;
+$semantic-green-700: #5bb99d;
+$semantic-green-800: #3eaa89;
+$semantic-green-900: #2b9a77;
+$semantic-green-1000: #268d6b;
+$semantic-green-1100: #217d5d;
+$semantic-green-1200: #1a6d4f;
+$semantic-green-1300: #135e40;
+$semantic-green-1400: #0f5135;
+$semantic-green-1500: #0d472f;
+$semantic-green-1600: #0b3d28;
+$semantic-green-1700: #093321;
+$semantic-green-1800: #08291b;
+$semantic-green-1900: #052417;
+$semantic-green-2000: #031f13;
+
+// Semantic Green Alpha
+$semantic-green-alpha-5: #0082380d;
+$semantic-green-alpha-10: #0082381a;
+$semantic-green-alpha-20: #00823833;
+$semantic-green-alpha-100: #217d5d;
+
+// ==================
+// SEMANTIC COLORS - ORANGE
+// ==================
+$semantic-orange-100: #fff6ec;
+$semantic-orange-200: #fff4e5;
+$semantic-orange-300: #ffefdb;
+$semantic-orange-400: #ffca89;
+$semantic-orange-500: #ffb156;
+$semantic-orange-600: #ffa034;
+$semantic-orange-700: #f98900;
+$semantic-orange-800: #d06b00;
+$semantic-orange-900: #b65b00;
+$semantic-orange-1000: #a65200;
+$semantic-orange-1100: #6f3300;
+$semantic-orange-1200: #5e2a00;
+$semantic-orange-1300: #512300;
+$semantic-orange-1400: #4a2000;
+$semantic-orange-1500: #441d00;
+$semantic-orange-1600: #411b00;
+$semantic-orange-1700: #3b1800;
+$semantic-orange-1800: #341400;
+$semantic-orange-1900: #301300;
+$semantic-orange-2000: #270e00;
+
+// Semantic Orange Alpha
+$semantic-orange-alpha-5: #a652000d;
+$semantic-orange-alpha-10: #a652001a;
+$semantic-orange-alpha-20: #a6520033;
+$semantic-orange-alpha-100: #a65200;
+
+// ==================
+// SEMANTIC COLORS - RED
+// ==================
+$semantic-red-100: #fff5f2;
+$semantic-red-200: #ffede9;
+$semantic-red-300: #ffe6df;
+$semantic-red-400: #ffc6b8;
+$semantic-red-500: #ffad99;
+$semantic-red-600: #ff9c86;
+$semantic-red-700: #ff8169;
+$semantic-red-800: #f84227;
+$semantic-red-900: #e32100;
+$semantic-red-1000: #d40d00;
+$semantic-red-1100: #8e0000;
+$semantic-red-1200: #790000;
+$semantic-red-1300: #680000;
+$semantic-red-1400: #600000;
+$semantic-red-1500: #590000;
+$semantic-red-1600: #550000;
+$semantic-red-1700: #4d0000;
+$semantic-red-1800: #440000;
+$semantic-red-1900: #400000;
+$semantic-red-2000: #340000;
+
+// Semantic Red Alpha
+$semantic-red-alpha-5: #d40d000d;
+$semantic-red-alpha-10: #d40d001a;
+$semantic-red-alpha-20: #d40d0033;
+$semantic-red-alpha-100: #d40d00;
+
+// ==================
+// TEXT COLORS
+// ==================
+$text-neutral-inverted: #ffffff;
+$text-neutral-on-inverted: #ffffff;
+$text-neutral-strong: #1c1f26;
+$text-neutral-base: #404753;
+$text-neutral-subtle: #606b7a;
+
+// ==================
+// BACKGROUND COLORS
+// ==================
+$background-brand-base-inverted: #0b3d3e;
+$background-brand-highlighted: #a9ebdc;
+$background-neutral-strong: #e9edf2;
+
+// ==================
+// LEGACY ALIASES (for backward compatibility)
+// ==================
+$primary-color: $teal-1600;
+$secondary-color: $teal-1000;
+$text-color: $text-neutral-base;
+$text-light: $text-neutral-subtle;
+$bg-color: #ffffff;
+$bg-light: $background-neutral-strong;
+$bg-dark: $cold-grey-1700;
+$border-color: $cold-grey-400;

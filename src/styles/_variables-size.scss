@@ -1,0 +1,160 @@
+// ==============================================
+// SIZE VARIABLES
+// Based on NJT Design System
+// ==============================================
+
+// Typography - Font Families
+$font-family-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+$font-family-secondary: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+
+// Typography - Font Sizes
+$font-size-2xs: 10px;
+$font-size-xs: 12px;
+$font-size-sm: 14px;
+$font-size-base: 16px;
+$font-size-lg: 18px;
+$font-size-xl: 20px;
+$font-size-2xl: 22px;
+$font-size-3xl: 24px;
+$font-size-4xl: 28px;
+$font-size-5xl: 32px;
+$font-size-6xl: 36px;
+$font-size-7xl: 40px;
+$font-size-8xl: 46px;
+$font-size-9xl: 52px;
+$font-size-10xl: 58px;
+$font-size-11xl: 66px;
+$font-size-12xl: 74px;
+
+// Typography - Font Weights
+$font-weight-medium: 500;
+$font-weight-bold: 700;
+
+// Spacing
+$spacing-0: 0px;
+$spacing-100: 4px;
+$spacing-200: 8px;
+$spacing-300: 12px;
+$spacing-400: 16px;
+$spacing-500: 20px;
+$spacing-600: 24px;
+$spacing-700: 28px;
+$spacing-800: 32px;
+$spacing-1000: 40px;
+$spacing-1200: 48px;
+$spacing-1400: 56px;
+$spacing-1600: 64px;
+$spacing-1800: 72px;
+$spacing-2000: 80px;
+$spacing-2400: 96px;
+$spacing-3000: 120px;
+$spacing-4000: 160px;
+$spacing-6000: 240px;
+
+// Breakpoints
+$breakpoint-xs: 320px;
+$breakpoint-sm: 640px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 1024px;
+$breakpoint-xl: 1280px;
+$breakpoint-2xl: 1536px;
+
+// Media Query Mixins - Min-width (Mobile First)
+@mixin media-xs {
+  @media (min-width: $breakpoint-xs) {
+    @content;
+  }
+}
+
+@mixin media-sm {
+  @media (min-width: $breakpoint-sm) {
+    @content;
+  }
+}
+
+@mixin media-md {
+  @media (min-width: $breakpoint-md) {
+    @content;
+  }
+}
+
+@mixin media-lg {
+  @media (min-width: $breakpoint-lg) {
+    @content;
+  }
+}
+
+@mixin media-xl {
+  @media (min-width: $breakpoint-xl) {
+    @content;
+  }
+}
+
+@mixin media-2xl {
+  @media (min-width: $breakpoint-2xl) {
+    @content;
+  }
+}
+
+// Media Query Mixins - Max-width (Desktop First)
+@mixin media-max-xs {
+  @media (max-width: #{$breakpoint-xs - 1px}) {
+    @content;
+  }
+}
+
+@mixin media-max-sm {
+  @media (max-width: #{$breakpoint-sm - 1px}) {
+    @content;
+  }
+}
+
+@mixin media-max-md {
+  @media (max-width: #{$breakpoint-md - 1px}) {
+    @content;
+  }
+}
+
+@mixin media-max-lg {
+  @media (max-width: #{$breakpoint-lg - 1px}) {
+    @content;
+  }
+}
+
+@mixin media-max-xl {
+  @media (max-width: #{$breakpoint-xl - 1px}) {
+    @content;
+  }
+}
+
+@mixin media-max-2xl {
+  @media (max-width: #{$breakpoint-2xl - 1px}) {
+    @content;
+  }
+}
+
+// Containers
+$container-xs: 460px;
+$container-sm: 540px;
+$container-md: 720px;
+$container-lg: 960px;
+$container-xl: 1140px;
+$container-2xl: 1320px;
+
+// Border Radius
+$radius-none: 0px;
+$radius-small: 4px;
+$radius-base: 8px;
+$radius-large: 16px;
+$radius-xlarge: 24px;
+$radius-rounded: 1000px; // For fully rounded elements (pills, circles)
+
+// Shadows
+$shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+$shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+$shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+
+// Transitions
+$transition-speed: 0.2s;
+$transition-ease: ease-in-out;
+
