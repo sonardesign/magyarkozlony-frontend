@@ -1,0 +1,109 @@
+// ============================================
+// Typography
+// ============================================
+
+@use '../abstracts' as *;
+
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+h1 {
+  margin-top: 20px;
+  font-size: 38px;
+  line-height: 44px;
+}
+
+h2 {
+  margin-top: 20px;
+  font-size: 32px;
+  line-height: 36px;
+}
+
+h3 {
+  margin-top: 20px;
+  font-size: 24px;
+  line-height: 30px;
+}
+
+h4 {
+  margin-top: 10px;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+h5 {
+  margin-top: 10px;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+h6 {
+  margin-top: 10px;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+blockquote {
+  border-left: 5px solid #e2e2e2;
+  margin: 0 0 10px;
+  padding: 10px 20px;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+figure {
+  margin: 0 0 10px;
+}
+
+figcaption {
+  text-align: center;
+  margin-top: 5px;
+}
+
+ul, ol {
+  margin-top: 0;
+  margin-bottom: 10px;
+  padding-left: 40px;
+}
+
+.w-list-unstyled {
+  padding-left: 0;
+  list-style: none;
+}
+
+// Custom Typography Classes
+.h2 {
+  font-family: $font-secondary;
+  color: $color-font-primary;
+  width: 100%;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: $font-size-22;
+  font-weight: 800;
+  line-height: 120%;
+  text-decoration: none;
+  
+  &.inverse {
+    color: $color-font-inverse;
+  }
+}
+
+.paragraph {
+  font-family: $font-primary;
+  color: $color-white;
+  width: 100%;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: $font-size-16;
+  font-weight: 600;
+  line-height: 120%;
+  text-decoration: none;
+}
+

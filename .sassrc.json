@@ -1,0 +1,11 @@
+{
+  "includePaths": [
+    "src/scss",
+    "src/scss/abstracts",
+    "node_modules"
+  ],
+  "indentedSyntax": false,
+  "outputStyle": "expanded",
+  "sourceMap": true
+}
+

@@ -1,0 +1,116 @@
+// ============================================
+// Sidebar
+// ============================================
+
+@use '../abstracts' as *;
+
+.sidebar {
+  grid-column-gap: 16px;
+  grid-row-gap: 16px;
+  flex-flow: column;
+  width: 30%;
+  display: flex;
+}
+
+.callout {
+  grid-column-gap: 12px;
+  @include backdrop-blur(7px);
+  background-color: $color-callout-bg;
+  border: 1px solid $color-callout-border;
+  border-radius: $border-radius-m;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 440px;
+  padding: 12px;
+  text-decoration: none;
+  display: flex;
+  overflow: hidden;
+}
+
+.icon-container-2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon {
+  object-fit: cover;
+  font-family: Remixicon, Arial, sans-serif;
+  overflow: hidden;
+}
+
+.content-style {
+  grid-row-gap: 8px;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  text-decoration: none;
+  display: flex;
+}
+
+.text-3 {
+  grid-row-gap: 4px;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  text-decoration: none;
+  display: flex;
+}
+
+.text-4 {
+  color: $color-teal-1600;
+  width: 100%;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-family: $font-primary;
+  font-size: $font-size-16;
+  font-weight: 500;
+  line-height: 150%;
+  text-decoration: none;
+}
+
+.actions {
+  grid-column-gap: 16px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  text-decoration: none;
+  display: flex;
+}
+
+.primary-action {
+  grid-column-gap: 4px;
+  flex: 0 auto;
+  justify-content: flex-start;
+  align-items: center;
+  text-decoration: none;
+  display: flex;
+}
+
+.link-text-4 {
+  color: $color-teal-1600;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-family: $font-primary;
+  font-size: $font-size-14;
+  font-weight: 700;
+  line-height: 150%;
+  text-decoration: none;
+}
+
+// Responsive
+@include respond-to-tiny {
+  .sidebar {
+    width: 100%;
+  }
+  
+  .callout {
+    max-width: 100%;
+  }
+}
+

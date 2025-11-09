@@ -1,0 +1,130 @@
+// ============================================
+// Container & Layout
+// ============================================
+
+@use '../abstracts' as *;
+
+.container {
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  max-width: $container-max-width;
+  text-decoration: none;
+  display: flex;
+}
+
+.w-layout-vflex {
+  flex-direction: column;
+  align-items: flex-start;
+  display: flex;
+}
+
+.w-layout-blockcontainer {
+  max-width: $container-max-width-small;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.w-container {
+  max-width: $container-max-width-small;
+  margin-left: auto;
+  margin-right: auto;
+  
+  @include clearfix;
+  
+  .w-row {
+    margin-left: -10px;
+    margin-right: -10px;
+  }
+}
+
+.section {
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  display: flex;
+  
+  &.header {
+    position: relative;
+    overflow: visible;
+  }
+  
+  &.body {
+    background-color: $color-gray-light;
+    padding-bottom: 16px;
+    position: relative;
+  }
+  
+  &.footer {
+    background-image: url("../../images/bg-large.png");
+    background-position: 100% 100%;
+    background-size: cover;
+    max-width: 100%;
+  }
+}
+
+.content {
+  grid-column-gap: 32px;
+  grid-row-gap: 32px;
+  flex-flow: row;
+  width: 100%;
+  margin-top: -82px;
+}
+
+.gasette-listing {
+  grid-column-gap: 32px;
+  grid-row-gap: 32px;
+  flex-flow: column;
+  width: 70%;
+  display: flex;
+}
+
+.listing {
+  grid-column-gap: 32px;
+  grid-row-gap: 32px;
+}
+
+.list-items {
+  grid-column-gap: 16px;
+  grid-row-gap: 16px;
+  flex-flow: column;
+  width: 100%;
+}
+
+// Responsive
+@include respond-to-medium {
+  .container {
+    padding-right: $spacing-16;
+    padding-left: $spacing-16;
+    max-width: 100%;
+  }
+  
+  .w-layout-blockcontainer {
+    max-width: $container-max-width-medium;
+  }
+  
+  .content {
+    flex-flow: column;
+  }
+  
+  .gasette-listing {
+    width: 100%;
+  }
+  
+  .section.header {
+    background-position: 50% 0;
+  }
+}
+
+@include respond-to-small {
+  .w-layout-blockcontainer {
+    max-width: none;
+  }
+  
+  .section.header {
+    background-position: 50% 0;
+  }
+}
+

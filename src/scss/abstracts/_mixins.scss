@@ -1,0 +1,70 @@
+// ============================================
+// Mixins
+// ============================================
+
+// Flexbox helpers
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+// Clearfix
+@mixin clearfix {
+  &:before,
+  &:after {
+    content: " ";
+    grid-area: 1 / 1 / 2 / 2;
+    display: table;
+  }
+  
+  &:after {
+    clear: both;
+  }
+}
+
+// Button reset
+@mixin button-reset {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font: inherit;
+}
+
+// Visually hidden
+@mixin visually-hidden {
+  clip: rect(0 0 0 0);
+  border: 0;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  position: absolute;
+  overflow: hidden;
+}
+
+// Backdrop blur
+@mixin backdrop-blur($amount: 7px) {
+  -webkit-backdrop-filter: blur($amount);
+  backdrop-filter: blur($amount);
+}
+
+// Truncate text
+@mixin truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+

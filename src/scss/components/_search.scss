@@ -1,0 +1,59 @@
+// ============================================
+// Search
+// ============================================
+
+@use '../abstracts' as *;
+
+.search {
+  z-index: $z-index-nav;
+  grid-row-gap: $spacing-32;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding-top: $spacing-32;
+  padding-bottom: 132px;
+  display: flex;
+  position: relative;
+}
+
+.search-form {
+  grid-row-gap: $spacing-16;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  text-decoration: none;
+  display: flex;
+}
+
+.form-wrapper {
+  grid-column-gap: $spacing-16;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  text-decoration: none;
+  display: flex;
+}
+
+.intro-text-wrapper {
+  grid-row-gap: $spacing-12;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  text-decoration: none;
+  display: flex;
+}
+
+.intro-text {
+  grid-row-gap: $spacing-32;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 70%;
+  text-decoration: none;
+  display: flex;
+}
+

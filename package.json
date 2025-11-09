@@ -1,14 +1,24 @@
 {
   "name": "magyarkozlony-frontend",
   "version": "1.0.0",
-  "description": "Static HTML + SCSS site built with Vite",
+  "description": "Magyar Közlöny - Official Hungarian Gazette Website",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
+    "dev": "npm run scss:watch",
+    "build": "npm run scss:build",
+    "preview": "vite preview",
+    "scss:dev": "sass src/scss/main.scss:src/css/main.css --style=expanded --source-map",
+    "scss:build": "sass src/scss/main.scss:src/css/main.css --style=compressed --no-source-map",
+    "scss:watch": "sass --watch src/scss/main.scss:src/css/main.css --style=expanded --source-map",
+    "serve": "vite"
   },
-  "keywords": [],
+  "keywords": [
+    "magyar-kozlony",
+    "hungarian-gazette",
+    "scss",
+    "webflow",
+    "frontend"
+  ],
   "author": "",
   "license": "ISC",
   "devDependencies": {

@@ -1,0 +1,36 @@
+// ============================================
+// Breakpoints
+// ============================================
+
+$breakpoint-tiny: 479px;
+$breakpoint-small: 767px;
+$breakpoint-medium: 991px;
+$breakpoint-large: 1200px;
+
+// Mixins for media queries
+// ============================================
+
+@mixin respond-to-tiny {
+  @media screen and (max-width: $breakpoint-tiny) {
+    @content;
+  }
+}
+
+@mixin respond-to-small {
+  @media screen and (max-width: $breakpoint-small) {
+    @content;
+  }
+}
+
+@mixin respond-to-medium {
+  @media screen and (max-width: $breakpoint-medium) {
+    @content;
+  }
+}
+
+@mixin respond-from-medium {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+

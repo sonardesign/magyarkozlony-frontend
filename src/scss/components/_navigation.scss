@@ -1,0 +1,89 @@
+// ============================================
+// Navigation
+// ============================================
+
+@use '../abstracts' as *;
+
+.secondary-nav {
+  z-index: $z-index-nav;
+  height: $spacing-80;
+  padding-right: $spacing-32;
+  padding-left: $spacing-32;
+  grid-column-gap: $spacing-16;
+  @include backdrop-blur(7px);
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: $border-radius-s;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  display: flex;
+  position: relative;
+}
+
+.secondary-menu-nav {
+  grid-column-gap: $spacing-16;
+  flex: 0 auto;
+  justify-content: flex-start;
+  align-items: center;
+  text-decoration: none;
+  display: flex;
+}
+
+.menu-item {
+  grid-row-gap: $spacing-12;
+  border-radius: $border-radius-m;
+  color: $color-font-inverse;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 6px $spacing-12;
+  text-decoration: none;
+  transition: all $transition-fast;
+  display: flex;
+  
+  &:hover {
+    background-color: $color-accent-500;
+    color: $color-teal-1600;
+  }
+  
+  &.active {
+    background-color: $color-accent-500;
+    color: $color-teal-1600;
+    cursor: pointer;
+    
+    &:hover {
+      background-color: $color-accent-600;
+    }
+    
+    &:active {
+      background-color: $color-accent-700;
+    }
+  }
+}
+
+.menu-tem {
+  grid-column-gap: $spacing-24;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  text-decoration: none;
+  display: flex;
+}
+
+.menu-text {
+  font-family: $font-primary;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: $font-size-16;
+  font-weight: 600;
+  line-height: 150%;
+  text-decoration: none;
+}
+
+@include respond-to-small {
+  .secondary-nav {
+    display: none;
+  }
+}
+
