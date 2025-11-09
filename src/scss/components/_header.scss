@@ -86,9 +86,30 @@
   padding: 4px 8px;
   text-decoration: none;
   display: flex;
+  cursor: pointer;
+
+  p, i{
+    color: $color-font-inverse;
+  }
+
+  p{
+    font-weight: 400;
+    font-size: $font-size-14;
+  }
 }
 
-.frame-1171275266 {
+.menu-text {
+  font-family: $font-primary;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: $font-size-14;
+  font-weight: 400;
+  line-height: 150%;
+  text-decoration: none;
+}
+
+
+.menu-icons {
   grid-row-gap: 10px;
   flex-direction: column;
   justify-content: center;
@@ -106,6 +127,10 @@
   width: 100%;
   text-decoration: none;
   display: flex;
+
+  i{
+    color: $color-font-inverse;
+  }
 }
 
 .frame-5 {

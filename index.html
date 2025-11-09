@@ -15,6 +15,7 @@
   <meta content="Webflow" name="generator" />
   
   <!-- Stylesheets -->
+  <link href="src/css/main.css" rel="stylesheet" type="text/css" />
   <link href="src/css/magyarkolzony.webflow.shared.css" rel="stylesheet" type="text/css" />
   
   <!-- Font Preconnects -->
@@ -48,7 +49,7 @@
   <!-- ============================================
        MOBILE MENU
        ============================================ -->
-  <div style="display:block" class="mobile-menu">
+  <div class="mobile-menu">
     <div class="mobile-menu-header">
       <img 
         src="src/images/magyar-kozlony.svg" 
@@ -58,7 +59,7 @@
         alt="Magyar Közlöny Logo" 
         class="magyar-kozlony"
       />
-      <div data-w-id="500631d4-e717-df4f-3714-b1b964578e97" class="close-button">
+      <div class="close-button">
         <div class="text-block">menu</div>
       </div>
     </div>
@@ -149,81 +150,30 @@
           <!-- Desktop Main Menu -->
           <div class="main-menu">
             <div class="main-menu-items">
-              <div class="some-text">Jog.gov.hu</div>
-              <div class="icon-container">
-                <img 
-                  src="src/images/icon-external-link-line.svg" 
-                  loading="lazy" 
-                  width="20" 
-                  height="20" 
-                  alt="External Link" 
-                  class="icon-external-link-line"
-                />
-              </div>
+              <p class="menu-text">Jog.gov.hu</p>
+              <i class="ri-external-link-fill icon-external-link-line"></i>
             </div>
             <div class="main-menu-items">
-              <div class="text-container">
-                <div class="some-text">Cégközlöny</div>
-              </div>
-              <div class="icon-container">
-                <img 
-                  src="src/images/icon-external-link-line.svg" 
-                  loading="lazy" 
-                  width="20" 
-                  height="20" 
-                  alt="External Link" 
-                  class="icon-external-link-line"
-                />
-              </div>
+              <p class="menu-text">Cégközlöny</p>
+              <i class="ri-external-link-fill icon-external-link-line"></i>
             </div>
-            <div class="main-menu-items">
-              <div class="text-container">
-                <div class="some-text">NJT.hu</div>
-              </div>
-              <div class="icon-container">
-                <img 
-                  src="src/images/icon-external-link-line.svg" 
-                  loading="lazy" 
-                  width="20" 
-                  height="20" 
-                  alt="External Link" 
-                  class="icon-external-link-line"
-                />
-              </div>
+            <div class="main-menu-items">              
+              <p class="menu-text">NJT.hu</p>        
+              <i class="ri-external-link-fill icon-external-link-line"></i>            
             </div>
           </div>
 
           <!-- Right Side Icons -->
-          <div class="frame-1171275266">
+          <div class="menu-icons">
             <div class="icons-wrapper">
               <div class="frame-5">
-                <img 
-                  src="src/images/icon-question-line.svg" 
-                  loading="lazy" 
-                  width="24" 
-                  height="24" 
-                  alt="Help" 
-                  class="icon-external-link-line"
-                />
+                <i class="ri-question-fill icon-external-link-line"></i>
               </div>
               <div class="button-outline">
-                <img 
-                  src="src/images/high-contrast-icon.svg" 
-                  loading="lazy" 
-                  width="20" 
-                  height="20" 
-                  alt="High Contrast" 
-                  class="icon-external-link-line"
-                />
+                <i class="ri-contrast-2-fill icon-external-link-line"></i>
                 <div class="high-contrast-mode-border"></div>
               </div>
-              <img 
-                src="src/images/menu-icon.svg" 
-                loading="lazy" 
-                data-w-id="cbb3de8e-ed29-7cf7-4434-ec6c59c0c7d3" 
-                alt="Menu" 
-                class="menu-icon"
-              />
+              <i class="ri-menu-fill menu-icon"></i>
             </div>
           </div>
         </div>
@@ -388,8 +338,8 @@
     </div>
 
     <!-- Decorative Image -->
-    <img 
-      src="images/justicia.svg" 
+      <img 
+      src="src/images/justicia.svg" 
       loading="lazy" 
       alt="Justicia" 
       class="justicia"
@@ -426,14 +376,7 @@
                         <div class="link-style-2">
                           <div class="link-text-3">Indoklás(ok)</div>
                           <div class="trailing-icon">
-                            <img 
-                              src="src/images/icon-arrow-right-line.svg" 
-                              loading="lazy" 
-                              width="14" 
-                              height="14" 
-                              alt="Arrow" 
-                              class="icon-arrow-right-line"
-                            />
+                            <i class="ri-arrow-right-fill icon-arrow-right-line"></i>
                           </div>
                         </div>
                       </div>
@@ -441,14 +384,7 @@
                         <div class="link-style-2">
                           <div class="link-text-3">Melléklet(ek)</div>
                           <div class="trailing-icon">
-                            <img 
-                              src="src/images/arrow-right.svg" 
-                              loading="lazy" 
-                              width="14" 
-                              height="14" 
-                              alt="Arrow" 
-                              class="icon-arrow-right-line"
-                            />
+                            <i class="ri-arrow-right-s-fill icon-arrow-right-line"></i>
                           </div>
                         </div>
                       </div>
@@ -482,14 +418,7 @@
                         <div class="link-style-2">
                           <div class="link-text-3">Indoklás(ok)</div>
                           <div class="trailing-icon">
-                            <img 
-                              src="src/images/icon-arrow-right-line.svg" 
-                              loading="lazy" 
-                              width="14" 
-                              height="14" 
-                              alt="Arrow" 
-                              class="icon-arrow-right-line"
-                            />
+                            <i class="ri-arrow-right-fill icon-arrow-right-line"></i>
                           </div>
                         </div>
                       </div>
@@ -497,14 +426,7 @@
                         <div class="link-style-2">
                           <div class="link-text-3">Melléklet(ek)</div>
                           <div class="trailing-icon">
-                            <img 
-                              src="src/images/arrow-right.svg" 
-                              loading="lazy" 
-                              width="14" 
-                              height="14" 
-                              alt="Arrow" 
-                              class="icon-arrow-right-line"
-                            />
+                            <i class="ri-arrow-right-s-fill icon-arrow-right-line"></i>
                           </div>
                         </div>
                       </div>
@@ -532,14 +454,7 @@
                         <div class="link-style-2">
                           <div class="link-text-3">Indoklás(ok)</div>
                           <div class="trailing-icon">
-                            <img 
-                              src="src/images/icon-arrow-right-line.svg" 
-                              loading="lazy" 
-                              width="14" 
-                              height="14" 
-                              alt="Arrow" 
-                              class="icon-arrow-right-line"
-                            />
+                            <i class="ri-arrow-right-fill icon-arrow-right-line"></i>
                           </div>
                         </div>
                       </div>
@@ -547,14 +462,7 @@
                         <div class="link-style-2">
                           <div class="link-text-3">Melléklet(ek)</div>
                           <div class="trailing-icon">
-                            <img 
-                              src="src/images/arrow-right.svg" 
-                              loading="lazy" 
-                              width="14" 
-                              height="14" 
-                              alt="Arrow" 
-                              class="icon-arrow-right-line"
-                            />
+                            <i class="ri-arrow-right-s-fill icon-arrow-right-line"></i>
                           </div>
                         </div>
                       </div>
@@ -584,14 +492,7 @@
                         <div class="link-style-2">
                           <div class="link-text-3">Indoklás(ok)</div>
                           <div class="trailing-icon">
-                            <img 
-                              src="src/images/icon-arrow-right-line.svg" 
-                              loading="lazy" 
-                              width="14" 
-                              height="14" 
-                              alt="Arrow" 
-                              class="icon-arrow-right-line"
-                            />
+                            <i class="ri-arrow-right-fill icon-arrow-right-line"></i>
                           </div>
                         </div>
                       </div>
@@ -599,14 +500,7 @@
                         <div class="link-style-2">
                           <div class="link-text-3">Melléklet(ek)</div>
                           <div class="trailing-icon">
-                            <img 
-                              src="src/images/arrow-right.svg" 
-                              loading="lazy" 
-                              width="14" 
-                              height="14" 
-                              alt="Arrow" 
-                              class="icon-arrow-right-line"
-                            />
+                            <i class="ri-arrow-right-s-fill icon-arrow-right-line"></i>
                           </div>
                         </div>
                       </div>
@@ -636,14 +530,7 @@
                         <div class="link-style-2">
                           <div class="link-text-3">Indoklás(ok)</div>
                           <div class="trailing-icon">
-                            <img 
-                              src="src/images/icon-arrow-right-line.svg" 
-                              loading="lazy" 
-                              width="14" 
-                              height="14" 
-                              alt="Arrow" 
-                              class="icon-arrow-right-line"
-                            />
+                            <i class="ri-arrow-right-fill icon-arrow-right-line"></i>
                           </div>
                         </div>
                       </div>
@@ -651,14 +538,7 @@
                         <div class="link-style-2">
                           <div class="link-text-3">Melléklet(ek)</div>
                           <div class="trailing-icon">
-                            <img 
-                              src="src/images/arrow-right.svg" 
-                              loading="lazy" 
-                              width="14" 
-                              height="14" 
-                              alt="Arrow" 
-                              class="icon-arrow-right-line"
-                            />
+                            <i class="ri-arrow-right-s-fill icon-arrow-right-line"></i>
                           </div>
                         </div>
                       </div>
@@ -686,14 +566,7 @@
                         <div class="link-style-2">
                           <div class="link-text-3">Indoklás(ok)</div>
                           <div class="trailing-icon">
-                            <img 
-                              src="src/images/icon-arrow-right-line.svg" 
-                              loading="lazy" 
-                              width="14" 
-                              height="14" 
-                              alt="Arrow" 
-                              class="icon-arrow-right-line"
-                            />
+                            <i class="ri-arrow-right-fill icon-arrow-right-line"></i>
                           </div>
                         </div>
                       </div>
@@ -701,14 +574,7 @@
                         <div class="link-style-2">
                           <div class="link-text-3">Melléklet(ek)</div>
                           <div class="trailing-icon">
-                            <img 
-                              src="src/images/arrow-right.svg" 
-                              loading="lazy" 
-                              width="14" 
-                              height="14" 
-                              alt="Arrow" 
-                              class="icon-arrow-right-line"
-                            />
+                            <i class="ri-arrow-right-s-fill icon-arrow-right-line"></i>
                           </div>
                         </div>
                       </div>
@@ -738,14 +604,7 @@
                         <div class="link-style-2">
                           <div class="link-text-3">Indoklás(ok)</div>
                           <div class="trailing-icon">
-                            <img 
-                              src="src/images/icon-arrow-right-line.svg" 
-                              loading="lazy" 
-                              width="14" 
-                              height="14" 
-                              alt="Arrow" 
-                              class="icon-arrow-right-line"
-                            />
+                            <i class="ri-arrow-right-fill icon-arrow-right-line"></i>
                           </div>
                         </div>
                       </div>
@@ -753,14 +612,7 @@
                         <div class="link-style-2">
                           <div class="link-text-3">Melléklet(ek)</div>
                           <div class="trailing-icon">
-                            <img 
-                              src="src/images/arrow-right.svg" 
-                              loading="lazy" 
-                              width="14" 
-                              height="14" 
-                              alt="Arrow" 
-                              class="icon-arrow-right-line"
-                            />
+                            <i class="ri-arrow-right-s-fill icon-arrow-right-line"></i>
                           </div>
                         </div>
                       </div>
@@ -790,14 +642,7 @@
                         <div class="link-style-2">
                           <div class="link-text-3">Indoklás(ok)</div>
                           <div class="trailing-icon">
-                            <img 
-                              src="src/images/icon-arrow-right-line.svg" 
-                              loading="lazy" 
-                              width="14" 
-                              height="14" 
-                              alt="Arrow" 
-                              class="icon-arrow-right-line"
-                            />
+                            <i class="ri-arrow-right-fill icon-arrow-right-line"></i>
                           </div>
                         </div>
                       </div>
@@ -805,14 +650,7 @@
                         <div class="link-style-2">
                           <div class="link-text-3">Melléklet(ek)</div>
                           <div class="trailing-icon">
-                            <img 
-                              src="src/images/arrow-right.svg" 
-                              loading="lazy" 
-                              width="14" 
-                              height="14" 
-                              alt="Arrow" 
-                              class="icon-arrow-right-line"
-                            />
+                            <i class="ri-arrow-right-s-fill icon-arrow-right-line"></i>
                           </div>
                         </div>
                       </div>
@@ -842,14 +680,7 @@
                         <div class="link-style-2">
                           <div class="link-text-3">Indoklás(ok)</div>
                           <div class="trailing-icon">
-                            <img 
-                              src="src/images/icon-arrow-right-line.svg" 
-                              loading="lazy" 
-                              width="14" 
-                              height="14" 
-                              alt="Arrow" 
-                              class="icon-arrow-right-line"
-                            />
+                            <i class="ri-arrow-right-fill icon-arrow-right-line"></i>
                           </div>
                         </div>
                       </div>
@@ -857,14 +688,7 @@
                         <div class="link-style-2">
                           <div class="link-text-3">Melléklet(ek)</div>
                           <div class="trailing-icon">
-                            <img 
-                              src="src/images/arrow-right.svg" 
-                              loading="lazy" 
-                              width="14" 
-                              height="14" 
-                              alt="Arrow" 
-                              class="icon-arrow-right-line"
-                            />
+                            <i class="ri-arrow-right-s-fill icon-arrow-right-line"></i>
                           </div>
                         </div>
                       </div>
@@ -883,7 +707,7 @@
           <!-- Callout 1 -->
           <div class="callout">
             <div class="icon-container-2">
-              <div class="icon">\e9ab</div>
+              <i class="ri-file-pdf-fill icon"></i>
             </div>
             <div class="content-style">
               <div class="text-3">
@@ -903,14 +727,7 @@
           <!-- Callout 2 -->
           <div class="callout">
             <div class="icon-container-2">
-              <img 
-                src="src/images/sidebar-icon.svg" 
-                loading="lazy" 
-                width="24" 
-                height="24" 
-                alt="Icon" 
-                class="icon"
-              />
+              <i class="ri-information-fill icon"></i>
             </div>
             <div class="content-style">
               <div class="text-3">
@@ -930,7 +747,7 @@
           <!-- Callout 3 -->
           <div class="callout">
             <div class="icon-container-2">
-              <div class="icon">ri-menu-line</div>
+              <i class="ri-menu-fill icon"></i>
             </div>
             <div class="content-style">
               <div class="text-3">
@@ -950,14 +767,7 @@
           <!-- Callout 4 -->
           <div class="callout">
             <div class="icon-container-2">
-              <img 
-                src="src/images/sidebar-icon.svg" 
-                loading="lazy" 
-                width="24" 
-                height="24" 
-                alt="Icon" 
-                class="icon"
-              />
+              <i class="ri-information-fill icon"></i>
             </div>
             <div class="content-style">
               <div class="text-3">
@@ -977,14 +787,7 @@
           <!-- Callout 5 -->
           <div class="callout">
             <div class="icon-container-2">
-              <img 
-                src="src/images/sidebar-icon.svg" 
-                loading="lazy" 
-                width="24" 
-                height="24" 
-                alt="Icon" 
-                class="icon"
-              />
+              <i class="ri-information-fill icon"></i>
             </div>
             <div class="content-style">
               <div class="text-3">
