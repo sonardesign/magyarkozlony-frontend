@@ -1,0 +1,189 @@
+@use '../variables' as *;
+
+// ==============================================
+// KOZLONY PAGE LAYOUT STYLES
+// ==============================================
+
+.kozlony-header {
+  background-color: #ffffff;
+  padding: 40px 0;
+  border-bottom: 1px solid #e9edf2;
+  
+  &__title {
+    font-family: $font-family-primary;
+    font-size: 36px;
+    font-weight: $font-weight-bold;
+    color: #000000;
+    margin: 0;
+  }
+  
+  @include media-max-md {
+    padding: 32px 0;
+    
+    &__title {
+      font-size: 28px;
+    }
+  }
+}
+
+.welcome-section {
+  background-color: #d9fcf0;
+  padding: 80px 0;
+  
+  &__title {
+    font-family: $font-family-primary;
+    font-size: 48px;
+    font-weight: $font-weight-bold;
+    color: #000000;
+    margin: 0 0 24px 0;
+    line-height: 1.2;
+  }
+  
+  &__text {
+    font-family: $font-family-primary;
+    font-size: 18px;
+    line-height: 1.7;
+    color: #000000;
+    max-width: 980px;
+    margin: 0;
+  }
+  
+  @include media-max-md {
+    padding: 48px 0;
+    
+    &__title {
+      font-size: 32px;
+      margin-bottom: 16px;
+    }
+    
+    &__text {
+      font-size: 16px;
+    }
+  }
+}
+
+.main-content {
+  background-color: #f5f7fa;
+  padding: 80px 0;
+  
+  @include media-max-md {
+    padding: 48px 0;
+  }
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 64px;
+  
+  @include media-max-lg {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+}
+
+.section-title {
+  font-family: $font-family-primary;
+  font-size: 32px;
+  font-weight: $font-weight-bold;
+  color: #000000;
+  margin: 0 0 40px 0;
+  
+  @include media-max-md {
+    font-size: 24px;
+    margin-bottom: 24px;
+  }
+}
+
+.section-featured {
+  margin-bottom: 80px;
+  
+  @include media-max-md {
+    margin-bottom: 48px;
+  }
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 40px;
+  
+  &__button {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #d1d7df;
+    background: #ffffff;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: $font-family-primary;
+    font-size: 14px;
+    font-weight: $font-weight-medium;
+    color: #000000;
+    transition: all $transition-speed;
+    
+    &:hover {
+      background-color: #f5f7fa;
+      border-color: #000000;
+    }
+    
+    &--active {
+      background-color: #000000;
+      color: #ffffff;
+      border-color: #000000;
+    }
+  }
+  
+  @include media-max-md {
+    margin-top: 32px;
+  }
+}
+
+.footer {
+  background-color: #0b3d3e;
+  color: #ffffff;
+  padding: 64px 0 40px;
+  
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 48px;
+    flex-wrap: wrap;
+    gap: 32px;
+  }
+  
+  &__link {
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: $font-weight-medium;
+    transition: opacity $transition-speed;
+    
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+  
+  &__copyright {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.7;
+    margin: 0;
+  }
+  
+  @include media-max-md {
+    padding: 48px 0 32px;
+    
+    &__nav {
+      flex-direction: column;
+      gap: 16px;
+      margin-bottom: 32px;
+    }
+    
+    &__copyright {
+      font-size: 12px;
+    }
+  }
+}
+

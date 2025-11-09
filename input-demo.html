@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Input Component Demo - NJT Design System</title>
+  <link rel="stylesheet" href="/src/styles/main.scss">
+  <style>
+    .demo-section {
+      margin-bottom: 48px;
+    }
+    .demo-section h2 {
+      margin-bottom: 24px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid #e9edf2;
+    }
+    .demo-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 32px;
+      margin-bottom: 32px;
+    }
+    .demo-item {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .demo-label {
+      font-size: 12px;
+      font-weight: 700;
+      color: #1c1f26;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+  </style>
+</head>
+<body>
+  <main class="main">
+    <div class="container" style="padding-top: 40px; padding-bottom: 40px;">
+      <h1>Input Component Demo</h1>
+      <p style="margin-bottom: 40px; color: #606b7a;">All input variants based on NJT Design System</p>
+
+      <!-- BASIC INPUTS - SMALL SIZE -->
+      <section class="demo-section">
+        <h2>Small Inputs - All States</h2>
+        <div class="demo-grid">
+          <!-- Enabled -->
+          <div class="demo-item">
+            <span class="demo-label">Enabled</span>
+            <div class="input-group">
+              <label class="input-group__label">Label</label>
+              <input type="text" class="input" placeholder="Some text">
+            </div>
+          </div>
+          
+          <!-- Error -->
+          <div class="demo-item">
+            <span class="demo-label">Error</span>
+            <div class="input-group">
+              <label class="input-group__label">Label</label>
+              <input type="text" class="input input--error" placeholder="Some text">
+              <span class="input-group__feedback input-group__feedback--error">Feedback message</span>
+            </div>
+          </div>
+          
+          <!-- Success -->
+          <div class="demo-item">
+            <span class="demo-label">Success</span>
+            <div class="input-group">
+              <label class="input-group__label">Label</label>
+              <input type="text" class="input input--success" placeholder="Some text">
+              <span class="input-group__feedback input-group__feedback--success">Feedback message</span>
+            </div>
+          </div>
+          
+          <!-- Read-only -->
+          <div class="demo-item">
+            <span class="demo-label">Read-only</span>
+            <div class="input-group">
+              <label class="input-group__label">Label</label>
+              <input type="text" class="input" placeholder="Some text" readonly value="Some text">
+            </div>
+          </div>
+          
+          <!-- Disabled -->
+          <div class="demo-item">
+            <span class="demo-label">Disabled</span>
+            <div class="input-group">
+              <label class="input-group__label">Label</label>
+              <input type="text" class="input" placeholder="Some text" disabled>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- BASIC INPUTS - LARGE SIZE -->
+      <section class="demo-section">
+        <h2>Large Inputs - All States</h2>
+        <div class="demo-grid">
+          <!-- Enabled -->
+          <div class="demo-item">
+            <span class="demo-label">Enabled</span>
+            <div class="input-group">
+              <label class="input-group__label">Label</label>
+              <input type="text" class="input input--large" placeholder="Some text">
+            </div>
+          </div>
+          
+          <!-- Error -->
+          <div class="demo-item">
+            <span class="demo-label">Error</span>
+            <div class="input-group">
+              <label class="input-group__label">Label</label>
+              <input type="text" class="input input--large input--error" placeholder="Some text">
+              <span class="input-group__feedback input-group__feedback--error">Feedback message</span>
+            </div>
+          </div>
+          
+          <!-- Success -->
+          <div class="demo-item">
+            <span class="demo-label">Success</span>
+            <div class="input-group">
+              <label class="input-group__label">Label</label>
+              <input type="text" class="input input--large input--success" placeholder="Some text">
+              <span class="input-group__feedback input-group__feedback--success">Feedback message</span>
+            </div>
+          </div>
+          
+          <!-- Disabled -->
+          <div class="demo-item">
+            <span class="demo-label">Disabled</span>
+            <div class="input-group">
+              <label class="input-group__label">Label</label>
+              <input type="text" class="input input--large" placeholder="Some text" disabled>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- INPUT TYPES -->
+      <section class="demo-section">
+        <h2>Input Types</h2>
+        <div class="demo-grid">
+          <!-- Email -->
+          <div class="input-group">
+            <label class="input-group__label" for="email">Email</label>
+            <input type="email" id="email" class="input" placeholder="email@example.com">
+          </div>
+          
+          <!-- Password -->
+          <div class="input-group">
+            <label class="input-group__label" for="password">Password</label>
+            <input type="password" id="password" class="input" placeholder="Enter password">
+          </div>
+          
+          <!-- Number -->
+          <div class="input-group">
+            <label class="input-group__label" for="number">Number</label>
+            <input type="number" id="number" class="input" placeholder="0">
+          </div>
+          
+          <!-- Tel -->
+          <div class="input-group">
+            <label class="input-group__label" for="tel">Phone</label>
+            <input type="tel" id="tel" class="input" placeholder="+36 30 123 4567">
+          </div>
+          
+          <!-- Date -->
+          <div class="input-group">
+            <label class="input-group__label" for="date">Date</label>
+            <input type="date" id="date" class="input">
+          </div>
+          
+          <!-- Time -->
+          <div class="input-group">
+            <label class="input-group__label" for="time">Time</label>
+            <input type="time" id="time" class="input">
+          </div>
+        </div>
+      </section>
+
+      <!-- TEXTAREA -->
+      <section class="demo-section">
+        <h2>Textarea</h2>
+        <div class="demo-grid">
+          <!-- Normal -->
+          <div class="input-group">
+            <label class="input-group__label" for="textarea">Message</label>
+            <textarea id="textarea" class="textarea" placeholder="Enter your message..."></textarea>
+          </div>
+          
+          <!-- Error state -->
+          <div class="input-group">
+            <label class="input-group__label" for="textarea-error">Message (Error)</label>
+            <textarea id="textarea-error" class="textarea input--error" placeholder="Enter your message..."></textarea>
+            <span class="input-group__feedback input-group__feedback--error">This field is required</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- SEARCH INPUT -->
+      <section class="demo-section">
+        <h2>Search Input</h2>
+        <div class="demo-grid">
+          <div class="input-group">
+            <label class="input-group__label" for="search">Search</label>
+            <div class="input-search">
+              <span class="input-search__icon">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"/>
+                </svg>
+              </span>
+              <input type="search" id="search" class="input" placeholder="Search...">
+              <button type="button" class="input-search__clear" aria-label="Clear search">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- INPUT WITH ADDONS -->
+      <section class="demo-section">
+        <h2>Input with Prefix/Suffix</h2>
+        <div class="demo-grid">
+          <!-- Prefix -->
+          <div class="input-group">
+            <label class="input-group__label">Website</label>
+            <div class="input-addon">
+              <span class="input-addon__prefix">https://</span>
+              <input type="text" class="input" placeholder="example.com">
+            </div>
+          </div>
+          
+          <!-- Suffix -->
+          <div class="input-group">
+            <label class="input-group__label">Price</label>
+            <div class="input-addon">
+              <input type="number" class="input" placeholder="0">
+              <span class="input-addon__suffix">Ft</span>
+            </div>
+          </div>
+          
+          <!-- Both -->
+          <div class="input-group">
+            <label class="input-group__label">Amount</label>
+            <div class="input-addon">
+              <span class="input-addon__prefix">$</span>
+              <input type="number" class="input" placeholder="0.00">
+              <span class="input-addon__suffix">USD</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- INPUT ROW -->
+      <section class="demo-section">
+        <h2>Input Row (Multiple Inputs)</h2>
+        <div class="input-row">
+          <div class="input-group">
+            <label class="input-group__label">First Name</label>
+            <input type="text" class="input" placeholder="John">
+          </div>
+          <div class="input-group">
+            <label class="input-group__label">Last Name</label>
+            <input type="text" class="input" placeholder="Doe">
+          </div>
+        </div>
+        
+        <div class="input-row">
+          <div class="input-group">
+            <label class="input-group__label">City</label>
+            <input type="text" class="input" placeholder="Budapest">
+          </div>
+          <div class="input-group">
+            <label class="input-group__label">Postal Code</label>
+            <input type="text" class="input" placeholder="1011">
+          </div>
+          <div class="input-group">
+            <label class="input-group__label">Country</label>
+            <input type="text" class="input" placeholder="Hungary">
+          </div>
+        </div>
+      </section>
+
+      <!-- REQUIRED FIELD -->
+      <section class="demo-section">
+        <h2>Required Fields</h2>
+        <div class="demo-grid">
+          <div class="input-group">
+            <label class="input-group__label input-group__label--required">Username</label>
+            <input type="text" class="input" placeholder="Enter username" required>
+          </div>
+          
+          <div class="input-group">
+            <label class="input-group__label input-group__label--required">Email</label>
+            <input type="email" class="input" placeholder="email@example.com" required>
+          </div>
+        </div>
+      </section>
+
+      <!-- INTERACTIVE FORM -->
+      <section class="demo-section">
+        <h2>Interactive Form Example</h2>
+        <form id="demoForm" style="max-width: 600px;">
+          <div class="input-group">
+            <label class="input-group__label input-group__label--required" for="form-name">Full Name</label>
+            <input type="text" id="form-name" class="input" placeholder="Enter your name" required>
+          </div>
+          
+          <div class="input-group">
+            <label class="input-group__label input-group__label--required" for="form-email">Email</label>
+            <input type="email" id="form-email" class="input" placeholder="email@example.com" required>
+          </div>
+          
+          <div class="input-group">
+            <label class="input-group__label" for="form-message">Message</label>
+            <textarea id="form-message" class="textarea" placeholder="Your message..." rows="5"></textarea>
+          </div>
+          
+          <div style="margin-top: 24px;">
+            <button type="submit" class="btn btn--primary">Submit</button>
+            <button type="reset" class="btn btn--secondary" style="margin-left: 12px;">Reset</button>
+          </div>
+        </form>
+      </section>
+    </div>
+  </main>
+
+  <script type="module" src="/src/main.js"></script>
+  <script>
+    // Form validation demo
+    const form = document.getElementById('demoForm');
+    
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      
+      const inputs = form.querySelectorAll('.input, .textarea');
+      let isValid = true;
+      
+      inputs.forEach(input => {
+        const group = input.closest('.input-group');
+        const existingFeedback = group.querySelector('.input-group__feedback');
+        
+        // Remove existing feedback
+        if (existingFeedback) {
+          existingFeedback.remove();
+        }
+        
+        // Remove error state
+        input.classList.remove('input--error', 'input--success');
+        
+        // Validate
+        if (input.hasAttribute('required') && !input.value.trim()) {
+          input.classList.add('input--error');
+          const feedback = document.createElement('span');
+          feedback.className = 'input-group__feedback input-group__feedback--error';
+          feedback.textContent = 'This field is required';
+          group.appendChild(feedback);
+          isValid = false;
+        } else if (input.type === 'email' && input.value && !input.value.includes('@')) {
+          input.classList.add('input--error');
+          const feedback = document.createElement('span');
+          feedback.className = 'input-group__feedback input-group__feedback--error';
+          feedback.textContent = 'Please enter a valid email';
+          group.appendChild(feedback);
+          isValid = false;
+        } else if (input.value.trim()) {
+          input.classList.add('input--success');
+          const feedback = document.createElement('span');
+          feedback.className = 'input-group__feedback input-group__feedback--success';
+          feedback.textContent = 'Looks good!';
+          group.appendChild(feedback);
+        }
+      });
+      
+      if (isValid) {
+        alert('Form submitted successfully!');
+        form.reset();
+        // Remove all feedback
+        form.querySelectorAll('.input-group__feedback').forEach(f => f.remove());
+        form.querySelectorAll('.input, .textarea').forEach(i => {
+          i.classList.remove('input--error', 'input--success');
+        });
+      }
+    });
+    
+    // Clear search demo
+    document.querySelectorAll('.input-search__clear').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const input = btn.closest('.input-search').querySelector('input');
+        input.value = '';
+        input.focus();
+      });
+    });
+  </script>
+</body>
+</html>
+
