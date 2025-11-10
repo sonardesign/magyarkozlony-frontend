@@ -13,10 +13,11 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  position: relative;
+  overflow: hidden;
   width: 100%;
   text-decoration: none;
   display: flex;
-  overflow: hidden;
 }
 
 .main-nav {
@@ -147,7 +148,7 @@
 }
 
 .justicia {
-  z-index: 1;
+  z-index: 0;
   position: absolute;
   top: -42px;
   right: 10%;

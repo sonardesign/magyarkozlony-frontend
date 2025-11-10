@@ -11957,10 +11957,11 @@ textarea.w-select {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  position: relative;
+  overflow: hidden;
   width: 100%;
   text-decoration: none;
   display: flex;
-  overflow: hidden;
 }
 
 .main-nav {
@@ -12086,7 +12087,7 @@ textarea.w-select {
 }
 
 .justicia {
-  z-index: 1;
+  z-index: 0;
   position: absolute;
   top: -42px;
   right: 10%;
@@ -12891,7 +12892,7 @@ textarea.w-select {
   font-size: 20px;
   transition: transform 0.2s ease;
   flex-shrink: 0;
-  color: white;
+  color: #404753;
 }
 .dropdown-trigger.dropdown-open .dropdown-arrow {
   transform: rotate(180deg);

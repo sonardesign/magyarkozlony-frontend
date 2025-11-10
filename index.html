@@ -225,15 +225,50 @@
                   <div class="w-layout-vflex input-blocks-1st">
                     <div class="w-layout-vflex input-group _120">
                       <label for="year" class="label inverted">Év</label>
-                      <input 
-                        class="input-field w-input" 
-                        maxlength="256" 
-                        name="year" 
-                        data-name="Year" 
-                        placeholder="ÉÉÉÉ" 
-                        type="text" 
-                        id="year"
-                      />
+                      <div class="dropdown-wrapper">
+                        <button 
+                          type="button"
+                          id="year-dropdown-trigger" 
+                          class="input-field w-select dropdown-trigger" 
+                          data-dropdown="year-dropdown"
+                          aria-haspopup="true"
+                          aria-expanded="false"
+                        >
+                          <span class="dropdown-selected-text">2025</span>
+                          <i class="ri-arrow-down-s-line dropdown-arrow"></i>
+                        </button>
+                        <input type="hidden" id="year" name="year" value="2025">
+                        <div id="year-dropdown" class="dropdown-menu" role="menu">
+                          <div class="dropdown-item" data-value="2025">2025</div>
+                          <div class="dropdown-item" data-value="2024">2024</div>
+                          <div class="dropdown-item" data-value="2023">2023</div>
+                          <div class="dropdown-item" data-value="2022">2022</div>
+                          <div class="dropdown-item" data-value="2021">2021</div>
+                          <div class="dropdown-item" data-value="2020">2020</div>
+                          <div class="dropdown-item" data-value="2019">2019</div>
+                          <div class="dropdown-item" data-value="2018">2018</div>
+                          <div class="dropdown-item" data-value="2017">2017</div>
+                          <div class="dropdown-item" data-value="2016">2016</div>
+                          <div class="dropdown-item" data-value="2015">2015</div>
+                          <div class="dropdown-item" data-value="2014">2014</div>
+                          <div class="dropdown-item" data-value="2013">2013</div>
+                          <div class="dropdown-item" data-value="2012">2012</div>
+                          <div class="dropdown-item" data-value="2011">2011</div>
+                          <div class="dropdown-item" data-value="2010">2010</div>
+                          <div class="dropdown-item" data-value="2009">2009</div>
+                          <div class="dropdown-item" data-value="2008">2008</div>
+                          <div class="dropdown-item" data-value="2007">2007</div>
+                          <div class="dropdown-item" data-value="2006">2006</div>
+                          <div class="dropdown-item" data-value="2005">2005</div>
+                          <div class="dropdown-item" data-value="2004">2004</div>
+                          <div class="dropdown-item" data-value="2003">2003</div>
+                          <div class="dropdown-item" data-value="2002">2002</div>
+                          <div class="dropdown-item" data-value="2001">2001</div>
+                          <div class="dropdown-item" data-value="2000">2000</div>
+                          <div class="dropdown-item" data-value="1999">1999</div>
+                          <div class="dropdown-item" data-value="1998">1998</div>
+                        </div>
+                      </div>
                     </div>
                     <div class="w-layout-vflex input-group _120">
                       <label for="month" class="label inverted">Hónap</label>
@@ -248,7 +283,7 @@
                           aria-expanded="false"
                         >
                           <span class="dropdown-selected-text">Január</span>
-                          <i class="ri-arrow-down-s-fill dropdown-arrow"></i>
+                          <i class="ri-arrow-down-s-line dropdown-arrow"></i>
                         </button>
                         <input type="hidden" id="month" name="month" value="01">
                         <div id="month-dropdown" class="dropdown-menu" role="menu">
