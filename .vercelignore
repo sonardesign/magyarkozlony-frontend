@@ -1,11 +1,8 @@
 # Dependencies
 node_modules/
 
-# Development files
-src/scss/
+# Development files (keep these for build process, exclude from final output in build.js)
 watch-and-bust.js
-cache-bust.js
-build.js
 vite.config.js
 
 # Documentation
