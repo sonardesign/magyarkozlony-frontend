@@ -12454,25 +12454,50 @@ textarea.w-select {
   grid-column-gap: 16px;
   grid-row-gap: 16px;
   flex-flow: column;
-  width: 30%;
   display: flex;
+}
+@media screen and (min-width: 479px), (min-width: 767px) {
+  .sidebar {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 991px), (min-width: 1200px) {
+  .sidebar {
+    width: 30%;
+  }
+}
+@media screen and (min-width: 991px), (min-width: 1200px) {
+  .sidebar .callout {
+    max-width: 440px;
+  }
+}
+@media screen and (min-width: 479px), (min-width: 767px) {
+  .sidebar .callout {
+    width: 100%;
+  }
 }
 
 .callout {
   grid-column-gap: 12px;
-  -webkit-backdrop-filter: blur(7px);
-  backdrop-filter: blur(7px);
-  background-color: #d9fcf0;
-  border: 1px solid #2ebf96;
   border-radius: 8px;
   justify-content: flex-start;
   align-items: flex-start;
   width: 100%;
-  max-width: 440px;
   padding: 12px;
   text-decoration: none;
   display: flex;
   overflow: hidden;
+}
+.callout.green {
+  background-color: #d9fcf0;
+  border: 1px solid #2ebf96;
+}
+.callout.green .text-4,
+.callout.green .link-text-4 {
+  color: #0b3d3e;
+}
+.callout.green .icon {
+  color: #0b3d3e;
 }
 
 .icon-container-2 {
@@ -12508,7 +12533,6 @@ textarea.w-select {
 }
 
 .text-4 {
-  color: #0b3d3e;
   width: 100%;
   margin-top: 0;
   margin-bottom: 0;
@@ -12539,7 +12563,6 @@ textarea.w-select {
 }
 
 .link-text-4 {
-  color: #0b3d3e;
   text-align: center;
   margin-top: 0;
   margin-bottom: 0;
@@ -12550,14 +12573,6 @@ textarea.w-select {
   text-decoration: none;
 }
 
-@media screen and (max-width: 479px) {
-  .sidebar {
-    width: 100%;
-  }
-  .callout {
-    max-width: 100%;
-  }
-}
 .footer {
   flex-direction: column;
   justify-content: center;
@@ -12756,7 +12771,14 @@ textarea.w-select {
   height: 40px;
   padding: 4px 8px;
   font-weight: 600;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.2s;
   display: flex;
+}
+.menu-item-mobile:hover {
+  background-color: rgba(56, 224, 177, 0.8);
+  color: #0b3d3e;
 }
 .menu-item-mobile.active {
   background-color: #38e0b1;

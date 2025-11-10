@@ -4,13 +4,16 @@
   "description": "Magyar Közlöny - Official Hungarian Gazette Website",
   "type": "module",
   "scripts": {
-    "dev": "npm run scss:watch",
-    "build": "npm run scss:build",
+    "dev": "npm run cache-bust && concurrently \"npm run scss:watch\" \"node watch-and-bust.js\" \"npm run serve\" --names \"SCSS,BUST,VITE\" --prefix-colors \"cyan,magenta,green\"",
+    "build": "npm run scss:build && npm run cache-bust",
     "preview": "vite preview",
-    "scss:dev": "sass src/scss/main.scss:src/css/main.css --style=expanded --source-map",
+    "scss:dev": "sass src/scss/main.scss:src/css/main.css --style=expanded --source-map && npm run cache-bust",
     "scss:build": "sass src/scss/main.scss:src/css/main.css --style=compressed --no-source-map",
     "scss:watch": "sass --watch src/scss/main.scss:src/css/main.css --style=expanded --source-map",
-    "serve": "vite"
+    "serve": "vite",
+    "cache-bust": "node cache-bust.js",
+    "clean": "rm -rf dist node_modules/.vite",
+    "force-refresh": "npm run clean && npm run cache-bust && npm run scss:dev"
   },
   "keywords": [
     "magyar-kozlony",
@@ -22,6 +25,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "concurrently": "^8.2.2",
     "sass": "^1.69.5",
     "vite": "^5.0.8"
   }

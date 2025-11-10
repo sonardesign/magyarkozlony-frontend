@@ -76,7 +76,15 @@
   height: 40px;
   padding: 4px 8px;
   font-weight: 600;
+  text-decoration: none;
+  color: inherit;
+  transition: all $transition-fast;
   display: flex;
+  
+  &:hover {
+    background-color: rgba($color-accent-500, 0.8);
+    color: $color-teal-1600;
+  }
   
   &.active {
     background-color: $color-accent-500;
