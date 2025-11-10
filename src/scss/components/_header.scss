@@ -118,14 +118,14 @@
 
 
 .menu-icons {
-  grid-row-gap: 10px;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-end;
   width: 100%;
   max-width: 260px;
+  gap: $spacing-16;
   text-decoration: none;
-  display: flex;
 }
 
 .icons-wrapper {
@@ -133,26 +133,44 @@
   justify-content: flex-end;
   align-items: center;
   width: 100%;
+  height: 100%;
   text-decoration: none;
   display: flex;
 
   i{
+    display: flex;
     width: 40px;
     height: 40px;
-    display: flex;
     align-items: center;
     justify-content: center;
     color: $color-font-inverse;
     cursor: pointer;
   }
+
+  i.outline-icon {
+    border: 1px solid $color-font-inverse;
+    border-radius: 999rem;
+  }
+
+
+  .menu-icon {
+    width: 40px;
+    height: 40px;
+  
+    @media screen and (min-width: $breakpoint-tiny), (min-width: $breakpoint-small) {
+      display: flex;
+    }
+  
+    @media screen and (min-width: $breakpoint-medium), (min-width: $breakpoint-large) {
+      display: none;
+    }
+  }
+
 }
 
 
-.menu-icon {
-  width: 40px;
-  height: 40px;
-  display: none;
-}
+
+
 
 .justicia {
   z-index: 0;
@@ -180,21 +198,6 @@
   }
 }
 
-@include respond-to-small {
-  .main-menu {
-    display: none;
-  }
-  
-  // Show only the mobile menu trigger icon on small screens
-  .menu-icon {
-    display: inline-flex;
-  }
-  
-  // Hide other menu icons on small screens
-  .menu-icons .icons-wrapper {
-    display: none;
-  }
-}
 
 @include respond-to-tiny {
   .justicia {
