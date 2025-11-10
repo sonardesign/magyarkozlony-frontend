@@ -129,20 +129,16 @@
   display: flex;
 
   i{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: $color-font-inverse;
+    cursor: pointer;
   }
 }
 
-.frame-5 {
-  grid-column-gap: 10px;
-  justify-content: center;
-  align-items: center;
-  width: 48px;
-  height: 48px;
-  padding: 10px;
-  text-decoration: none;
-  display: flex;
-}
 
 .menu-icon {
   width: 40px;

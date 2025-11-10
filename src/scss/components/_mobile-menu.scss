@@ -177,6 +177,12 @@
     z-index: $z-index-mobile-menu;
     display: none;
     position: fixed;
+    transition: opacity 0.3s ease;
+    opacity: 0;
+    
+    &.is-open {
+      opacity: 1;
+    }
   }
   
   .mobile-menu-header {

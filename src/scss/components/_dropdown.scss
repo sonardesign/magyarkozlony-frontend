@@ -1,0 +1,152 @@
+// ============================================
+// Dropdown Component
+// ============================================
+// Custom dropdown styling that matches the design system
+
+@use '../abstracts' as *;
+
+// Dropdown Wrapper
+.dropdown-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+// Dropdown Trigger (button that looks like input)
+.dropdown-trigger {
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: $spacing-8;
+  position: relative;
+  
+  // Make sure the text doesn't overlap with the arrow
+  .dropdown-selected-text {
+    font-family: $font-primary;
+    font-size: $font-size-16;
+    font-weight: 400;
+    color: $color-font-primary;
+    flex: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  
+  // Arrow icon
+  .dropdown-arrow {
+    font-size: 20px;
+    transition: transform 0.2s ease;
+    flex-shrink: 0;
+    color: $color-font-inverse;
+  }
+  
+  // When dropdown is open
+  &.dropdown-open {
+    .dropdown-arrow {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+// Dropdown Menu
+.dropdown-menu {
+  background: $color-gray-light;
+  border: 1px solid $color-border;
+  border-radius: $border-radius-m;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  padding: $spacing-4;
+  overflow: hidden;
+  overflow-y: auto;
+  max-height: 300px;
+  z-index: $z-index-dropdown;
+  
+  // Custom scrollbar
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  &::-webkit-scrollbar-track {
+    background: #f5f5f5;
+  }
+  
+  &::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 4px;
+    
+    &:hover {
+      background: #999;
+    }
+  }
+}
+
+// Dropdown Items
+.dropdown-item {
+  padding: $spacing-12 $spacing-16;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease;
+  font-size: $font-size-16;
+  font-family: $font-primary;
+  color: $color-font-primary;
+  border-radius: $border-radius-s;
+  display: flex;
+  align-items: center;
+  gap: $spacing-8;
+  outline: none;
+  position: relative;
+
+  
+  // Hover state
+  &:hover,
+  &.is-focused {
+    background: rgba(255, 255, 255, 0.1);
+  }
+  
+  // Active/pressed state
+  &:active {
+    background: rgba(255, 255, 255, 0.15);
+  }
+  
+  // Focused state (keyboard navigation)
+  &.is-focused {
+    outline: 2px solid $color-accent-500;
+    outline-offset: -2px;
+  }
+  
+  // Selected/active state
+  &.is-active {
+    background: $color-accent-500;
+    font-weight: 600;
+    color: $color-teal-1600;
+    padding-right: $spacing-48; // Make room for checkmark
+    
+    &::after {
+      content: '✓';
+      position: absolute;
+      right: $spacing-16;
+      font-size: $font-size-16;
+      color: $color-teal-1600;
+      font-weight: 700;
+    }
+    
+    // Focused + selected
+    &.is-focused {
+      outline-color: $color-teal-1600;
+    }
+  }
+  
+  // Icon inside dropdown items
+  i {
+    font-size: 18px;
+    color: currentColor;
+  }
+}
+
+// Dropdown Divider (optional)
+.dropdown-divider {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.1);
+  margin: $spacing-4 0;
+}

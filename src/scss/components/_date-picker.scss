@@ -1,0 +1,49 @@
+// ============================================
+// Date Picker Component
+// ============================================
+
+@use '../abstracts' as *;
+
+.date-input {
+  padding: $spacing-12 $spacing-16;
+  border: 1px solid #e2e2e2;
+  border-radius: $border-radius-s;
+  font-size: $font-size-14;
+  font-family: $font-primary;
+  cursor: pointer;
+  transition: border-color $transition-fast, box-shadow $transition-fast;
+  background: $color-white;
+  width: 100%;
+  
+  &::placeholder {
+    color: #999;
+  }
+  
+  &:hover {
+    border-color: $color-teal-1600;
+  }
+  
+  &:focus {
+    outline: none;
+    border-color: $color-accent-500;
+    box-shadow: 0 0 0 3px rgba(56, 224, 177, 0.1);
+  }
+}
+
+// Calendar styles are inline in JS for maximum portability
+// Add these if you need custom styling beyond JS
+
+.datepicker-calendar {
+  .datepicker-day {
+    &:hover {
+      background: #f5f5f5 !important;
+    }
+    
+    &.selected {
+      background: $color-accent-500 !important;
+      color: $color-teal-1600 !important;
+      font-weight: 600;
+    }
+  }
+}
+
