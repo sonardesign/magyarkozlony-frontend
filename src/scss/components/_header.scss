@@ -159,6 +159,10 @@
     display: none;
   }
   
+  .main-menu-items {
+    display: none;
+  }
+  
   .justicia {
     max-width: 80%;
     left: 10%;
@@ -174,14 +178,32 @@
     display: none;
   }
   
+  // Show only the mobile menu trigger icon on small screens
   .menu-icon {
     display: inline-flex;
+  }
+  
+  // Hide other menu icons on small screens
+  .menu-icons .icons-wrapper {
+    display: none;
   }
 }
 
 @include respond-to-tiny {
   .justicia {
     max-width: 210%;
+  }
+}
+
+// Hide main menu items on medium and large breakpoints (desktop)
+@include respond-from-medium {
+  .main-menu-items {
+    display: none;
+  }
+  
+  // Hide the mobile menu trigger on desktop
+  .menu-icon {
+    display: none;
   }
 }
 

@@ -1,0 +1,59 @@
+// ============================================
+// Tanusitvanyok Page - Certificate Verification
+// ============================================
+// Page-specific styles for the certificate verification page
+
+@use '../abstracts' as *;
+
+// Tanusitvanyok Form Container
+.tanusitvanyok-form {
+  width: 100%;
+  gap: $spacing-16;
+}
+
+.tanusitvanyok-inputs-container{
+  width: 100%;
+  gap: $spacing-16;
+}
+
+// First Input Row - Year Dropdown
+.tanusitvanyok-inputs {
+  grid-row-gap: $spacing-8;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  display: flex;
+}
+
+// Second Input Row - Month Dropdown
+
+.layout-hflex{
+  display: flex;
+  flex-direction:row;
+}
+
+.layout-vflex{
+  display: flex;
+  flex-direction:column;
+}
+
+
+.button-wrapper-tanusitvanyok{
+  width: 100%;
+  justify-content: flex-end;
+}
+
+// Responsive adjustments
+@include respond-to-small {
+  .tanusitvanyok-form {
+    grid-row-gap: $spacing-12;
+  }
+  
+  .tanusitvanyok-inputs-1,
+  .tanusitvanyok-inputs-2 {
+    width: 100%;
+  }
+}
+
+

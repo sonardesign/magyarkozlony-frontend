@@ -1,0 +1,30 @@
+# Dependencies
+node_modules/
+
+# Development files
+src/scss/
+watch-and-bust.js
+cache-bust.js
+build.js
+vite.config.js
+
+# Documentation
+readmes/
+*.md
+
+# Local development
+.env
+.env.local
+
+# IDE
+.vscode/
+.idea/
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS
+.DS_Store
+Thumbs.db
+
