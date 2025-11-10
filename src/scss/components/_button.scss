@@ -4,62 +4,28 @@
 
 @use '../abstracts' as *;
 
-.button {
-  padding: $spacing-12;
-  grid-row-gap: 10px;
-  font-family: $font-primary;
-  color: $color-teal-1600;
-  border-radius: $border-radius-m;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  text-decoration: none;
-  display: inline-flex;
-  
-  &.primary {
-    background-color: $color-accent-500;
-    transition: opacity $transition-fast;
-    display: inline-flex;
-    
-    &:hover {
-      background-color: $color-accent-600;
-    }
-    
-    &:active {
-      background-color: $color-accent-700;
-    }
-    
-    &:focus {
-      outline-color: $color-accent-500;
-      outline-offset: 2px;
-      outline-width: 2px;
-      outline-style: solid;
-    }
-  }
-  
-  &.outlined {
-    padding-top: $spacing-12;
-    grid-row-gap: 0px;
-    border: 1px solid $color-teal-1600;
-  }
-}
-
-.button-primary {
-  background-color: $color-accent-500;
-  font-family: $font-primary;
-  color: $color-teal-1600;
+.btn{
   font-size: $font-size-16;
   border-radius: $border-radius-m;
   flex: 0 auto;
   justify-content: center;
   align-items: center;
-  min-width: 80px;
-  height: 40px;
-  padding: 4px 12px;
+  min-width: $spacing-80;
+  height: $spacing-40;
+  padding: $spacing-4 $spacing-12;
+  font-family: $font-primary;
   font-weight: 600;
   text-decoration: none;
   display: flex;
-  
+  cursor: pointer;
+  transition: all $transition-fast;  
+}
+
+.button-primary {
+  background-color: $color-accent-500;
+  color: $color-teal-1600;
+  @extend .btn;
+
   &:hover {
     background-color: $color-accent-600;
   }
@@ -77,32 +43,65 @@
 }
 
 .button-outline {
-  border: 1.5px solid #f4f9f8;
-  border-radius: $border-radius-round;
-  justify-content: center;
-  align-items: center;
-  width: 40px;
-  max-width: 40px;
-  height: 40px;
-  max-height: 40px;
-  padding: 16px 12px;
-  text-decoration: none;
-  display: flex;
-  position: relative;
-}
-
-.button-outline-2 {
   border: 1.5px solid $color-teal-1600;
   border-radius: $border-radius-m;
-  flex: 0 auto;
-  justify-content: center;
-  align-items: center;
-  min-width: 80px;
-  height: 40px;
-  padding: 12px;
-  text-decoration: none;
-  display: flex;
-  position: relative;
+  @extend .btn;
+  
+  &:hover {
+    background-color: rgba($color-teal-1600, 0.05);
+    border-color: $color-teal-1800;
+  }
+  
+  &:focus {
+    outline-color: $color-accent-500;
+    outline-offset: 2px;
+    outline-width: 2px;
+    outline-style: solid;
+  }
+}
+
+.button-subtle {
+  background-color: rgba(55, 240, 191, 0.1);
+  flex-shrink: 0;
+  @extend .btn;
+  
+  &:hover {
+    background-color: rgba(55, 240, 191, 0.15);
+  }
+  
+  &:active {
+    background-color: rgba(55, 240, 191, 0.2);
+  }
+  
+  &:focus {
+    outline-color: $color-accent-500;
+    outline-offset: 2px;
+    outline-width: 2px;
+    outline-style: solid;
+  }
+  
+  .label-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 $spacing-4;
+  }
+  
+  .label-text {
+    font-family: $font-primary;
+    font-size: $font-size-16;
+    font-weight: 700;
+    line-height: 1;
+    color: #227b6b;
+    text-align: center;
+  }
+  
+  .high-contrast-border {
+    position: absolute;
+    inset: 0;
+    border: 1px solid transparent;
+    border-radius: $border-radius-m;
+  }
 }
 
 .button-label {
@@ -156,5 +155,12 @@
 
 .high-contrast-mode-border {
   border-radius: $border-radius-round;
+}
+
+// Responsive adjustments for button-subtle
+@include respond-to-small {
+  .button-subtle {
+    width: 100%;
+  }
 }
 

@@ -8,8 +8,7 @@ This directory contains all UI component styles for the Magyar Közlöny website
 Button styles with variants:
 - `.button.primary` - Primary action button
 - `.button-primary` - Alternative primary button
-- `.button-outline` - Outlined button
-- `.button-outline-2` - Alternative outlined button
+- `.button-outline` - Outlined button with border
 
 ### 2. **Header** (`_header.scss`)
 Header and top navigation styles including logo, menu items, and responsive behavior.
@@ -85,6 +84,47 @@ Custom dropdown component with:
 
 ### 12. **Date Picker** (`_date-picker.scss`)
 Date picker component styles.
+
+### 13. **Paginator** (`_paginator.scss`) ✨ NEW
+Pagination navigation component for browsing through multiple pages.
+
+**Structure:**
+```html
+<div class="paginator">
+  <!-- Previous Button (disabled state) -->
+  <button class="paginator-button disabled" disabled aria-label="Previous page">
+    <i class="ri-arrow-left-s-line"></i>
+  </button>
+
+  <!-- Page Numbers -->
+  <a href="#" class="paginator-page active" aria-current="page">1</a>
+  <a href="#" class="paginator-page">2</a>
+  <a href="#" class="paginator-page">3</a>
+  <span class="paginator-page ellipsis">...</span>
+  <a href="#" class="paginator-page">14</a>
+
+  <!-- Next Button (enabled state) -->
+  <button class="paginator-button enabled" aria-label="Next page">
+    <i class="ri-arrow-right-s-line"></i>
+  </button>
+</div>
+```
+
+**Classes:**
+- `.paginator` - Container for pagination
+- `.paginator-button` - Arrow button (prev/next)
+  - `.enabled` - Active arrow (clickable)
+  - `.disabled` - Passive arrow (grayed out)
+- `.paginator-page` - Page number link
+  - `.active` - Current page (bold + underlined)
+  - `.ellipsis` - Three dots separator (...)
+
+**States:**
+- **Disabled button**: Gray background (#a3abba), not clickable
+- **Enabled button**: Teal background, interactive
+- **Active page**: Bold, underlined, current page indicator
+- **Hover states**: Interactive elements change on hover
+- **Focus states**: Accessible keyboard navigation with focus rings
 
 ## Component Guidelines
 

@@ -121,53 +121,6 @@
   }
 }
 
-.button-subtle {
-  background-color: rgba(55, 240, 191, 0.1);
-  border-radius: $border-radius-m;
-  padding: $spacing-12;
-  min-width: 80px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0;
-  position: relative;
-  text-decoration: none;
-  transition: background-color $transition-fast;
-  flex-shrink: 0;
-  
-  &:hover {
-    background-color: rgba(55, 240, 191, 0.15);
-  }
-  
-  &:active {
-    background-color: rgba(55, 240, 191, 0.2);
-  }
-  
-  .label-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0 $spacing-4;
-  }
-  
-  .label-text {
-    font-family: $font-primary;
-    font-size: $font-size-16;
-    font-weight: 700;
-    line-height: 1;
-    color: #227b6b;
-    text-align: center;
-  }
-  
-  .high-contrast-border {
-    position: absolute;
-    inset: 0;
-    border: 1px solid transparent;
-    border-radius: $border-radius-m;
-  }
-}
-
 // ============================================
 // Certificate Listing Layout (similar to homepage)
 // ============================================
@@ -209,10 +162,6 @@
   .tanusitvany-inner {
     flex-direction: column;
     align-items: flex-start;
-  }
-  
-  .button-subtle {
-    width: 100%;
   }
 }
 

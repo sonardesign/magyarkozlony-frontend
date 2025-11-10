@@ -119,7 +119,7 @@
 }
 
 .impressum-links {
-  grid-column-gap: 32px;
+  gap: $spacing-32;
   opacity: 0.8;
   flex: 0 auto;
   justify-content: center;
@@ -131,15 +131,14 @@
   // Tablet: reduce gap
   @include respond-to-medium {
     grid-column-gap: 20px;
-    grid-row-gap: 12px;
+    gap: 12px;
   }
   
   // Mobile: stack links vertically, left align
   @include respond-to-small {
     flex-direction: column;
     align-items: flex-start;
-    grid-column-gap: 0;
-    grid-row-gap: 16px;
+    gap: $spacing-16;
     width: 100%;
   }
 }

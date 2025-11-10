@@ -1,0 +1,187 @@
+// ============================================
+// Paginator Component
+// ============================================
+// Pagination navigation for browsing through pages
+
+@use '../abstracts' as *;
+
+.paginator {
+  display: flex;
+  align-items: center;
+  gap: $spacing-4;
+  justify-content: flex-start;
+}
+
+// Pagination Buttons (arrows)
+.paginator-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  min-width: 32px;
+  min-height: 32px;
+  max-width: 32px;
+  max-height: 32px;
+  padding: $spacing-12 $spacing-8;
+  border-radius: $border-radius-m;
+  border: none;
+  cursor: pointer;
+  transition: background-color $transition-fast;
+  position: relative;
+  
+  // Enabled state (active arrow)
+  &.enabled {
+    background-color: $color-accent-500;
+    
+    &:hover {
+      background-color: $color-accent-600;
+    }
+    
+    &:active {
+      background-color: $color-accent-700;
+    }
+    
+    &:focus {
+      outline-color: $color-accent-500;
+      outline-offset: 2px;
+      outline-width: 2px;
+      outline-style: solid;
+    }
+    
+    i {
+      color: $color-teal-1600;
+    }
+  }
+  
+  // Disabled state (passive arrow)
+  &.disabled {
+    background-color: #a3abba;
+    cursor: not-allowed;
+    pointer-events: none;
+    
+    i {
+      color: $color-white;
+    }
+  }
+  
+  // Icon
+  i {
+    font-size: 16px;
+    line-height: 1;
+  }
+  
+  // High contrast border
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border: 1px solid transparent;
+    border-radius: $border-radius-m;
+    pointer-events: none;
+  }
+}
+
+// Page Numbers
+.paginator-page {
+  font-family: $font-primary;
+  font-size: $font-size-18;
+  font-weight: 500;
+  line-height: 1.5;
+  color: $color-font-primary;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  padding: $spacing-4 $spacing-8;
+  border-radius: $border-radius-s;
+  transition: background-color $transition-fast, color $transition-fast;
+  min-width: 32px;
+  display: inline-block;
+  
+  &:hover {
+    background-color: rgba($color-accent-500, 0.1);
+  }
+  
+  &:focus {
+    outline-color: $color-accent-500;
+    outline-offset: 2px;
+    outline-width: 2px;
+    outline-style: solid;
+  }
+  
+  // Active/Current page
+  &.active {
+    font-weight: 700;
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    text-underline-position: from-font;
+    color: $color-font-primary;
+    cursor: default;
+    
+    &:hover {
+      background-color: transparent;
+    }
+  }
+  
+  // Ellipsis (...)
+  &.ellipsis {
+    cursor: default;
+    pointer-events: none;
+    
+    &:hover {
+      background-color: transparent;
+    }
+  }
+}
+
+// Responsive adjustments
+@include respond-to-small {
+  .paginator {
+    gap: $spacing-12;
+  }
+  
+  .paginator-page {
+    min-width: 28px;
+    font-size: $font-size-16;
+    padding: $spacing-4;
+  }
+  
+  .paginator-button {
+    width: 28px;
+    height: 28px;
+    min-width: 28px;
+    min-height: 28px;
+    max-width: 28px;
+    max-height: 28px;
+    
+    i {
+      font-size: 14px;
+    }
+  }
+}
+
+@include respond-to-tiny {
+  .paginator {
+    gap: $spacing-8;
+  }
+  
+  .paginator-page {
+    min-width: 24px;
+    font-size: $font-size-14;
+  }
+  
+  .paginator-button {
+    width: 24px;
+    height: 24px;
+    min-width: 24px;
+    min-height: 24px;
+    max-width: 24px;
+    max-height: 24px;
+    padding: $spacing-4;
+    
+    i {
+      font-size: 12px;
+    }
+  }
+}
+

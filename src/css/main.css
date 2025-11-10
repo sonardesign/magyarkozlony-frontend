@@ -11516,6 +11516,7 @@ textarea.w-select {
   max-width: 1200px;
   text-decoration: none;
   display: flex;
+  padding: 0 16px;
 }
 
 .w-layout-vflex {
@@ -11769,45 +11770,7 @@ textarea.w-select {
     display: none !important;
   }
 }
-.button {
-  padding: 12px;
-  grid-row-gap: 10px;
-  font-family: Inter, sans-serif;
-  color: #0b3d3e;
-  border-radius: 8px;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  text-decoration: none;
-  display: inline-flex;
-}
-.button.primary {
-  background-color: #38e0b1;
-  transition: opacity 0.2s;
-  display: inline-flex;
-}
-.button.primary:hover {
-  background-color: #33cc9d;
-}
-.button.primary:active {
-  background-color: #2ebf96;
-}
-.button.primary:focus {
-  outline-color: #38e0b1;
-  outline-offset: 2px;
-  outline-width: 2px;
-  outline-style: solid;
-}
-.button.outlined {
-  padding-top: 12px;
-  grid-row-gap: 0px;
-  border: 1px solid #0b3d3e;
-}
-
-.button-primary {
-  background-color: #38e0b1;
-  font-family: Inter, sans-serif;
-  color: #0b3d3e;
+.btn, .button-subtle, .button-outline, .button-primary {
   font-size: 16px;
   border-radius: 8px;
   flex: 0 auto;
@@ -11816,9 +11779,17 @@ textarea.w-select {
   min-width: 80px;
   height: 40px;
   padding: 4px 12px;
+  font-family: Inter, sans-serif;
   font-weight: 600;
   text-decoration: none;
   display: flex;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.button-primary {
+  background-color: #38e0b1;
+  color: #0b3d3e;
 }
 .button-primary:hover {
   background-color: #33cc9d;
@@ -11834,32 +11805,55 @@ textarea.w-select {
 }
 
 .button-outline {
-  border: 1.5px solid #f4f9f8;
-  border-radius: 1000px;
-  justify-content: center;
-  align-items: center;
-  width: 40px;
-  max-width: 40px;
-  height: 40px;
-  max-height: 40px;
-  padding: 16px 12px;
-  text-decoration: none;
-  display: flex;
-  position: relative;
-}
-
-.button-outline-2 {
   border: 1.5px solid #0b3d3e;
   border-radius: 8px;
-  flex: 0 auto;
-  justify-content: center;
-  align-items: center;
-  min-width: 80px;
-  height: 40px;
-  padding: 12px;
-  text-decoration: none;
+}
+.button-outline:hover {
+  background-color: rgba(11, 61, 62, 0.05);
+  border-color: #082F30;
+}
+.button-outline:focus {
+  outline-color: #38e0b1;
+  outline-offset: 2px;
+  outline-width: 2px;
+  outline-style: solid;
+}
+
+.button-subtle {
+  background-color: rgba(55, 240, 191, 0.1);
+  flex-shrink: 0;
+}
+.button-subtle:hover {
+  background-color: rgba(55, 240, 191, 0.15);
+}
+.button-subtle:active {
+  background-color: rgba(55, 240, 191, 0.2);
+}
+.button-subtle:focus {
+  outline-color: #38e0b1;
+  outline-offset: 2px;
+  outline-width: 2px;
+  outline-style: solid;
+}
+.button-subtle .label-container {
   display: flex;
-  position: relative;
+  align-items: center;
+  justify-content: center;
+  padding: 0 4px;
+}
+.button-subtle .label-text {
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1;
+  color: #227b6b;
+  text-align: center;
+}
+.button-subtle .high-contrast-border {
+  position: absolute;
+  inset: 0;
+  border: 1px solid transparent;
+  border-radius: 8px;
 }
 
 .button-label {
@@ -11915,6 +11909,11 @@ textarea.w-select {
   border-radius: 1000px;
 }
 
+@media screen and (max-width: 767px) {
+  .button-subtle {
+    width: 100%;
+  }
+}
 .header {
   grid-row-gap: 10px;
   background-color: #fff;
@@ -12001,6 +12000,7 @@ textarea.w-select {
   text-decoration: none;
   display: flex;
   cursor: pointer;
+  transition: all 0.2s;
 }
 .main-menu-items p, .main-menu-items i {
   color: white;
@@ -12008,6 +12008,12 @@ textarea.w-select {
 .main-menu-items p {
   font-weight: 400;
   font-size: 14px;
+}
+.main-menu-items:hover {
+  background-color: #38e0b1;
+}
+.main-menu-items:hover p, .main-menu-items:hover i {
+  color: #0b3d3e;
 }
 
 .menu-text {
@@ -12589,7 +12595,7 @@ textarea.w-select {
 }
 
 .impressum-links {
-  grid-column-gap: 32px;
+  gap: 32px;
   opacity: 0.8;
   flex: 0 auto;
   justify-content: center;
@@ -12601,15 +12607,14 @@ textarea.w-select {
 @media screen and (max-width: 991px) {
   .impressum-links {
     grid-column-gap: 20px;
-    grid-row-gap: 12px;
+    gap: 12px;
   }
 }
 @media screen and (max-width: 767px) {
   .impressum-links {
     flex-direction: column;
     align-items: flex-start;
-    grid-column-gap: 0;
-    grid-row-gap: 16px;
+    gap: 16px;
     width: 100%;
   }
 }
@@ -13009,6 +13014,154 @@ textarea.w-select {
   font-weight: 600;
 }
 
+.paginator {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  justify-content: flex-start;
+}
+
+.paginator-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  min-width: 32px;
+  min-height: 32px;
+  max-width: 32px;
+  max-height: 32px;
+  padding: 12px 8px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  position: relative;
+}
+.paginator-button.enabled {
+  background-color: #38e0b1;
+}
+.paginator-button.enabled:hover {
+  background-color: #33cc9d;
+}
+.paginator-button.enabled:active {
+  background-color: #2ebf96;
+}
+.paginator-button.enabled:focus {
+  outline-color: #38e0b1;
+  outline-offset: 2px;
+  outline-width: 2px;
+  outline-style: solid;
+}
+.paginator-button.enabled i {
+  color: #0b3d3e;
+}
+.paginator-button.disabled {
+  background-color: #a3abba;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+.paginator-button.disabled i {
+  color: #fff;
+}
+.paginator-button i {
+  font-size: 16px;
+  line-height: 1;
+}
+.paginator-button::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  pointer-events: none;
+}
+
+.paginator-page {
+  font-family: Inter, sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: #404753;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: background-color 0.2s, color 0.2s;
+  min-width: 32px;
+  display: inline-block;
+}
+.paginator-page:hover {
+  background-color: rgba(56, 224, 177, 0.1);
+}
+.paginator-page:focus {
+  outline-color: #38e0b1;
+  outline-offset: 2px;
+  outline-width: 2px;
+  outline-style: solid;
+}
+.paginator-page.active {
+  font-weight: 700;
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+  text-underline-position: from-font;
+  color: #404753;
+  cursor: default;
+}
+.paginator-page.active:hover {
+  background-color: transparent;
+}
+.paginator-page.ellipsis {
+  cursor: default;
+  pointer-events: none;
+}
+.paginator-page.ellipsis:hover {
+  background-color: transparent;
+}
+
+@media screen and (max-width: 767px) {
+  .paginator {
+    gap: 12px;
+  }
+  .paginator-page {
+    min-width: 28px;
+    font-size: 16px;
+    padding: 4px;
+  }
+  .paginator-button {
+    width: 28px;
+    height: 28px;
+    min-width: 28px;
+    min-height: 28px;
+    max-width: 28px;
+    max-height: 28px;
+  }
+  .paginator-button i {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 479px) {
+  .paginator {
+    gap: 8px;
+  }
+  .paginator-page {
+    min-width: 24px;
+    font-size: 14px;
+  }
+  .paginator-button {
+    width: 24px;
+    height: 24px;
+    min-width: 24px;
+    min-height: 24px;
+    max-width: 24px;
+    max-height: 24px;
+    padding: 4px;
+  }
+  .paginator-button i {
+    font-size: 12px;
+  }
+}
 .content {
   grid-column-gap: 32px;
   grid-row-gap: 32px;
@@ -13248,48 +13401,6 @@ textarea.w-select {
   color: #404753;
 }
 
-.button-subtle {
-  background-color: rgba(55, 240, 191, 0.1);
-  border-radius: 8px;
-  padding: 12px;
-  min-width: 80px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0;
-  position: relative;
-  text-decoration: none;
-  transition: background-color 0.2s;
-  flex-shrink: 0;
-}
-.button-subtle:hover {
-  background-color: rgba(55, 240, 191, 0.15);
-}
-.button-subtle:active {
-  background-color: rgba(55, 240, 191, 0.2);
-}
-.button-subtle .label-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0 4px;
-}
-.button-subtle .label-text {
-  font-family: Inter, sans-serif;
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 1;
-  color: #227b6b;
-  text-align: center;
-}
-.button-subtle .high-contrast-border {
-  position: absolute;
-  inset: 0;
-  border: 1px solid transparent;
-  border-radius: 8px;
-}
-
 .certificate-listing {
   grid-column-gap: 32px;
   grid-row-gap: 32px;
@@ -13320,9 +13431,6 @@ textarea.w-select {
   .tanusitvany-inner {
     flex-direction: column;
     align-items: flex-start;
-  }
-  .button-subtle {
-    width: 100%;
   }
 }
 
