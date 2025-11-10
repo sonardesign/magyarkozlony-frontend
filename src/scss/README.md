@@ -29,10 +29,17 @@ scss/
 │   ├── _navigation.scss   # Navigation menus
 │   ├── _search.scss       # Search component
 │   ├── _form.scss         # Form elements
-│   ├── _card.scss         # Card components
-│   ├── _sidebar.scss      # Sidebar & callouts
+│   ├── _card.scss         # Card components (generic)
+│   ├── _callout.scss      # Callout boxes (info boxes)
+│   ├── _sidebar.scss      # Sidebar container
 │   ├── _footer.scss       # Footer
-│   └── _mobile-menu.scss  # Mobile menu
+│   ├── _mobile-menu.scss  # Mobile menu
+│   ├── _dropdown.scss     # Dropdown component
+│   └── _date-picker.scss  # Date picker component
+│
+├── pages/             # Page-specific styles
+│   ├── _home.scss         # Homepage (index.html) specific
+│   └── _tanusitvanyok.scss # Certificates page
 │
 └── main.scss          # Main entry point
 ```

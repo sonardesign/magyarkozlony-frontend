@@ -33,6 +33,7 @@
 @use 'components/search';
 @use 'components/form';
 @use 'components/card';
+@use 'components/callout';
 @use 'components/sidebar';
 @use 'components/footer';
 @use 'components/mobile-menu';
@@ -41,5 +42,6 @@
 
 // 6. Pages - Page-specific styles
 // ============================================
+@use 'pages/home';
 @use 'pages/tanusitvanyok';
 

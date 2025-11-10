@@ -171,18 +171,33 @@
       display: none;
     }
   }
-
 }
 
-
-
-
+// ============================================
+// Justicia Decorative Image
+// ============================================
 
 .justicia {
-  z-index: 0;
-  position: absolute;
-  top: -42px;
-  right: 10%;
+    object-fit: cover;
+    z-index: 0;
+    height: auto;
+    position: absolute;
+    overflow: hidden;
+    
+    // Default styles for Large and Medium breakpoints (>768px)
+    width: 50%;
+    top: -90px;
+    bottom: auto;
+    left: auto;
+    right: 5%;
+    
+    // Small and Tiny breakpoints (<768px)
+    @include respond-to-small {
+        width: 80%;
+        top: -40px;
+        right: 0;
+        left: 0;
+    }
 }
 
 @include respond-to-medium {
@@ -194,32 +209,12 @@
     display: none;
   }
   
-  .justicia {
-    max-width: 80%;
-    left: 10%;
-  }
-  
   .menu-icon {
     display: none;
   }
 }
-
 
 @include respond-to-tiny {
-  .justicia {
-    max-width: 100%;
-  }
-}
-
-// Hide main menu items on medium and large breakpoints (desktop)
-@include respond-from-medium {
-  .main-menu-items {
-    display: none;
-  }
-  
-  // Hide the mobile menu trigger on desktop
-  .menu-icon {
-    display: none;
-  }
+  // Responsive styles for tiny screens
 }
 

@@ -43,6 +43,14 @@
     color: $color-font-primary;
   }
   
+  // Focus state (same as button primary)
+  &:focus {
+    outline-color: $color-accent-500;
+    outline-offset: 2px;
+    outline-width: 2px;
+    outline-style: solid;
+  }
+  
   // When dropdown is open
   &.dropdown-open {
     .dropdown-arrow {

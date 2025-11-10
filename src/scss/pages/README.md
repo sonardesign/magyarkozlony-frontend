@@ -8,7 +8,8 @@ Each page that requires unique styling should have its own SCSS file:
 
 ```
 pages/
-├── _tanusitvanyok.scss    ← Certificate verification page
+├── _home.scss              ← Homepage (index.html)
+├── _tanusitvanyok.scss     ← Certificate verification page
 ├── _segitseg.scss          ← Help page (future)
 ├── _rss.scss               ← RSS page (future)
 └── README.md               ← This file
@@ -91,9 +92,27 @@ Create a new page SCSS file when:
 
 | Page | File | Classes |
 |------|------|---------|
+| Homepage | `_home.scss` | `.gasette-listing`, `.listing`, `.list-items`, `.content`, `.intro-text`, `.justicia`, `.kozlonyszam-*`, `.gasette-link` |
 | Tanúsítványok | `_tanusitvanyok.scss` | `.tanusitvanyok-form`, `.tanusitvanyok-inputs-1`, `.tanusitvanyok-inputs-2` |
 | Segítség | (future) | - |
 | RSS | (future) | - |
+
+### Homepage (`_home.scss`)
+
+**Purpose:** Contains all styles specific to the homepage (index.html) gazette listing and layout.
+
+**Key Components:**
+- **Gazette Listing:** `.gasette-listing`, `.listing`, `.list-items` - Main content area for gazette items
+- **Content Layout:** `.content` - Main content wrapper with negative margin overlap
+- **Intro Text:** `.intro-text-wrapper`, `.intro-text` - Welcome text section
+- **Justicia Image:** `.justicia` - Decorative justice statue image
+- **Gazette Cards:** `.kozlonyszam-wrapper`, `.kozlonyszam-texts`, etc. - Gazette item styling
+- **Links:** `.gasette-link` - Gazette title links
+
+**Responsive Behavior:**
+- Desktop (>991px): Two-column layout with gazette listing (70%) and sidebar (30%)
+- Tablet (768-991px): Single column, justicia image scaled down
+- Mobile (<768px): Full-width layout, compact gazette cards
 
 ---
 

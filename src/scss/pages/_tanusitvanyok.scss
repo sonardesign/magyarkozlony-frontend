@@ -168,7 +168,26 @@
   }
 }
 
+// ============================================
+// Certificate Listing Layout (similar to homepage)
+// ============================================
+
+.certificate-listing {
+  grid-column-gap: 32px;
+  grid-row-gap: 32px;
+  flex-flow: column;
+  width: 70%;
+  display: flex;
+}
+
+
 // Responsive adjustments
+@include respond-to-medium {
+  .certificate-listing {
+    width: 100%;
+  }
+}
+
 @include respond-to-small {
   .tanusitvanyok-form {
     grid-row-gap: $spacing-12;
@@ -176,6 +195,10 @@
   
   .tanusitvanyok-inputs-1,
   .tanusitvanyok-inputs-2 {
+    width: 100%;
+  }
+  
+  .certificate-listing {
     width: 100%;
   }
   

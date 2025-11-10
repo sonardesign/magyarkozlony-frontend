@@ -1,0 +1,172 @@
+// ============================================
+// Homepage (index.html)
+// ============================================
+// Styles specific to the homepage layout and components
+
+@use '../abstracts' as *;
+
+// ============================================
+// Main Content Layout
+// ============================================
+
+.content {
+  grid-column-gap: 32px;
+  grid-row-gap: 32px;
+  flex-flow: row;
+  width: 100%;
+  margin-top: -82px; // Overlap with search section
+}
+
+// ============================================
+// Gazette Listing Section
+// ============================================
+
+.gasette-listing {
+  grid-column-gap: 32px;
+  grid-row-gap: 32px;
+  flex-flow: column;
+  width: 70%;
+  display: flex;
+}
+
+.listing {
+  grid-column-gap: 32px;
+  grid-row-gap: 32px;
+}
+
+.list-items {
+  grid-column-gap: 16px;
+  grid-row-gap: 16px;
+  flex-flow: column;
+  width: 100%;
+}
+
+// ============================================
+// Intro Text Section
+// ============================================
+
+.intro-text-wrapper {
+  grid-row-gap: $spacing-12;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  text-decoration: none;
+  display: flex;
+}
+
+.intro-text {
+  grid-row-gap: $spacing-32;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-decoration: none;
+  display: flex;
+
+  @media screen and (min-width: $breakpoint-tiny), (min-width: $breakpoint-small) {
+    max-width: 100%;
+  }
+
+  @media screen and (min-width: $breakpoint-medium), (min-width: $breakpoint-large) {
+    max-width: 70%;
+  }
+}
+
+
+
+// ============================================
+// Gazette Card Components
+// ============================================
+
+.kozlonyszam-wrapper {
+  grid-column-gap: 16px;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  text-decoration: none;
+  display: flex;
+}
+
+.kozlonszam-content {
+  grid-row-gap: 8px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  height: 73px;
+  display: flex;
+}
+
+.kozlonyszam-texts {
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  text-decoration: none;
+  display: flex;
+}
+
+.kozlonyszam-secondary-intertactions {
+  grid-column-gap: 16px;
+  flex: 0 auto;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-decoration: none;
+  display: flex;
+}
+
+.gasette-link {
+  color: $color-teal-1600;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-family: $font-primary;
+  font-size: $font-size-18;
+  font-weight: 700;
+  line-height: 150%;
+  text-decoration: underline;
+}
+
+// ============================================
+// Responsive Design
+// ============================================
+
+@include respond-to-medium {
+  .content {
+    flex-flow: column;
+  }
+  
+  .gasette-listing {
+    width: 100%;
+  }
+
+  .gasette-link {
+    text-align: left;
+  }
+}
+
+@include respond-to-small {
+  .kozlonyszam-wrapper,
+  .kozlonszam-content {
+    height: 100%;
+  }
+  
+  .kozlonyszam-texts {
+    grid-column-gap: $spacing-8;
+    grid-row-gap: $spacing-8;
+    flex-flow: column;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  
+  .gasette-link {
+    text-align: left;
+  }
+
+}
+
+@include respond-to-tiny {
+  .gasette-link {
+    text-align: left;
+  }
+}
+

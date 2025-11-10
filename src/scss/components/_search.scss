@@ -36,31 +36,3 @@
   display: flex;
 }
 
-.intro-text-wrapper {
-  grid-row-gap: $spacing-12;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  width: 100%;
-  text-decoration: none;
-  display: flex;
-}
-
-.intro-text {
-  grid-row-gap: $spacing-32;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  text-decoration: none;
-  display: flex;
-
-  @media screen and (min-width: $breakpoint-tiny), (min-width: $breakpoint-small) {
-    max-width: 100%;
-  }
-
-  @media screen and (min-width: $breakpoint-medium), (min-width: $breakpoint-large) {
-    max-width: 70%;
-  }
-
-}
-
