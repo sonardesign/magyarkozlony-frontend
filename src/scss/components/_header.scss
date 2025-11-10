@@ -7,9 +7,16 @@
 .header {
   grid-row-gap: 10px;
   background-color: $color-white;
-  background-image: url("../../images/bg-large.png");
+  // Optimized background image (5.51 KB vs 2.01 MB original!)
+  background-image: url("../images/bg-optimized.webp");
+  background-image: 
+    image-set(
+      url("../images/bg-optimized.webp") type("image/webp"),
+      url("../images/bg-optimized.jpg") type("image/jpeg")
+    );
   background-position: 0 0;
   background-size: cover;
+  background-repeat: no-repeat;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;

@@ -73,6 +73,11 @@ function copyWithExclusions(src, dest) {
       continue;
     }
 
+    // Skip unoptimized large background image
+    if (entry === 'bg-large.png') {
+      continue;
+    }
+
     const srcPath = join(src, entry);
     const destPath = join(dest, entry);
 

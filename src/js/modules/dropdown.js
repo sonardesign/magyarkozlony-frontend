@@ -307,9 +307,10 @@ export class Dropdown {
     dropdown.isOpen = true;
     this.activeDropdown = dropdown;
     
-    // Update ARIA
+    // Update ARIA and classes
     trigger.setAttribute('aria-expanded', 'true');
     trigger.classList.add('dropdown-open');
+    menu.classList.add('dropdown-open');
     
     // Focus first item or selected item
     const indexToFocus = dropdown.selectedIndex >= 0 ? dropdown.selectedIndex : 0;
@@ -331,9 +332,10 @@ export class Dropdown {
     dropdown.isOpen = false;
     dropdown.focusedIndex = -1;
     
-    // Update ARIA
+    // Update ARIA and classes
     trigger.setAttribute('aria-expanded', 'false');
     trigger.classList.remove('dropdown-open');
+    menu.classList.remove('dropdown-open');
     
     // Hide after animation
     setTimeout(() => {

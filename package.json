@@ -13,7 +13,8 @@
     "serve": "vite",
     "cache-bust": "node cache-bust.js",
     "clean": "rm -rf dist node_modules/.vite",
-    "force-refresh": "npm run clean && npm run cache-bust && npm run scss:dev"
+    "force-refresh": "npm run clean && npm run cache-bust && npm run scss:dev",
+    "optimize:image": "node optimize-images.js"
   },
   "keywords": [
     "magyar-kozlony",
@@ -27,7 +28,7 @@
   "devDependencies": {
     "concurrently": "^8.2.2",
     "sass": "^1.69.5",
+    "sharp": "^0.33.0",
     "vite": "^5.0.8"
   }
 }
-
