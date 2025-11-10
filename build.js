@@ -94,7 +94,7 @@ console.log('  ✓ src/ (excluding SCSS sources and source maps)');
 
 // Copy other necessary files
 console.log('📋 Copying additional files...');
-const additionalFiles = ['favicon.ico'];
+const additionalFiles = ['favicon.ico', 'robots.txt'];
 additionalFiles.forEach(file => {
   if (existsSync(file)) {
     copyFileSync(file, join(DIST_DIR, file));
