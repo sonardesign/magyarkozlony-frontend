@@ -12082,6 +12082,11 @@ textarea.w-select {
   justify-content: center;
   color: white;
   cursor: pointer;
+  transition: all 0.2s;
+}
+.icons-wrapper i:hover {
+  color: #38e0b1;
+  border-color: #38e0b1;
 }
 .icons-wrapper i.outline-icon {
   border: 1px solid white;

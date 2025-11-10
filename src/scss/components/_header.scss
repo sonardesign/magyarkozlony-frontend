@@ -145,6 +145,12 @@
     justify-content: center;
     color: $color-font-inverse;
     cursor: pointer;
+    transition: all $transition-fast;
+
+    &:hover{
+      color: $color-accent-500;
+      border-color: $color-accent-500;
+    }
   }
 
   i.outline-icon {
