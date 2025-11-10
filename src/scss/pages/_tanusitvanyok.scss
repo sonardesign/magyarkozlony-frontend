@@ -44,6 +44,130 @@
   justify-content: flex-end;
 }
 
+// ============================================
+// Certificate Listing Component
+// ============================================
+
+.tanusitvany-listing {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border-radius: $border-radius-m;
+  overflow: hidden;
+}
+
+.tanusitvany-item {
+  background-color: $color-white;
+  border-bottom: 1px solid #dcdee1;
+  padding: $spacing-16 $spacing-32;
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-32;
+  align-items: flex-end;
+  width: 100%;
+  
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.tanusitvany-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  gap: $spacing-16;
+}
+
+.tanusitvany-text-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-8;
+  flex: 1;
+  min-width: 0;
+}
+
+.tanusitvany-name {
+  font-family: $font-primary;
+  font-size: $font-size-16;
+  font-weight: 700;
+  line-height: 1.5;
+  margin: 0;
+  
+  &.valid {
+    color: $color-positive-1000;
+  }
+  
+  &.invalid {
+    color: #d02c21;
+  }
+}
+
+.tanusitvany-validity {
+  display: flex;
+  gap: $spacing-8;
+  align-items: flex-start;
+  font-family: $font-primary;
+  font-size: $font-size-14;
+  font-weight: 500;
+  line-height: 1.5;
+  
+  .label {
+    color: $color-gray-medium;
+  }
+  
+  .dates {
+    color: $color-font-primary;
+  }
+}
+
+.button-subtle {
+  background-color: rgba(55, 240, 191, 0.1);
+  border-radius: $border-radius-m;
+  padding: $spacing-12;
+  min-width: 80px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  position: relative;
+  text-decoration: none;
+  transition: background-color $transition-fast;
+  flex-shrink: 0;
+  
+  &:hover {
+    background-color: rgba(55, 240, 191, 0.15);
+  }
+  
+  &:active {
+    background-color: rgba(55, 240, 191, 0.2);
+  }
+  
+  .label-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 $spacing-4;
+  }
+  
+  .label-text {
+    font-family: $font-primary;
+    font-size: $font-size-16;
+    font-weight: 700;
+    line-height: 1;
+    color: #227b6b;
+    text-align: center;
+  }
+  
+  .high-contrast-border {
+    position: absolute;
+    inset: 0;
+    border: 1px solid transparent;
+    border-radius: $border-radius-m;
+  }
+}
+
 // Responsive adjustments
 @include respond-to-small {
   .tanusitvanyok-form {
@@ -52,6 +176,19 @@
   
   .tanusitvanyok-inputs-1,
   .tanusitvanyok-inputs-2 {
+    width: 100%;
+  }
+  
+  .tanusitvany-item {
+    padding: $spacing-16;
+  }
+  
+  .tanusitvany-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .button-subtle {
     width: 100%;
   }
 }
