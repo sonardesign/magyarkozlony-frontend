@@ -12227,6 +12227,20 @@ textarea.w-select {
   display: flex;
 }
 
+.search-buttons {
+  display: flex;
+  flex-flow: row;
+}
+@media screen and (max-width: 767px) {
+  .search-buttons {
+    flex-flow: column;
+    width: 100%;
+  }
+  .search-buttons input {
+    width: 100%;
+  }
+}
+
 .main-search {
   grid-column-gap: 16px;
   grid-row-gap: 16px;
@@ -12336,6 +12350,16 @@ textarea.w-select {
   width: 100%;
   text-decoration: none;
   display: flex;
+}
+@media screen and (max-width: 767px) {
+  .card {
+    padding: 16px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .card .button-outline {
+    width: 100%;
+  }
 }
 
 .bodysmallregular {
@@ -13170,6 +13194,17 @@ textarea.w-select {
   margin-top: -82px;
 }
 
+.new-gazettes-mobile {
+  display: none;
+  grid-row-gap: 16px;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 32px;
+  margin-bottom: 32px;
+  position: relative;
+  z-index: 10;
+}
+
 .gasette-listing {
   grid-column-gap: 32px;
   grid-row-gap: 32px;
@@ -13293,10 +13328,22 @@ textarea.w-select {
   .gasette-link {
     text-align: left;
   }
+  .new-gazettes-mobile {
+    display: flex;
+  }
+  .new-gazettes-desktop {
+    display: none;
+  }
 }
 @media screen and (max-width: 479px) {
   .gasette-link {
     text-align: left;
+  }
+  .new-gazettes-mobile {
+    display: flex;
+  }
+  .new-gazettes-desktop {
+    display: none;
   }
 }
 .tanusitvanyok-form {

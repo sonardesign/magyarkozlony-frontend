@@ -18,6 +18,21 @@
 }
 
 // ============================================
+// Mobile-Only Gazette Block
+// ============================================
+
+.new-gazettes-mobile {
+  display: none; // Hidden by default on large screens
+  grid-row-gap: $spacing-16;
+  flex-direction: column;
+  width: 100%;
+  margin-top: $spacing-32;
+  margin-bottom: $spacing-32;
+  position: relative;
+  z-index: 10;
+}
+
+// ============================================
 // Gazette Listing Section
 // ============================================
 
@@ -162,11 +177,26 @@
     text-align: left;
   }
 
+  .new-gazettes-mobile {
+    display: flex; // Show on small breakpoints
+  }
+
+  .new-gazettes-desktop{
+    display: none;
+  }
 }
 
 @include respond-to-tiny {
   .gasette-link {
     text-align: left;
+  }
+
+  .new-gazettes-mobile {
+    display: flex; // Show on tiny breakpoints
+  }
+
+  .new-gazettes-desktop{
+    display: none;
   }
 }
 
