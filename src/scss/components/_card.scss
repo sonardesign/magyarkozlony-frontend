@@ -15,6 +15,17 @@
   width: 100%;
   text-decoration: none;
   display: flex;
+
+  @include respond-to-small {
+    padding: $spacing-16;
+  }
+
+  .button-outline{
+
+    @include respond-to-small {
+      width: 100%;
+    }
+  }
 }
 
 .bodysmallregular {

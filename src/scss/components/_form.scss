@@ -9,6 +9,20 @@
   display: flex;
 }
 
+.search-buttons{
+  display: flex;
+  flex-flow: row;
+
+  @include respond-to-small {
+    flex-flow: column;
+    width: 100%;
+
+    input{
+      width: 100%;
+    }
+  }
+}
+
 .main-search {
   grid-column-gap: $spacing-16;
   grid-row-gap: $spacing-16;
