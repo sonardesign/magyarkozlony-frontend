@@ -11926,7 +11926,6 @@ textarea.w-select {
   justify-content: flex-start;
   align-items: center;
   position: relative;
-  overflow: hidden;
   width: 100%;
   text-decoration: none;
   display: flex;
@@ -12304,6 +12303,39 @@ textarea.w-select {
   outline-offset: 2px;
   outline-width: 2px;
   outline-style: solid;
+}
+
+.w-input {
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #404753;
+}
+.w-input::placeholder {
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #606b7a;
+  opacity: 1;
+}
+.w-input::-webkit-input-placeholder {
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #606b7a;
+}
+.w-input::-moz-placeholder {
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #606b7a;
+  opacity: 1;
+}
+.w-input:-ms-input-placeholder {
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #606b7a;
 }
 
 .label {
@@ -13043,6 +13075,7 @@ textarea.w-select {
   align-items: center;
   gap: 4px;
   justify-content: flex-start;
+  padding: 16px 0;
 }
 
 .paginator-button {
@@ -13205,9 +13238,18 @@ textarea.w-select {
   z-index: 10;
 }
 
+.new-gazettes-desktop {
+  display: flex;
+  flex-flow: column;
+  width: 100%;
+  margin: 16px 0;
+  position: relative;
+  z-index: 10;
+}
+
 .gasette-listing {
-  grid-column-gap: 32px;
-  grid-row-gap: 32px;
+  grid-column-gap: 16px;
+  grid-row-gap: 16px;
   flex-flow: column;
   width: 70%;
   display: flex;
@@ -13215,7 +13257,6 @@ textarea.w-select {
 
 .listing {
   grid-column-gap: 32px;
-  grid-row-gap: 32px;
 }
 
 .list-items {

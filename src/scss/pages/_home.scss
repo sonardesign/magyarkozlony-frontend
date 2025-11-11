@@ -32,13 +32,22 @@
   z-index: 10;
 }
 
+.new-gazettes-desktop{
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+    margin: $spacing-16 0;
+    position: relative;
+    z-index: 10;
+}
+
 // ============================================
 // Gazette Listing Section
 // ============================================
 
 .gasette-listing {
-  grid-column-gap: 32px;
-  grid-row-gap: 32px;
+  grid-column-gap: $spacing-16;
+  grid-row-gap: $spacing-16;
   flex-flow: column;
   width: 70%;
   display: flex;
@@ -46,7 +55,6 @@
 
 .listing {
   grid-column-gap: 32px;
-  grid-row-gap: 32px;
 }
 
 .list-items {

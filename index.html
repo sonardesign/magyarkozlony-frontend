@@ -20,7 +20,7 @@
   <meta name="bingbot" content="noindex, nofollow" />
   
   <!-- Stylesheets -->
-  <link href="src/css/main.css?v=1762878140015" rel="stylesheet" type="text/css" />
+  <link href="src/css/main.css?v=1762879401867" rel="stylesheet" type="text/css" />
   
   <!-- Font Preconnects -->
   <link href="https://fonts.googleapis.com" rel="preconnect" />
@@ -387,7 +387,7 @@
                         maxlength="256" 
                         name="number" 
                         data-name="Number" 
-                        placeholder="ÉÉÉÉ" 
+                        placeholder="Pl. 70" 
                         type="text" 
                         id="number"
                       />
@@ -398,15 +398,24 @@
                   <div class="w-layout-vflex input-blocks-2nd">
                     <div class="w-layout-vflex input-group _370">
                       <label for="publication" class="label inverted">Kiadvány</label>
-                      <input 
-                        class="input-field w-input" 
-                        maxlength="256" 
-                        name="publication" 
-                        data-name="Publication" 
-                        placeholder="ÉÉÉÉ" 
-                        type="text" 
-                        id="publication"
-                      />
+                      <div class="dropdown-wrapper">
+                        <button 
+                          type="button"
+                          id="publication-dropdown-trigger" 
+                          class="input-field w-select dropdown-trigger" 
+                          data-dropdown="publication-dropdown"
+                          aria-haspopup="true"
+                          aria-expanded="false"
+                        >
+                          <span class="dropdown-selected-text">Magyar Közlöny</span>
+                          <i class="ri-arrow-down-s-line dropdown-arrow"></i>
+                        </button>
+                        <input type="hidden" id="publication" name="publication" value="magyar-kozlony">
+                        <div id="publication-dropdown" class="dropdown-menu" role="menu">
+                          <div class="dropdown-item" data-value="magyar-kozlony">Magyar Közlöny</div>
+                          <div class="dropdown-item" data-value="hivatalos-ertesito">Hivatalos Értesítő</div>
+                        </div>
+                      </div>
                     </div>
                     <div class="w-layout-vflex input-group _370">
                       <label for="keyword" class="label inverted">Kulcsszó</label>
@@ -415,7 +424,7 @@
                         maxlength="256" 
                         name="keyword" 
                         data-name="Keyword" 
-                        placeholder="ÉÉÉÉ" 
+                        placeholder="Pl. gépjármű" 
                         type="text" 
                         id="keyword"
                       />
@@ -429,7 +438,7 @@
                     type="submit" 
                     data-wait="Please wait..." 
                     class="link-button-inverse w-button" 
-                    value="Keresés"
+                    value="Beállítások törlése"
                   />
                   <input 
                     type="submit" 

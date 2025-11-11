@@ -92,6 +92,44 @@
   }
 }
 
+// Input field text styling (matches dropdown text)
+.w-input {
+  font-family: $font-primary;
+  font-size: $font-size-16;
+  font-weight: 400;
+  color: $color-font-primary;
+  
+  &::placeholder {
+    font-family: $font-primary;
+    font-size: $font-size-16;
+    font-weight: 400;
+    color: $color-gray-medium; // Lighter color for placeholder
+    opacity: 1; // Ensure opacity is set for Firefox
+  }
+  
+  &::-webkit-input-placeholder {
+    font-family: $font-primary;
+    font-size: $font-size-16;
+    font-weight: 400;
+    color: $color-gray-medium;
+  }
+  
+  &::-moz-placeholder {
+    font-family: $font-primary;
+    font-size: $font-size-16;
+    font-weight: 400;
+    color: $color-gray-medium;
+    opacity: 1;
+  }
+  
+  &:-ms-input-placeholder {
+    font-family: $font-primary;
+    font-size: $font-size-16;
+    font-weight: 400;
+    color: $color-gray-medium;
+  }
+}
+
 .label {
   font-family: $font-primary;
   color: $color-font-primary;
