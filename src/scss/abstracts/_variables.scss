@@ -95,11 +95,24 @@ $transition-medium: 0.3s;
 
 // Z-index
 // ============================================
+// Best practice z-index hierarchy:
+// 0-10: Base content, static elements
+// 10-100: Navigation, sticky elements, overlays
+// 100-1000: Dropdowns, modals, popovers
+// 1000+: Lightboxes, full-screen overlays
+
+$z-index-base: 0;
+$z-index-listing: 1;
 $z-index-nav: 2;
-$z-index-dropdown: 50;
-$z-index-mobile-menu: 100;
+$z-index-form-elements: 1; // Form elements stay at base level
+$z-index-dropdown-wrapper: 1; // Creates stacking context, menu will overlay
+$z-index-dropdown-menu: 100; // Dropdown menu overlays everything below
+$z-index-mobile-menu: 200;
 $z-index-navigation: 1000;
 $z-index-lightbox: 2000;
+
+// Legacy support
+$z-index-dropdown: $z-index-dropdown-menu;
 
 // Container
 // ============================================

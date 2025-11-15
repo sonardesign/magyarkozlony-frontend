@@ -4,6 +4,7 @@
 // Styles specific to the homepage layout and components
 
 @use '../abstracts' as *;
+@use '../layout/container' as *;
 
 // ============================================
 // Main Content Layout
@@ -29,16 +30,15 @@
   margin-top: $spacing-32;
   margin-bottom: $spacing-32;
   position: relative;
-  z-index: 10;
+  z-index: $z-index-listing;
 }
 
 .new-gazettes-desktop{
     display: flex;
     flex-flow: column;
     width: 100%;
-    margin: $spacing-16 0;
     position: relative;
-    z-index: 10;
+    z-index: $z-index-listing;
 }
 
 // ============================================
@@ -53,9 +53,6 @@
   display: flex;
 }
 
-.listing {
-  grid-column-gap: 32px;
-}
 
 .list-items {
   grid-column-gap: 16px;
@@ -101,16 +98,7 @@
 // Gazette Card Components
 // ============================================
 
-.kozlonyszam-wrapper {
-  grid-column-gap: 16px;
-  justify-content: flex-start;
-  align-items: center;
-  width: 100%;
-  text-decoration: none;
-  display: flex;
-}
-
-.kozlonszam-content {
+.gazette-card-content {
   grid-row-gap: 8px;
   flex-direction: column;
   justify-content: center;
@@ -120,7 +108,7 @@
   display: flex;
 }
 
-.kozlonyszam-texts {
+.gazette-card-header {
   justify-content: space-between;
   align-items: center;
   width: 100%;
@@ -128,7 +116,7 @@
   display: flex;
 }
 
-.kozlonyszam-secondary-intertactions {
+.gazette-card-actions {
   grid-column-gap: 16px;
   flex: 0 auto;
   justify-content: flex-start;
@@ -137,7 +125,7 @@
   display: flex;
 }
 
-.gasette-link {
+.gazette-title-link {
   color: $color-teal-1600;
   text-align: center;
   margin-top: 0;
@@ -147,6 +135,65 @@
   font-weight: 700;
   line-height: 150%;
   text-decoration: underline;
+  max-width: 320px;
+  width: 100%;
+}
+
+.gazette-action-link {
+  grid-column-gap: 4px;
+  justify-content: flex-start;
+  align-items: center;
+  text-decoration: none;
+  display: flex;
+}
+
+.action-icon {
+  grid-column-gap: 8px;
+  flex: 0 auto;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  display: flex;
+}
+
+// Legacy support - keep for rss.html and segitseg.html compatibility
+.kozlonyszam-wrapper {
+  @extend .flex-row;
+  width: 100%;
+}
+
+.kozlonszam-content {
+  @extend .gazette-card-content;
+}
+
+.kozlonyszam-texts {
+  @extend .gazette-card-header;
+}
+
+.kozlonyszam-secondary-intertactions {
+  @extend .gazette-card-actions;
+}
+
+.gasette-link {
+  @extend .gazette-title-link;
+}
+
+.link-style {
+  grid-column-gap: 4px;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  max-width: 320px;
+  text-decoration: none;
+  display: flex;
+}
+
+.link-style-2 {
+  @extend .gazette-action-link;
+}
+
+.trailing-icon {
+  @extend .action-icon;
 }
 
 // ============================================
@@ -162,12 +209,42 @@
     width: 100%;
   }
 
+  .gazette-title-link {
+    text-align: left;
+  }
+  
+  // Legacy support for rss.html and segitseg.html
   .gasette-link {
     text-align: left;
   }
 }
 
 @include respond-to-small {
+  .gazette-card-content {
+    height: 100%;
+  }
+  
+  .gazette-card-header {
+    grid-column-gap: $spacing-8;
+    grid-row-gap: $spacing-8;
+    flex-flow: column;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  
+  .gazette-title-link {
+    text-align: left;
+  }
+
+  .new-gazettes-mobile {
+    display: flex; // Show on small breakpoints
+  }
+
+  .new-gazettes-desktop{
+    display: none;
+  }
+  
+  // Legacy support for rss.html and segitseg.html
   .kozlonyszam-wrapper,
   .kozlonszam-content {
     height: 100%;
@@ -184,18 +261,10 @@
   .gasette-link {
     text-align: left;
   }
-
-  .new-gazettes-mobile {
-    display: flex; // Show on small breakpoints
-  }
-
-  .new-gazettes-desktop{
-    display: none;
-  }
 }
 
 @include respond-to-tiny {
-  .gasette-link {
+  .gazette-title-link {
     text-align: left;
   }
 
@@ -205,6 +274,11 @@
 
   .new-gazettes-desktop{
     display: none;
+  }
+  
+  // Legacy support for rss.html and segitseg.html
+  .gasette-link {
+    text-align: left;
   }
 }
 

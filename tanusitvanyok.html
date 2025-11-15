@@ -45,8 +45,9 @@
   </script>
   
   <!-- Favicons -->
-  <link href="https://cdn.prod.website-files.com/img/favicon.ico" rel="shortcut icon" type="image/x-icon" />
-  <link href="https://cdn.prod.website-files.com/img/webclip.png" rel="apple-touch-icon" />
+  <link href="src/images/njt-favicon.svg" rel="icon" type="image/svg+xml" />
+  <link href="src/images/njt-favicon.svg" rel="shortcut icon" type="image/svg+xml" />
+  <link href="src/images/njt-favicon.svg" rel="apple-touch-icon" />
 </head>
 
 <body data-current-page="tanusitvanyok">
@@ -64,7 +65,7 @@
         class="magyar-kozlony"
       />
       <div class="close-button">
-        <div class="text-block">menu</div>
+        <span class="text-block">menu</span>
       </div>
     </div>
 
@@ -72,16 +73,16 @@
       <!-- Primary Menu Group -->
       <div class="menu-item-group">
         <a href="index.html" class="menu-item-mobile" data-page="index">
-          <div>Közlönyök</div>
+          <span>Közlönyök</span>
         </a>
         <a href="tanusitvanyok.html" class="menu-item-mobile" data-page="tanusitvanyok">
-          <div>Tanúsítványok</div>
+          <span>Tanúsítványok</span>
         </a>
         <a href="segitseg.html" class="menu-item-mobile" data-page="segitseg">
-          <div>Segítség</div>
+          <span>Segítség</span>
         </a>
         <a href="rss.html" class="menu-item-mobile" data-page="rss">
-          <div>RSS</div>
+          <span>RSS</span>
         </a>
       </div>
 
@@ -90,19 +91,19 @@
       <!-- Secondary Menu Group -->
       <div class="menu-item-group">
         <div class="menu-item-mobile">
-          <div class="text-4">Közlönyök</div>
+          <p class="text-4">Közlönyök</p>
         </div>
         <div class="menu-item-01">
-          <div class="text-6">Jog.gov.hz</div>
+          <p class="text-6">Jog.gov.hz</p>
         </div>
         <div class="menu-item-01">
           <div class="text-container-5">
-            <div class="text-6">Segítség</div>
+            <p class="text-6">Segítség</p>
           </div>
         </div>
         <div class="menu-item-01">
           <div class="text-container-5">
-            <div class="text-6">Rss</div>
+            <p class="text-6">Rss</p>
           </div>
         </div>
       </div>
@@ -110,19 +111,19 @@
       <!-- External Links Group -->
       <div class="menu-item-04">
         <div class="text-container-5">
-          <div class="text-6">Jog.gov.hu</div>
+          <p class="text-6">Jog.gov.hu</p>
         </div>
       </div>
 
       <div class="group-02">
         <div class="menu-item-5">
           <div class="text-container-5">
-            <div class="text-6">Cégközlöny</div>
+            <p class="text-6">Cégközlöny</p>
           </div>
         </div>
         <div class="menu-item-5">
           <div class="text-container-5">
-            <div class="text-6">Nemzeti Jogszabálytár</div>
+            <p class="text-6">Nemzeti Jogszabálytár</p>
           </div>
         </div>
       </div>
@@ -139,7 +140,7 @@
         <div class="primary-nav-inner">
           <!-- Logo -->
           <div class="logo-wrapper">
-            <a href="index.html" class="main-nav-brand w-inline-block">
+            <a href="index.html" class="main-nav-brand inline-block">
               <img 
                 src="src/images/magyar-kozlony.svg" 
                 loading="lazy" 
@@ -181,24 +182,24 @@
       <!-- Secondary Navigation -->
       <div class="secondary-nav">
         <div class="secondary-menu-nav">
-          <a href="index.html" class="menu-item w-inline-block" data-page="index">
+          <a href="index.html" class="menu-item inline-block" data-page="index">
             <div class="menu-tem">
-              <div class="menu-text">Közlönyök</div>
+              <span class="menu-text">Közlönyök</span>
             </div>
           </a>
-          <a href="tanusitvanyok.html" class="menu-item w-inline-block" data-page="tanusitvanyok">
+          <a href="tanusitvanyok.html" class="menu-item inline-block" data-page="tanusitvanyok">
             <div class="menu-tem">
-              <div class="menu-text">Tanúsítványok</div>
+              <span class="menu-text">Tanúsítványok</span>
             </div>
           </a>
-          <a href="segitseg.html" class="menu-item w-inline-block" data-page="segitseg">
+          <a href="segitseg.html" class="menu-item inline-block" data-page="segitseg">
             <div class="menu-tem">
-              <div class="menu-text">Segítség</div>
+              <span class="menu-text">Segítség</span>
             </div>
           </a>
-          <a href="rss.html" class="menu-item w-inline-block" data-page="rss">
+          <a href="rss.html" class="menu-item inline-block" data-page="rss">
             <div class="menu-tem">
-              <div class="menu-text">RSS</div>
+              <span class="menu-text">RSS</span>
             </div>
           </a>
         </div>
@@ -308,11 +309,11 @@
        ============================================ -->
   <section class="section body">
     <div class="container">
-      <div class="w-layout-vflex content">
+      <div class="flex-column content">
         <!-- Main Certificate Listing -->
         <div class="certificate-listing">
-          <div class="w-layout-vflex listing">
-            <div class="h2 inverse">Tanúsítványok</div>
+          <div class="flex-column listing">
+            <h2 class="h2 inverse">Tanúsítványok</h2>
             
             <!-- Certificate Listing Component -->
             <div class="tanusitvany-listing">
@@ -554,25 +555,15 @@
         <!-- Sidebar -->
         <div class="sidebar">
           <div class="callout blue">
-            <div class="icon-container-2">
-              <i class="ri-information-fill icon"></i>
-            </div>
-            <div class="content-style">
-              <div class="text-3">
-                <div class="text-4">
-                  A 2013. május 3. után megjelent dokumentumok esetében a hitelességet bizonyító digitális aláírást a PDF dokumentum tartalmazza, így a hitelesség ellenőrzéséhez nincs szükség ellenőrző programra.
-                </div>
-              </div>
-              <div class="text-3">
-                <div class="text-4">
-                  A 2013. május 3. előtt megjelent és minősített elektronikus aláírással ellátott hivatalos lapok hitelességének ellenőrzéséhez a "Program letöltése" gombra kattintva töltheti le a magyarországi minősített hitelesítés szolgáltatók (CA) tanúsítványait telepítő alkalmazást. A csomag telepíti a KGYHSZ, a MÁV Informatika, a Microsec és a NetLock tanúsítványait a Windows tanúsítvány tárába.
-                </div>
-              </div>
-              <div class="actions">
-                <div class="primary-action">
-                  <div class="link-text-4">Program letöltése</div>
-                </div>
-              </div>
+            <i class="ri-information-fill callout-icon"></i>
+            <div class="callout-content">
+              <p class="callout-text">
+                A 2013. május 3. után megjelent dokumentumok esetében a hitelességet bizonyító digitális aláírást a PDF dokumentum tartalmazza, így a hitelesség ellenőrzéséhez nincs szükség ellenőrző programra.
+              </p>
+              <p class="callout-text">
+                A 2013. május 3. előtt megjelent és minősített elektronikus aláírással ellátott hivatalos lapok hitelességének ellenőrzéséhez a "Program letöltése" gombra kattintva töltheti le a magyarországi minősített hitelesítés szolgáltatók (CA) tanúsítványait telepítő alkalmazást. A csomag telepíti a KGYHSZ, a MÁV Informatika, a Microsec és a NetLock tanúsítványait a Windows tanúsítvány tárába.
+              </p>
+              <a href="#" class="callout-action">Program letöltése</a>
             </div>
           </div>
         </div>
@@ -614,11 +605,11 @@
     </div>
 
     <!-- Footer Content -->
-    <div class="w-layout-vflex container">
+    <div class="flex-column container">
       <div class="footer-inner">
         <div class="container-2">
           <!-- Footer Logo -->
-          <a href="index.html" class="logo w-inline-block">
+          <a href="index.html" class="logo inline-block">
             <img 
               src="src/images/magyar-kozlony-footer.svg" 
               loading="lazy" 
@@ -632,23 +623,15 @@
           <!-- Footer Links & Copyright -->
           <div class="footer-text-wrapper">
             <div class="impressum-links">
-              <div class="link-style-3">
-                <div class="link-text-5">Impresszum</div>
-              </div>
-              <div class="link-style-3">
-                <div class="link-text-5">Felhasználási feltételek</div>
-              </div>
-              <div class="link-style-3">
-                <div class="link-text-5">Akadálymentesítési nyilatkozat</div>
-              </div>
-              <div class="link-style-3">
-                <div class="link-text-5">Adatkezelési tájékoztató</div>
-              </div>
+              <a href="impresszum.html" class="link-text-5">Impresszum</a>
+              <a href="kapcsolat.html" class="link-text-5">Kapcsolat</a>
+              <a href="jogszabalyi-hatter.html" class="link-text-5">Jogszabályi háttér</a>
+              <a href="akadalymentesitesi-nyilatkozat.html" class="link-text-5">Akadálymentesítési nyilatkozat</a>
             </div>
-            <div class="text-5">
+            <p class="text-5">
               © A Nemzeti Jogszabálytárban elérhető szövegek tekintetében az MKIFK 
               Magyar Közlönykiadó és Igazságügyi Fordítóközpont Zrt. minden jogot fenntart!
-            </div>
+            </p>
           </div>
         </div>
       </div>

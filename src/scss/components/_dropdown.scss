@@ -6,10 +6,19 @@
 @use '../abstracts' as *;
 
 // Dropdown Wrapper
+// Creates a stacking context for the dropdown menu
 .dropdown-wrapper {
   position: relative;
   display: inline-block;
   width: 100%;
+  z-index: $z-index-dropdown-wrapper;
+  
+  // When dropdown trigger is open, increase wrapper z-index to ensure it overlays other elements
+  // JavaScript adds 'dropdown-open' class to the trigger
+  &:has(.dropdown-trigger.dropdown-open),
+  &:has(.dropdown-menu.dropdown-open) {
+    z-index: $z-index-dropdown-menu;
+  }
 }
 
 // Dropdown Trigger (button that looks like input)
@@ -60,6 +69,7 @@
 }
 
 // Dropdown Menu
+// Positioned absolutely within dropdown-wrapper stacking context
 .dropdown-menu {
   // Hidden by default
   display: none;
@@ -75,7 +85,8 @@
   overflow: hidden;
   overflow-y: auto;
   max-height: 300px;
-  z-index: $z-index-dropdown;
+  // High z-index ensures menu overlays form elements and other dropdowns
+  z-index: $z-index-dropdown-menu;
   
   // When dropdown is open
   &.dropdown-open {

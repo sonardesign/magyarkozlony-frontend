@@ -1,10 +1,11 @@
 // ============================================
 // Callout Component
 // ============================================
-// Callout boxes with icon, text, and optional actions
+// Streamlined callout boxes with icon, text, and optional actions
 // Support for color variants (green, blue, yellow, etc.)
 
 @use '../abstracts' as *;
+@use '../layout/container' as *;
 
 // Base Callout - Color Agnostic
 .callout {
@@ -24,68 +25,103 @@
     border: 1px solid $color-callout-border;
     
     // Text colors for green callouts
-    .text-4,
-    .link-text-4 {
+    .callout-text,
+    .callout-action {
       color: $color-teal-1600;
     }
     
-    .icon {
+    .callout-icon {
       color: $color-teal-1600;
     }
   }
 
-  &.blue{
+  &.blue {
     background-color: $background-informative-subtle;
     border: 1px solid $border-informative-subtle;
 
-    .text-4,
-    .link-text-4 {
+    .callout-text,
+    .callout-action {
       color: $icon-informative-subtle;
     }
     
-    .icon {
+    .callout-icon {
       color: $icon-informative-subtle;
     }
   }
 }
 
-// Icon Container
+// Callout Icon
+.callout-icon {
+  flex-shrink: 0;
+  font-family: Remixicon, Arial, sans-serif;
+  font-size: 20px;
+  line-height: 1;
+}
+
+// Callout Content Container
+.callout-content {
+  @extend .flex-column;
+  grid-row-gap: 8px;
+  flex: 1;
+  width: 100%;
+}
+
+// Callout Text
+.callout-text {
+  width: 100%;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-family: $font-primary;
+  font-size: $font-size-16;
+  font-weight: 500;
+  line-height: 150%;
+  text-decoration: none;
+}
+
+// Callout Action Link
+.callout-action {
+  @extend .flex-row;
+  grid-column-gap: 4px;
+  flex: 0 auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-family: $font-primary;
+  font-size: $font-size-14;
+  font-weight: 700;
+  line-height: 150%;
+  text-decoration: none;
+  
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+// Legacy support - keep for backward compatibility during migration
 .icon-container-2 {
-  display: flex;
-  align-items: center;
+  @extend .flex-row;
   justify-content: center;
 }
 
-// Icon
 .icon {
   object-fit: cover;
   font-family: Remixicon, Arial, sans-serif;
   overflow: hidden;
 }
 
-// Content Wrapper
 .content-style {
+  @extend .flex-column;
   grid-row-gap: 8px;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
   width: 100%;
   text-decoration: none;
-  display: flex;
 }
 
-// Text Container
 .text-3 {
+  @extend .flex-column;
   grid-row-gap: 4px;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
   width: 100%;
   text-decoration: none;
-  display: flex;
 }
 
-// Text Content
 .text-4 {
   width: 100%;
   margin-top: 0;
@@ -97,7 +133,6 @@
   text-decoration: none;
 }
 
-// Actions Container
 .actions {
   grid-column-gap: 16px;
   flex-wrap: wrap;
@@ -108,17 +143,13 @@
   display: flex;
 }
 
-// Primary Action Link
 .primary-action {
+  @extend .flex-row;
   grid-column-gap: 4px;
   flex: 0 auto;
-  justify-content: flex-start;
-  align-items: center;
   text-decoration: none;
-  display: flex;
 }
 
-// Link Text
 .link-text-4 {
   text-align: center;
   margin-top: 0;

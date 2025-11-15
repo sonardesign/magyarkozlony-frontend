@@ -3,6 +3,7 @@
 // ============================================
 
 @use '../abstracts' as *;
+@use '../layout/container' as *;
 
 .mobile-menu {
   flex-direction: column;
@@ -115,12 +116,9 @@
 }
 
 .text-container-5 {
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
+  @extend .flex-column;
   width: 100%;
   text-decoration: none;
-  display: flex;
 }
 
 .text-6 {

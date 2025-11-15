@@ -20,7 +20,7 @@
   <meta name="bingbot" content="noindex, nofollow" />
   
   <!-- Stylesheets -->
-  <link href="src/css/main.css?v=1762879401867" rel="stylesheet" type="text/css" />
+  <link href="src/css/main.css?v=1763216945060" rel="stylesheet" type="text/css" />
   
   <!-- Font Preconnects -->
   <link href="https://fonts.googleapis.com" rel="preconnect" />
@@ -45,8 +45,9 @@
   </script>
   
   <!-- Favicons -->
-  <link href="https://cdn.prod.website-files.com/img/favicon.ico" rel="shortcut icon" type="image/x-icon" />
-  <link href="https://cdn.prod.website-files.com/img/webclip.png" rel="apple-touch-icon" />
+  <link href="src/images/njt-favicon.svg" rel="icon" type="image/svg+xml" />
+  <link href="src/images/njt-favicon.svg" rel="shortcut icon" type="image/svg+xml" />
+  <link href="src/images/njt-favicon.svg" rel="apple-touch-icon" />
 </head>
 
 <body data-current-page="index">
@@ -64,7 +65,7 @@
         class="magyar-kozlony"
       />
       <div class="close-button">
-        <div class="text-block">menu</div>
+        <span class="text-block">menu</span>
       </div>
     </div>
 
@@ -72,16 +73,16 @@
       <!-- Primary Menu Group -->
       <div class="menu-item-group">
         <a href="index.html" class="menu-item-mobile" data-page="index">
-          <div>Közlönyök</div>
+          <span>Közlönyök</span>
         </a>
         <a href="tanusitvanyok.html" class="menu-item-mobile" data-page="tanusitvanyok">
-          <div>Tanúsítványok</div>
+          <span>Tanúsítványok</span>
         </a>
         <a href="segitseg.html" class="menu-item-mobile" data-page="segitseg">
-          <div>Segítség</div>
+          <span>Segítség</span>
         </a>
         <a href="rss.html" class="menu-item-mobile" data-page="rss">
-          <div>RSS</div>
+          <span>RSS</span>
         </a>
       </div>
 
@@ -90,19 +91,19 @@
       <!-- Secondary Menu Group -->
       <div class="menu-item-group">
         <div class="menu-item-mobile">
-          <div class="text-4">Közlönyök</div>
+          <p class="text-4">Közlönyök</p>
         </div>
         <div class="menu-item-01">
-          <div class="text-6">Jog.gov.hz</div>
+          <p class="text-6">Jog.gov.hz</p>
         </div>
         <div class="menu-item-01">
           <div class="text-container-5">
-            <div class="text-6">Segítség</div>
+            <p class="text-6">Segítség</p>
           </div>
         </div>
         <div class="menu-item-01">
           <div class="text-container-5">
-            <div class="text-6">Rss</div>
+            <p class="text-6">Rss</p>
           </div>
         </div>
       </div>
@@ -110,19 +111,19 @@
       <!-- External Links Group -->
       <div class="menu-item-04">
         <div class="text-container-5">
-          <div class="text-6">Jog.gov.hu</div>
+          <p class="text-6">Jog.gov.hu</p>
         </div>
       </div>
 
       <div class="group-02">
         <div class="menu-item-5">
           <div class="text-container-5">
-            <div class="text-6">Cégközlöny</div>
+            <p class="text-6">Cégközlöny</p>
           </div>
         </div>
         <div class="menu-item-5">
           <div class="text-container-5">
-            <div class="text-6">Nemzeti Jogszabálytár</div>
+            <p class="text-6">Nemzeti Jogszabálytár</p>
           </div>
         </div>
       </div>
@@ -139,7 +140,7 @@
         <div class="primary-nav-inner">
           <!-- Logo -->
           <div class="logo-wrapper">
-            <a href="index.html" class="main-nav-brand w-inline-block">
+            <a href="index.html" class="main-nav-brand inline-block">
               <img 
                 src="src/images/magyar-kozlony.svg" 
                 loading="lazy" 
@@ -181,24 +182,24 @@
       <!-- Secondary Navigation -->
       <div class="secondary-nav">
         <div class="secondary-menu-nav">
-          <a href="index.html" class="menu-item w-inline-block" data-page="index">
+          <a href="index.html" class="menu-item inline-block" data-page="index">
             <div class="menu-tem">
-              <div class="menu-text">Közlönyök</div>
+              <span class="menu-text">Közlönyök</span>
             </div>
           </a>
-          <a href="tanusitvanyok.html" class="menu-item w-inline-block" data-page="tanusitvanyok">
+          <a href="tanusitvanyok.html" class="menu-item inline-block" data-page="tanusitvanyok">
             <div class="menu-tem">
-              <div class="menu-text">Tanúsítványok</div>
+              <span class="menu-text">Tanúsítványok</span>
             </div>
           </a>
-          <a href="segitseg.html" class="menu-item w-inline-block" data-page="segitseg">
+          <a href="segitseg.html" class="menu-item inline-block" data-page="segitseg">
             <div class="menu-tem">
-              <div class="menu-text">Segítség</div>
+              <span class="menu-text">Segítség</span>
             </div>
           </a>
-          <a href="rss.html" class="menu-item w-inline-block" data-page="rss">
+          <a href="rss.html" class="menu-item inline-block" data-page="rss">
             <div class="menu-tem">
-              <div class="menu-text">RSS</div>
+              <span class="menu-text">RSS</span>
             </div>
           </a>
         </div>
@@ -206,76 +207,52 @@
 
       <!-- Mobile-Only Gazette Block -->
       <div class="new-gazettes-mobile">
-        <div class="h2 inverse">Legfrissebb Közlöny</div>
-        <div class="w-layout-vflex list-items">
+        <h2 class="h2 inverse">Legfrissebb Közlöny</h2>
+        <div class="flex-column list-items">
           <!-- Mobile Gazette Card 1 -->
           <div class="card">
-            <div class="kozlonyszam-wrapper">
-              <div class="kozlonszam-content">
-                <div class="kozlonyszam-texts">
-                  <div class="link-style">
-                    <a href="#" class="gasette-link">Magyar Közlöny 2025. évi 70. szám</a>
-                  </div>
-                  <div class="bodysmallregular">2025. június 20.</div>
-                  <a href="#" class="button-outline w-inline-block">
-                    <div class="button-label">PDF letöltése</div>
-                    <div class="high-contrast-mode-border-2"></div>
-                  </a>
-                </div>
-                <div class="kozlonyszam-secondary-intertactions">
-                  <div class="frame-1171276819">
-                    <div class="link-style-2">
-                      <div class="link-text-3">Indoklás(ok)</div>
-                      <div class="trailing-icon">
-                        <i class="ri-arrow-right-line"></i>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="frame-1171276820">
-                    <div class="link-style-2">
-                      <div class="link-text-3">Melléklet(ek)</div>
-                      <div class="trailing-icon">
-                        <i class="ri-arrow-right-line"></i>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+            <div class="gazette-card-content">
+              <div class="gazette-card-header">
+                <a href="#" class="gazette-title-link">Magyar Közlöny 2025. évi 70. szám</a>
+                <p class="bodysmallregular">2025. június 20.</p>
+                <a href="#" class="button-outline inline-block">
+                  <span class="button-label">PDF letöltése</span>
+                  <div class="high-contrast-mode-border-2"></div>
+                </a>
+              </div>
+              <div class="gazette-card-actions">
+                <a href="#" class="gazette-action-link">
+                  <span class="link-text-small">Indoklás(ok)</span>
+                  <i class="ri-arrow-right-line action-icon"></i>
+                </a>
+                <a href="#" class="gazette-action-link">
+                  <span class="link-text-small">Melléklet(ek)</span>
+                  <i class="ri-arrow-right-line action-icon"></i>
+                </a>
               </div>
             </div>
           </div>
 
           <!-- Mobile Gazette Card 2 -->
           <div class="card">
-            <div class="kozlonyszam-wrapper">
-              <div class="kozlonszam-content">
-                <div class="kozlonyszam-texts">
-                  <div class="link-style">
-                    <a href="#" class="gasette-link">Magyar Közlöny 2025. évi 69. szám</a>
-                  </div>
-                  <div class="bodysmallregular">2025. június 19.</div>
-                  <a href="#" class="button-outline w-inline-block">
-                    <div class="button-label">PDF letöltése</div>
-                    <div class="high-contrast-mode-border-2"></div>
-                  </a>
-                </div>
-                <div class="kozlonyszam-secondary-intertactions">
-                  <div class="frame-1171276819">
-                    <div class="link-style-2">
-                      <div class="link-text-3">Indoklás(ok)</div>
-                      <div class="trailing-icon">
-                        <i class="ri-arrow-right-line"></i>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="frame-1171276820">
-                    <div class="link-style-2">
-                      <div class="link-text-3">Melléklet(ek)</div>
-                      <div class="trailing-icon">
-                        <i class="ri-arrow-right-line"></i>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+            <div class="gazette-card-content">
+              <div class="gazette-card-header">
+                <a href="#" class="gazette-title-link">Magyar Közlöny 2025. évi 69. szám</a>
+                <p class="bodysmallregular">2025. június 19.</p>
+                <a href="#" class="button-outline inline-block">
+                  <span class="button-label">PDF letöltése</span>
+                  <div class="high-contrast-mode-border-2"></div>
+                </a>
+              </div>
+              <div class="gazette-card-actions">
+                <a href="#" class="gazette-action-link">
+                  <span class="link-text-small">Indoklás(ok)</span>
+                  <i class="ri-arrow-right-line action-icon"></i>
+                </a>
+                <a href="#" class="gazette-action-link">
+                  <span class="link-text-small">Melléklet(ek)</span>
+                  <i class="ri-arrow-right-line action-icon"></i>
+                </a>
               </div>
             </div>
           </div>
@@ -297,10 +274,10 @@
                 data-wf-element-id="c50cb6fc-122f-2c6a-a591-628c5abc0e66" 
                 data-turnstile-sitekey="0x4AAAAAAAQTptj2So4dx43e"
               >
-                <div class="w-layout-vflex form-inputs">
+                <div class="flex-column form-inputs">
                   <!-- First Row of Inputs -->
-                  <div class="w-layout-vflex input-blocks-1st">
-                    <div class="w-layout-vflex input-group _120">
+                  <div class="flex-column input-blocks-1st">
+                    <div class="flex-column input-group _120">
                       <label for="year" class="label inverted">Év</label>
                       <div class="dropdown-wrapper">
                         <button 
@@ -347,7 +324,7 @@
                         </div>
                       </div>
                     </div>
-                    <div class="w-layout-vflex input-group _120">
+                    <div class="flex-column input-group _120">
                       <label for="month" class="label inverted">Hónap</label>
                      
                       <div class="dropdown-wrapper">
@@ -380,7 +357,7 @@
                       </div>
                       
                     </div>
-                    <div class="w-layout-vflex input-group _140">
+                    <div class="flex-column input-group _140">
                       <label for="number" class="label inverted">Közlönyszám</label>
                       <input 
                         class="input-field w-input" 
@@ -395,8 +372,8 @@
                   </div>
 
                   <!-- Second Row of Inputs -->
-                  <div class="w-layout-vflex input-blocks-2nd">
-                    <div class="w-layout-vflex input-group _370">
+                  <div class="flex-column input-blocks-2nd">
+                    <div class="flex-column input-group _370">
                       <label for="publication" class="label inverted">Kiadvány</label>
                       <div class="dropdown-wrapper">
                         <button 
@@ -417,7 +394,7 @@
                         </div>
                       </div>
                     </div>
-                    <div class="w-layout-vflex input-group _370">
+                    <div class="flex-column input-group _370">
                       <label for="keyword" class="label inverted">Kulcsszó</label>
                       <input 
                         class="input-field w-input" 
@@ -450,10 +427,10 @@
               </form>
 
               <!-- Form States -->
-              <div class="w-form-done">
+              <div class="form-success">
                 <div>Thank you! Your submission has been received!</div>
               </div>
-              <div class="w-form-fail">
+              <div class="form-error">
                 <div>Oops! Something went wrong while submitting the form.</div>
               </div>
             </div>
@@ -464,7 +441,7 @@
         <!-- Intro Text -->
         <div class="intro-text-wrapper">
           <div class="intro-text">
-            <div class="h2 inverse">Üdvözöljük a Magyar Közlöny weboldalán!</div>
+            <h2 class="h2 inverse">Üdvözöljük a Magyar Közlöny weboldalán!</h2>
             <div class="paragraph">
               A Magyar Közlöny Magyarország hivatalos lapja, amelyben a jogszabályokat, 
               az Alkotmánybíróság határozatait, a Kúria jogegységi döntéseit, valamint 
@@ -491,45 +468,33 @@
        ============================================ -->
   <section class="section body">
     <div class="container">
-      <div class="w-layout-vflex content">
+      <div class="flex-column content">
         <!-- Main Gazette Listing -->
         <div class="gasette-listing">
           <!-- Featured Gazette -->
-          <div class="w-layout-vflex listing">
-            <div class="h2 inverse">Legfrisebb Közlöny</div>
+          <div class="flex-column listing">
+            <h2 class="h2 inverse">Legfrisebb Közlöny</h2>
             
-            <div class="new-gazettes-desktop w-layout-vflex list-items">
+            <div class="new-gazettes-desktop flex-column list-items">
               <div class="card">
-                <div class="kozlonyszam-wrapper">
-                  <div class="kozlonszam-content">
-                    <div class="kozlonyszam-texts">
-                      <div class="link-style">
-                        <a href="#" class="gasette-link">Magyar Közlöny 2025. évi 70. szám</a>
-                      </div>
-                      <div class="bodysmallregular">2025. június 20.</div>
-                      <a href="#" class="button-outline w-inline-block">
-                        <div class="button-label">PDF letöltése</div>
-                        <div class="high-contrast-mode-border-2"></div>
-                      </a>
-                    </div>
-                    <div class="kozlonyszam-secondary-intertactions">
-                      <div class="frame-1171276819">
-                        <div class="link-style-2">
-                          <div class="link-text-3">Indoklás(ok)</div>
-                          <div class="trailing-icon">
-                            <i class="ri-arrow-right-line"></i>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="frame-1171276820">
-                        <div class="link-style-2">
-                          <div class="link-text-3">Melléklet(ek)</div>
-                          <div class="trailing-icon">
-                            <i class="ri-arrow-right-line"></i>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+                <div class="gazette-card-content">
+                  <div class="gazette-card-header">
+                    <a href="#" class="gazette-title-link">Magyar Közlöny 2025. évi 70. szám</a>
+                    <p class="bodysmallregular">2025. június 20.</p>
+                    <a href="#" class="button-outline inline-block">
+                      <span class="button-label">PDF letöltése</span>
+                      <div class="high-contrast-mode-border-2"></div>
+                    </a>
+                  </div>
+                  <div class="gazette-card-actions">
+                    <a href="#" class="gazette-action-link">
+                      <span class="link-text-small">Indoklás(ok)</span>
+                      <i class="ri-arrow-right-line action-icon"></i>
+                    </a>
+                    <a href="#" class="gazette-action-link">
+                      <span class="link-text-small">Melléklet(ek)</span>
+                      <i class="ri-arrow-right-line action-icon"></i>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -537,302 +502,206 @@
           </div>
 
           <!-- All Gazettes Listing -->
-          <div class="w-layout-vflex listing">
-            <div class="w-layout-vflex list-items">
+          <div class="flex-column listing">
+            <div class="flex-column list-items">
               <!-- Gazette Card 1 -->
               <div class="card">
-                <div class="kozlonyszam-wrapper">
-                  <div class="kozlonszam-content">
-                    <div class="kozlonyszam-texts">
-                      <div class="link-style">
-                        <div class="gasette-link">Magyar Közlöny 2025. évi 70. szám</div>
-                      </div>
-                      <div class="bodysmallregular">2025. június 20.</div>
-                      <a href="#" class="button-outline w-inline-block">
-                        <div class="button-label">PDF letöltése</div>
-                        <div class="high-contrast-mode-border-2"></div>
-                      </a>
-                    </div>
-                    <div class="kozlonyszam-secondary-intertactions">
-                      <div class="frame-1171276819">
-                        <div class="link-style-2">
-                          <div class="link-text-3">Indoklás(ok)</div>
-                          <div class="trailing-icon">
-                            <i class="ri-arrow-right-line"></i>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="frame-1171276820">
-                        <div class="link-style-2">
-                          <div class="link-text-3">Melléklet(ek)</div>
-                          <div class="trailing-icon">
-                            <i class="ri-arrow-right-line"></i>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+                <div class="gazette-card-content">
+                  <div class="gazette-card-header">
+                    <a href="#" class="gazette-title-link">Magyar Közlöny 2025. évi 70. szám</a>
+                    <p class="bodysmallregular">2025. június 20.</p>
+                    <a href="#" class="button-outline inline-block">
+                      <span class="button-label">PDF letöltése</span>
+                      <div class="high-contrast-mode-border-2"></div>
+                    </a>
+                  </div>
+                  <div class="gazette-card-actions">
+                    <a href="#" class="gazette-action-link">
+                      <span class="link-text-small">Indoklás(ok)</span>
+                      <i class="ri-arrow-right-line action-icon"></i>
+                    </a>
+                    <a href="#" class="gazette-action-link">
+                      <span class="link-text-small">Melléklet(ek)</span>
+                      <i class="ri-arrow-right-line action-icon"></i>
+                    </a>
                   </div>
                 </div>
               </div>
 
               <!-- Gazette Card 2 -->
               <div class="card">
-                <div class="kozlonyszam-wrapper">
-                  <div class="kozlonszam-content">
-                    <div class="kozlonyszam-texts">
-                      <div class="link-style">
-                        <div class="gasette-link">Magyar Közlöny 2025. évi 70. szám</div>
-                      </div>
-                      <div class="bodysmallregular">2025. június 20.</div>
-                      <a href="#" class="button-outline w-inline-block">
-                        <div class="button-label">PDF letöltése</div>
-                        <div class="high-contrast-mode-border-2"></div>
-                      </a>
-                    </div>
-                    <div class="kozlonyszam-secondary-intertactions">
-                      <div class="frame-1171276819">
-                        <div class="link-style-2">
-                          <div class="link-text-3">Indoklás(ok)</div>
-                          <div class="trailing-icon">
-                            <i class="ri-arrow-right-line"></i>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="frame-1171276820">
-                        <div class="link-style-2">
-                          <div class="link-text-3">Melléklet(ek)</div>
-                          <div class="trailing-icon">
-                            <i class="ri-arrow-right-line"></i>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+                <div class="gazette-card-content">
+                  <div class="gazette-card-header">
+                    <a href="#" class="gazette-title-link">Magyar Közlöny 2025. évi 70. szám</a>
+                    <p class="bodysmallregular">2025. június 20.</p>
+                    <a href="#" class="button-outline inline-block">
+                      <span class="button-label">PDF letöltése</span>
+                      <div class="high-contrast-mode-border-2"></div>
+                    </a>
+                  </div>
+                  <div class="gazette-card-actions">
+                    <a href="#" class="gazette-action-link">
+                      <span class="link-text-small">Indoklás(ok)</span>
+                      <i class="ri-arrow-right-line action-icon"></i>
+                    </a>
+                    <a href="#" class="gazette-action-link">
+                      <span class="link-text-small">Melléklet(ek)</span>
+                      <i class="ri-arrow-right-line action-icon"></i>
+                    </a>
                   </div>
                 </div>
               </div>
 
               <!-- Gazette Card 3 -->
               <div class="card">
-                <div class="kozlonyszam-wrapper">
-                  <div class="kozlonszam-content">
-                    <div class="kozlonyszam-texts">
-                      <div class="link-style">
-                        <div class="gasette-link">Magyar Közlöny 2025. évi 70. szám</div>
+                <div class="gazette-card-content">
+                  <div class="gazette-card-header">
+                    <a href="#" class="gazette-title-link">Magyar Közlöny 2025. évi 70. szám</a>
+                    <p class="bodysmallregular">2025. június 20.</p>
+                    <div class="button-outline">
+                      <div class="label-container-3">
+                        <span class="button-label">PDF letöltése</span>
                       </div>
-                      <div class="bodysmallregular">2025. június 20.</div>
-                      <div class="button-outline">
-                        <div class="label-container-3">
-                          <div class="button-label">PDF letöltése</div>
-                        </div>
-                        <div class="high-contrast-mode-border-2"></div>
-                      </div>
+                      <div class="high-contrast-mode-border-2"></div>
                     </div>
-                    <div class="kozlonyszam-secondary-intertactions">
-                      <div class="frame-1171276819">
-                        <div class="link-style-2">
-                          <div class="link-text-3">Indoklás(ok)</div>
-                          <div class="trailing-icon">
-                            <i class="ri-arrow-right-line"></i>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="frame-1171276820">
-                        <div class="link-style-2">
-                          <div class="link-text-3">Melléklet(ek)</div>
-                          <div class="trailing-icon">
-                            <i class="ri-arrow-right-line"></i>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+                  </div>
+                  <div class="gazette-card-actions">
+                    <a href="#" class="gazette-action-link">
+                      <span class="link-text-small">Indoklás(ok)</span>
+                      <i class="ri-arrow-right-line action-icon"></i>
+                    </a>
+                    <a href="#" class="gazette-action-link">
+                      <span class="link-text-small">Melléklet(ek)</span>
+                      <i class="ri-arrow-right-line action-icon"></i>
+                    </a>
                   </div>
                 </div>
               </div>
 
               <!-- Gazette Card 4 -->
               <div class="card">
-                <div class="kozlonyszam-wrapper">
-                  <div class="kozlonszam-content">
-                    <div class="kozlonyszam-texts">
-                      <div class="link-style">
-                        <div class="gasette-link">Magyar Közlöny 2025. évi 70. szám</div>
+                <div class="gazette-card-content">
+                  <div class="gazette-card-header">
+                    <a href="#" class="gazette-title-link">Magyar Közlöny 2025. évi 70. szám</a>
+                    <p class="bodysmallregular">2025. június 20.</p>
+                    <div class="button-outline">
+                      <div class="label-container-3">
+                        <span class="button-label">PDF letöltése</span>
                       </div>
-                      <div class="bodysmallregular">2025. június 20.</div>
-                      <div class="button-outline">
-                        <div class="label-container-3">
-                          <div class="button-label">PDF letöltése</div>
-                        </div>
-                        <div class="high-contrast-mode-border-2"></div>
-                      </div>
+                      <div class="high-contrast-mode-border-2"></div>
                     </div>
-                    <div class="kozlonyszam-secondary-intertactions">
-                      <div class="frame-1171276819">
-                        <div class="link-style-2">
-                          <div class="link-text-3">Indoklás(ok)</div>
-                          <div class="trailing-icon">
-                            <i class="ri-arrow-right-line"></i>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="frame-1171276820">
-                        <div class="link-style-2">
-                          <div class="link-text-3">Melléklet(ek)</div>
-                          <div class="trailing-icon">
-                            <i class="ri-arrow-right-line"></i>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+                  </div>
+                  <div class="gazette-card-actions">
+                    <a href="#" class="gazette-action-link">
+                      <span class="link-text-small">Indoklás(ok)</span>
+                      <i class="ri-arrow-right-line action-icon"></i>
+                    </a>
+                    <a href="#" class="gazette-action-link">
+                      <span class="link-text-small">Melléklet(ek)</span>
+                      <i class="ri-arrow-right-line action-icon"></i>
+                    </a>
                   </div>
                 </div>
               </div>
 
               <!-- Gazette Card 5 -->
               <div class="card">
-                <div class="kozlonyszam-wrapper">
-                  <div class="kozlonszam-content">
-                    <div class="kozlonyszam-texts">
-                      <div class="link-style">
-                        <div class="gasette-link">Magyar Közlöny 2025. évi 70. szám</div>
-                      </div>
-                      <div class="bodysmallregular">2025. június 20.</div>
-                      <a href="#" class="button-outline w-inline-block">
-                        <div class="button-label">PDF letöltése</div>
-                        <div class="high-contrast-mode-border-2"></div>
-                      </a>
-                    </div>
-                    <div class="kozlonyszam-secondary-intertactions">
-                      <div class="frame-1171276819">
-                        <div class="link-style-2">
-                          <div class="link-text-3">Indoklás(ok)</div>
-                          <div class="trailing-icon">
-                            <i class="ri-arrow-right-line"></i>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="frame-1171276820">
-                        <div class="link-style-2">
-                          <div class="link-text-3">Melléklet(ek)</div>
-                          <div class="trailing-icon">
-                            <i class="ri-arrow-right-line"></i>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+                <div class="gazette-card-content">
+                  <div class="gazette-card-header">
+                    <a href="#" class="gazette-title-link">Magyar Közlöny 2025. évi 70. szám</a>
+                    <p class="bodysmallregular">2025. június 20.</p>
+                    <a href="#" class="button-outline inline-block">
+                      <span class="button-label">PDF letöltése</span>
+                      <div class="high-contrast-mode-border-2"></div>
+                    </a>
+                  </div>
+                  <div class="gazette-card-actions">
+                    <a href="#" class="gazette-action-link">
+                      <span class="link-text-small">Indoklás(ok)</span>
+                      <i class="ri-arrow-right-line action-icon"></i>
+                    </a>
+                    <a href="#" class="gazette-action-link">
+                      <span class="link-text-small">Melléklet(ek)</span>
+                      <i class="ri-arrow-right-line action-icon"></i>
+                    </a>
                   </div>
                 </div>
               </div>
 
               <!-- Gazette Card 6 -->
               <div class="card">
-                <div class="kozlonyszam-wrapper">
-                  <div class="kozlonszam-content">
-                    <div class="kozlonyszam-texts">
-                      <div class="link-style">
-                        <div class="gasette-link">Magyar Közlöny 2025. évi 70. szám</div>
+                <div class="gazette-card-content">
+                  <div class="gazette-card-header">
+                    <a href="#" class="gazette-title-link">Magyar Közlöny 2025. évi 70. szám</a>
+                    <p class="bodysmallregular">2025. június 20.</p>
+                    <div class="button-outline">
+                      <div class="label-container-3">
+                        <span class="button-label">PDF letöltése</span>
                       </div>
-                      <div class="bodysmallregular">2025. június 20.</div>
-                      <div class="button-outline">
-                        <div class="label-container-3">
-                          <div class="button-label">PDF letöltése</div>
-                        </div>
-                        <div class="high-contrast-mode-border-2"></div>
-                      </div>
+                      <div class="high-contrast-mode-border-2"></div>
                     </div>
-                    <div class="kozlonyszam-secondary-intertactions">
-                      <div class="frame-1171276819">
-                        <div class="link-style-2">
-                          <div class="link-text-3">Indoklás(ok)</div>
-                          <div class="trailing-icon">
-                            <i class="ri-arrow-right-line"></i>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="frame-1171276820">
-                        <div class="link-style-2">
-                          <div class="link-text-3">Melléklet(ek)</div>
-                          <div class="trailing-icon">
-                            <i class="ri-arrow-right-line"></i>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+                  </div>
+                  <div class="gazette-card-actions">
+                    <a href="#" class="gazette-action-link">
+                      <span class="link-text-small">Indoklás(ok)</span>
+                      <i class="ri-arrow-right-line action-icon"></i>
+                    </a>
+                    <a href="#" class="gazette-action-link">
+                      <span class="link-text-small">Melléklet(ek)</span>
+                      <i class="ri-arrow-right-line action-icon"></i>
+                    </a>
                   </div>
                 </div>
               </div>
 
               <!-- Gazette Card 7 -->
               <div class="card">
-                <div class="kozlonyszam-wrapper">
-                  <div class="kozlonszam-content">
-                    <div class="kozlonyszam-texts">
-                      <div class="link-style">
-                        <div class="gasette-link">Magyar Közlöny 2025. évi 70. szám</div>
+                <div class="gazette-card-content">
+                  <div class="gazette-card-header">
+                    <a href="#" class="gazette-title-link">Magyar Közlöny 2025. évi 70. szám</a>
+                    <p class="bodysmallregular">2025. június 20.</p>
+                    <div class="button-outline">
+                      <div class="label-container-3">
+                        <span class="button-label">PDF letöltése</span>
                       </div>
-                      <div class="bodysmallregular">2025. június 20.</div>
-                      <div class="button-outline">
-                        <div class="label-container-3">
-                          <div class="button-label">PDF letöltése</div>
-                        </div>
-                        <div class="high-contrast-mode-border-2"></div>
-                      </div>
+                      <div class="high-contrast-mode-border-2"></div>
                     </div>
-                    <div class="kozlonyszam-secondary-intertactions">
-                      <div class="frame-1171276819">
-                        <div class="link-style-2">
-                          <div class="link-text-3">Indoklás(ok)</div>
-                          <div class="trailing-icon">
-                            <i class="ri-arrow-right-line"></i>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="frame-1171276820">
-                        <div class="link-style-2">
-                          <div class="link-text-3">Melléklet(ek)</div>
-                          <div class="trailing-icon">
-                            <i class="ri-arrow-right-line"></i>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+                  </div>
+                  <div class="gazette-card-actions">
+                    <a href="#" class="gazette-action-link">
+                      <span class="link-text-small">Indoklás(ok)</span>
+                      <i class="ri-arrow-right-line action-icon"></i>
+                    </a>
+                    <a href="#" class="gazette-action-link">
+                      <span class="link-text-small">Melléklet(ek)</span>
+                      <i class="ri-arrow-right-line action-icon"></i>
+                    </a>
                   </div>
                 </div>
               </div>
 
               <!-- Gazette Card 8 -->
               <div class="card">
-                <div class="kozlonyszam-wrapper">
-                  <div class="kozlonszam-content">
-                    <div class="kozlonyszam-texts">
-                      <div class="link-style">
-                        <div class="gasette-link">Magyar Közlöny 2025. évi 70. szám</div>
+                <div class="gazette-card-content">
+                  <div class="gazette-card-header">
+                    <a href="#" class="gazette-title-link">Magyar Közlöny 2025. évi 70. szám</a>
+                    <p class="bodysmallregular">2025. június 20.</p>
+                    <div class="button-outline">
+                      <div class="label-container-3">
+                        <span class="button-label">PDF letöltése</span>
                       </div>
-                      <div class="bodysmallregular">2025. június 20.</div>
-                      <div class="button-outline">
-                        <div class="label-container-3">
-                          <div class="button-label">PDF letöltése</div>
-                        </div>
-                        <div class="high-contrast-mode-border-2"></div>
-                      </div>
+                      <div class="high-contrast-mode-border-2"></div>
                     </div>
-                    <div class="kozlonyszam-secondary-intertactions">
-                      <div class="frame-1171276819">
-                        <div class="link-style-2">
-                          <div class="link-text-3">Indoklás(ok)</div>
-                          <div class="trailing-icon">
-                            <i class="ri-arrow-right-line"></i>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="frame-1171276820">
-                        <div class="link-style-2">
-                          <div class="link-text-3">Melléklet(ek)</div>
-                          <div class="trailing-icon">
-                            <i class="ri-arrow-right-line"></i>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+                  </div>
+                  <div class="gazette-card-actions">
+                    <a href="#" class="gazette-action-link">
+                      <span class="link-text-small">Indoklás(ok)</span>
+                      <i class="ri-arrow-right-line action-icon"></i>
+                    </a>
+                    <a href="#" class="gazette-action-link">
+                      <span class="link-text-small">Melléklet(ek)</span>
+                      <i class="ri-arrow-right-line action-icon"></i>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -869,76 +738,53 @@
         <div class="sidebar">
           <!-- Callout 1 -->
           <div class="callout green">
-            <div class="icon-container-2">
-              <i class="ri-information-fill icon"></i>
-            </div>
-            <div class="content-style">
-              <div class="text-3">
-                <div class="text-4">
-                  A PDF formátumú közlönyök megjelenítéséhez az ingyenesen letölthető 
-                  Adobe Acrobat Reader használatát javasoljuk.
-                </div>
-              </div>
-              <div class="actions">
-                <div class="primary-action">
-                  <div class="link-text-4">Letöltés</div>
-                </div>
-              </div>
+            <i class="ri-information-fill callout-icon"></i>
+            <div class="callout-content">
+              <p class="callout-text">
+                A PDF formátumú közlönyök megjelenítéséhez az ingyenesen letölthető 
+                Adobe Acrobat Reader használatát javasoljuk.
+              </p>
+              <a href="#" class="callout-action">Letöltés</a>
             </div>
           </div>
 
           <!-- Callout 2 -->
           <div class="callout green">
-            <div class="icon-container-2">
-              <i class="ri-information-fill icon"></i>
-            </div>
-            <div class="content-style">
-              <div class="text-3">
-                <div class="text-4">
-                  A 2013. május 3. után megjelent dokumentumok esetében a hitelességet bizonyító digitális aláírást a PDF dokumentum tartalmazza, így a hitelesség ellenőrzéséhez nincs szükség egyéb ellenőrző program letöltésére. A hitelesség ellenőrzéséhez szükséges beállításokról az alábbi linkről letölthető dokumentumban tájékozódhat.
-                </div>
-              </div>
+            <i class="ri-information-fill callout-icon"></i>
+            <div class="callout-content">
+              <p class="callout-text">
+                A 2013. május 3. után megjelent dokumentumok esetében a hitelességet bizonyító digitális aláírást a PDF dokumentum tartalmazza, így a hitelesség ellenőrzéséhez nincs szükség egyéb ellenőrző program letöltésére. A hitelesség ellenőrzéséhez szükséges beállításokról az alábbi linkről letölthető dokumentumban tájékozódhat.
+              </p>
             </div>
           </div>
 
           <!-- Callout 3 -->
           <div class="callout green">
-            <div class="icon-container-2">
-              <i class="ri-information-fill icon"></i>
-            </div>
-            <div class="content-style">
-              <div class="text-3">
-                <div class="text-4">
-                  A 2013. május 3. előtt megjelent hivatalos lapok hitelességének ellenőrzéséhez töltse le és telepítse az SDX programot, az M2-es aláírásokhoz az újabb SDX Verify Free M2 ellenőrző programot és a tanúsítványokat!
-                </div>
-              </div>
+            <i class="ri-information-fill callout-icon"></i>
+            <div class="callout-content">
+              <p class="callout-text">
+                A 2013. május 3. előtt megjelent hivatalos lapok hitelességének ellenőrzéséhez töltse le és telepítse az SDX programot, az M2-es aláírásokhoz az újabb SDX Verify Free M2 ellenőrző programot és a tanúsítványokat!
+              </p>
             </div>
           </div>
 
           <!-- Callout 4 -->
           <div class="callout green">
-            <div class="icon-container-2">
-              <i class="ri-information-fill icon"></i>
-            </div>
-            <div class="content-style">
-              <div class="text-3">
-                <div class="text-4">
-                  Megjelenítő nézet: A hivatalos lap számára kattintva (pl. Magyar Közlöny 2013. évi 1. szám) a lap gyors áttekintését és az abban történő keresést lehetővé tévő megjelenítő nézetbe jut. A megjelenítő nézetben a „Közlönyök” gomb alatt található következő „:≡” ikonra kattintva tudja az előnézeti képeket ki és bekapcsolni. Amennyiben Ön nyomtatni szeretne, javasoljuk a PDF formátumú közlöny letöltését.
-                </div>
-              </div>
+            <i class="ri-information-fill callout-icon"></i>
+            <div class="callout-content">
+              <p class="callout-text">
+                Megjelenítő nézet: A hivatalos lap számára kattintva (pl. Magyar Közlöny 2013. évi 1. szám) a lap gyors áttekintését és az abban történő keresést lehetővé tévő megjelenítő nézetbe jut. A megjelenítő nézetben a „Közlönyök" gomb alatt található következő „:≡" ikonra kattintva tudja az előnézeti képeket ki és bekapcsolni. Amennyiben Ön nyomtatni szeretne, javasoljuk a PDF formátumú közlöny letöltését.
+              </p>
             </div>
           </div>
 
           <!-- Callout 5 -->
           <div class="callout green">
-            <div class="icon-container-2">
-              <i class="ri-information-fill icon"></i>
-            </div>
-            <div class="content-style">
-              <div class="text-3">
-                <div class="text-4">
-                  Keresés: - a tárgyszavas keresés pontos szóra vagy szótöredékre a * jellel ad eredményt (pl. körjegyz*) - a dátum szerinti keresés utolsó rovatában a keresett hivatalos lap konkrét számát tudja megadni - a megjelenítő nézeten belüli keresés csak a * jel alkalmazása nélkül ad eredményt a keresett szó ragozott alakjaira is                </div>
-              </div>
+            <i class="ri-information-fill callout-icon"></i>
+            <div class="callout-content">
+              <p class="callout-text">
+                Keresés: - a tárgyszavas keresés pontos szóra vagy szótöredékre a * jellel ad eredményt (pl. körjegyz*) - a dátum szerinti keresés utolsó rovatában a keresett hivatalos lap konkrét számát tudja megadni - a megjelenítő nézeten belüli keresés csak a * jel alkalmazása nélkül ad eredményt a keresett szó ragozott alakjaira is
+              </p>
             </div>
           </div>
         </div>
@@ -979,11 +825,11 @@
     </div>
 
     <!-- Footer Content -->
-    <div class="w-layout-vflex container">
+    <div class="flex-column container">
       <div class="footer-inner">
         <div class="container-2">
           <!-- Footer Logo -->
-          <a href="index.html" class="logo w-inline-block">
+          <a href="index.html" class="logo inline-block">
             <img 
               src="src/images/magyar-kozlony-footer.svg" 
               loading="lazy" 
@@ -997,15 +843,15 @@
           <!-- Footer Links & Copyright -->
           <div class="footer-text-wrapper">
             <div class="impressum-links">
-              <a href="#" class="link-text-5">Impresszum</a>
-              <a href="#" class="link-text-5">Felhasználási feltételek</a>      
-              <a href="#" class="link-text-5">Akadálymentesítési nyilatkozat</a>
-              <a href="#" class="link-text-5">Adatkezelési tájékoztató</a>  
+              <a href="impresszum.html" class="link-text-5">Impresszum</a>
+              <a href="kapcsolat.html" class="link-text-5">Kapcsolat</a>      
+              <a href="jogszabalyi-hatter.html" class="link-text-5">Jogszabályi háttér</a>
+              <a href="akadalymentesitesi-nyilatkozat.html" class="link-text-5">Akadálymentesítési nyilatkozat</a>  
             </div>
-            <div class="text-5">
+            <p class="text-5">
               © A Nemzeti Jogszabálytárban elérhető szövegek tekintetében az MKIFK 
               Magyar Közlönykiadó és Igazságügyi Fordítóközpont Zrt. minden jogot fenntart!
-            </div>
+            </p>
           </div>
         </div>
       </div>

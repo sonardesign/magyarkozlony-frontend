@@ -151,12 +151,12 @@ These classes are used extensively in `index.html`:
 <!-- Main Content -->
 <section class="section body">
   <div class="container">
-    <div class="w-layout-vflex content">
+    <div class="flex-column content">
       
       <!-- Gazette Listing -->
       <div class="gasette-listing">
-        <div class="w-layout-vflex listing">
-          <div class="w-layout-vflex list-items">
+        <div class="flex-column listing">
+          <div class="flex-column list-items">
             
             <!-- Gazette Card -->
             <div class="card">

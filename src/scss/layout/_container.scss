@@ -15,13 +15,20 @@
   padding: 0 $spacing-16;
 }
 
-.w-layout-vflex {
+// Flex column layout utility
+.flex-column {
   flex-direction: column;
   align-items: flex-start;
   display: flex;
 }
 
-.w-layout-blockcontainer {
+.flex-row {
+  flex-direction: row;
+  align-items: center;
+  display: flex;
+}
+
+.layout-blockcontainer {
   max-width: $container-max-width-small;
   margin-left: auto;
   margin-right: auto;
@@ -72,6 +79,54 @@
   }
 }
 
+
+.listing {
+  grid-column-gap: 32px;
+  z-index: $z-index-listing;
+  gap: $spacing-16;
+}
+
+// Content wrapper for subpages
+.content-wrapper {
+  width: 100%;
+  padding: $spacing-32;
+  border-radius: $border-radius-m;
+  background: white;
+  margin-top: -32px;
+  
+  h1, h2, h3, h4, h5, h6 {
+    margin-bottom: $spacing-16;
+  }
+  
+  p {
+    margin-bottom: $spacing-16;
+    color: $color-font-primary;
+    font-weight: 400;
+    
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  
+  // Page header with icon
+  .page-header {
+    @extend .flex-row;
+    align-items: center;
+    gap: $spacing-16;
+    margin-bottom: $spacing-24;
+    
+    img {
+      flex-shrink: 0;
+    }
+    
+    h1, h2 {
+      margin-bottom: 0;
+    }
+  }
+}
+
+
+
 // Responsive
 @include respond-to-medium {
   .container {
@@ -80,7 +135,7 @@
     max-width: 100%;
   }
   
-  .w-layout-blockcontainer {
+  .layout-blockcontainer {
     max-width: $container-max-width-medium;
   }
   
@@ -90,7 +145,7 @@
 }
 
 @include respond-to-small {
-  .w-layout-blockcontainer {
+  .layout-blockcontainer {
     max-width: none;
   }
   

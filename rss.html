@@ -45,8 +45,9 @@
   </script>
   
   <!-- Favicons -->
-  <link href="https://cdn.prod.website-files.com/img/favicon.ico" rel="shortcut icon" type="image/x-icon" />
-  <link href="https://cdn.prod.website-files.com/img/webclip.png" rel="apple-touch-icon" />
+  <link href="src/images/njt-favicon.svg" rel="icon" type="image/svg+xml" />
+  <link href="src/images/njt-favicon.svg" rel="shortcut icon" type="image/svg+xml" />
+  <link href="src/images/njt-favicon.svg" rel="apple-touch-icon" />
 </head>
 
 <body data-current-page="rss">
@@ -139,7 +140,7 @@
         <div class="primary-nav-inner">
           <!-- Logo -->
           <div class="logo-wrapper">
-            <a href="index.html" class="main-nav-brand w-inline-block">
+            <a href="index.html" class="main-nav-brand inline-block">
               <img 
                 src="src/images/magyar-kozlony.svg" 
                 loading="lazy" 
@@ -181,22 +182,22 @@
       <!-- Secondary Navigation -->
       <div class="secondary-nav">
         <div class="secondary-menu-nav">
-          <a href="index.html" class="menu-item w-inline-block" data-page="index">
+          <a href="index.html" class="menu-item inline-block" data-page="index">
             <div class="menu-tem">
               <div class="menu-text">Közlönyök</div>
             </div>
           </a>
-          <a href="tanusitvanyok.html" class="menu-item w-inline-block" data-page="tanusitvanyok">
+          <a href="tanusitvanyok.html" class="menu-item inline-block" data-page="tanusitvanyok">
             <div class="menu-tem">
               <div class="menu-text">Tanúsítványok</div>
             </div>
           </a>
-          <a href="segitseg.html" class="menu-item w-inline-block" data-page="segitseg">
+          <a href="segitseg.html" class="menu-item inline-block" data-page="segitseg">
             <div class="menu-tem">
               <div class="menu-text">Segítség</div>
             </div>
           </a>
-          <a href="rss.html" class="menu-item w-inline-block" data-page="rss">
+          <a href="rss.html" class="menu-item inline-block" data-page="rss">
             <div class="menu-tem">
               <div class="menu-text">RSS</div>
             </div>
@@ -219,10 +220,10 @@
                 data-wf-element-id="c50cb6fc-122f-2c6a-a591-628c5abc0e66" 
                 data-turnstile-sitekey="0x4AAAAAAAQTptj2So4dx43e"
               >
-                <div class="w-layout-vflex form-inputs">
+                <div class="flex-column form-inputs">
                   <!-- First Row of Inputs -->
-                  <div class="w-layout-vflex input-blocks-1st">
-                    <div class="w-layout-vflex input-group _120">
+                  <div class="flex-column input-blocks-1st">
+                    <div class="flex-column input-group _120">
                       <label for="year" class="label inverted">Év</label>
                       <div class="dropdown-wrapper">
                         <button 
@@ -269,7 +270,7 @@
                         </div>
                       </div>
                     </div>
-                    <div class="w-layout-vflex input-group _120">
+                    <div class="flex-column input-group _120">
                       <label for="month" class="label inverted">Hónap</label>
                      
                       <div class="dropdown-wrapper">
@@ -302,7 +303,7 @@
                       </div>
                       
                     </div>
-                    <div class="w-layout-vflex input-group _140">
+                    <div class="flex-column input-group _140">
                       <label for="number" class="label inverted">Közlönyszám</label>
                       <input 
                         class="input-field w-input" 
@@ -317,8 +318,8 @@
                   </div>
 
                   <!-- Second Row of Inputs -->
-                  <div class="w-layout-vflex input-blocks-2nd">
-                    <div class="w-layout-vflex input-group _370">
+                  <div class="flex-column input-blocks-2nd">
+                    <div class="flex-column input-group _370">
                       <label for="publication" class="label inverted">Kiadvány</label>
                       <input 
                         class="input-field w-input" 
@@ -330,7 +331,7 @@
                         id="publication"
                       />
                     </div>
-                    <div class="w-layout-vflex input-group _370">
+                    <div class="flex-column input-group _370">
                       <label for="keyword" class="label inverted">Kulcsszó</label>
                       <input 
                         class="input-field w-input" 
@@ -346,7 +347,7 @@
                 </div>
 
                 <!-- Submit Buttons -->
-                <div class="w-layout-vflex flex-block">
+                <div class="flex-column flex-block">
                   <input 
                     type="submit" 
                     data-wait="Please wait..." 
@@ -363,10 +364,10 @@
               </form>
 
               <!-- Form States -->
-              <div class="w-form-done">
+              <div class="form-success">
                 <div>Thank you! Your submission has been received!</div>
               </div>
-              <div class="w-form-fail">
+              <div class="form-error">
                 <div>Oops! Something went wrong while submitting the form.</div>
               </div>
             </div>
@@ -404,13 +405,13 @@
        ============================================ -->
   <section class="section body">
     <div class="container">
-      <div class="w-layout-vflex content">
+      <div class="flex-column content">
         <!-- Main Gazette Listing -->
         <div class="gasette-listing">
           <!-- Featured Gazette -->
-          <div class="w-layout-vflex listing">
+          <div class="flex-column listing">
             <div class="h2 inverse">Legfrisebb Közlöny</div>
-            <div class="w-layout-vflex list-items">
+            <div class="flex-column list-items">
               <div class="card">
                 <div class="kozlonyszam-wrapper">
                   <div class="kozlonszam-content">
@@ -419,23 +420,23 @@
                         <a href="#" class="gasette-link">Magyar Közlöny 2025. évi 70. szám</a>
                       </div>
                       <div class="bodysmallregular">2025. június 20.</div>
-                      <a href="#" class="button-outline w-inline-block">
+                      <a href="#" class="button-outline inline-block">
                         <div class="button-label">PDF letöltése</div>
                         <div class="high-contrast-mode-border-2"></div>
                       </a>
                     </div>
                     <div class="kozlonyszam-secondary-intertactions">
-                      <div class="frame-1171276819">
+                      <div class="flex-row">
                         <div class="link-style-2">
-                          <div class="link-text-3">Indoklás(ok)</div>
+                          <div class="link-text-small">Indoklás(ok)</div>
                           <div class="trailing-icon">
                             <i class="ri-arrow-right-line"></i>
                           </div>
                         </div>
                       </div>
-                      <div class="frame-1171276820">
+                      <div class="flex-row">
                         <div class="link-style-2">
-                          <div class="link-text-3">Melléklet(ek)</div>
+                          <div class="link-text-small">Melléklet(ek)</div>
                           <div class="trailing-icon">
                             <i class="ri-arrow-right-line"></i>
                           </div>
@@ -449,9 +450,9 @@
           </div>
 
           <!-- All Gazettes Listing -->
-          <div class="w-layout-vflex listing">
+          <div class="flex-column listing">
             <div class="h2">Üdvözöljük a Magyar Közlöny weboldalán!</div>
-            <div class="w-layout-vflex list-items">
+            <div class="flex-column list-items">
               <!-- Gazette Card 1 -->
               <div class="card">
                 <div class="kozlonyszam-wrapper">
@@ -461,23 +462,23 @@
                         <div class="gasette-link">Magyar Közlöny 2025. évi 70. szám</div>
                       </div>
                       <div class="bodysmallregular">2025. június 20.</div>
-                      <a href="#" class="button-outline w-inline-block">
+                      <a href="#" class="button-outline inline-block">
                         <div class="button-label">PDF letöltése</div>
                         <div class="high-contrast-mode-border-2"></div>
                       </a>
                     </div>
                     <div class="kozlonyszam-secondary-intertactions">
-                      <div class="frame-1171276819">
+                      <div class="flex-row">
                         <div class="link-style-2">
-                          <div class="link-text-3">Indoklás(ok)</div>
+                          <div class="link-text-small">Indoklás(ok)</div>
                           <div class="trailing-icon">
                             <i class="ri-arrow-right-line"></i>
                           </div>
                         </div>
                       </div>
-                      <div class="frame-1171276820">
+                      <div class="flex-row">
                         <div class="link-style-2">
-                          <div class="link-text-3">Melléklet(ek)</div>
+                          <div class="link-text-small">Melléklet(ek)</div>
                           <div class="trailing-icon">
                             <i class="ri-arrow-right-line"></i>
                           </div>
@@ -497,23 +498,23 @@
                         <div class="gasette-link">Magyar Közlöny 2025. évi 70. szám</div>
                       </div>
                       <div class="bodysmallregular">2025. június 20.</div>
-                      <a href="#" class="button-outline w-inline-block">
+                      <a href="#" class="button-outline inline-block">
                         <div class="button-label">PDF letöltése</div>
                         <div class="high-contrast-mode-border-2"></div>
                       </a>
                     </div>
                     <div class="kozlonyszam-secondary-intertactions">
-                      <div class="frame-1171276819">
+                      <div class="flex-row">
                         <div class="link-style-2">
-                          <div class="link-text-3">Indoklás(ok)</div>
+                          <div class="link-text-small">Indoklás(ok)</div>
                           <div class="trailing-icon">
                             <i class="ri-arrow-right-line"></i>
                           </div>
                         </div>
                       </div>
-                      <div class="frame-1171276820">
+                      <div class="flex-row">
                         <div class="link-style-2">
-                          <div class="link-text-3">Melléklet(ek)</div>
+                          <div class="link-text-small">Melléklet(ek)</div>
                           <div class="trailing-icon">
                             <i class="ri-arrow-right-line"></i>
                           </div>
@@ -541,17 +542,17 @@
                       </div>
                     </div>
                     <div class="kozlonyszam-secondary-intertactions">
-                      <div class="frame-1171276819">
+                      <div class="flex-row">
                         <div class="link-style-2">
-                          <div class="link-text-3">Indoklás(ok)</div>
+                          <div class="link-text-small">Indoklás(ok)</div>
                           <div class="trailing-icon">
                             <i class="ri-arrow-right-line"></i>
                           </div>
                         </div>
                       </div>
-                      <div class="frame-1171276820">
+                      <div class="flex-row">
                         <div class="link-style-2">
-                          <div class="link-text-3">Melléklet(ek)</div>
+                          <div class="link-text-small">Melléklet(ek)</div>
                           <div class="trailing-icon">
                             <i class="ri-arrow-right-line"></i>
                           </div>
@@ -579,17 +580,17 @@
                       </div>
                     </div>
                     <div class="kozlonyszam-secondary-intertactions">
-                      <div class="frame-1171276819">
+                      <div class="flex-row">
                         <div class="link-style-2">
-                          <div class="link-text-3">Indoklás(ok)</div>
+                          <div class="link-text-small">Indoklás(ok)</div>
                           <div class="trailing-icon">
                             <i class="ri-arrow-right-line"></i>
                           </div>
                         </div>
                       </div>
-                      <div class="frame-1171276820">
+                      <div class="flex-row">
                         <div class="link-style-2">
-                          <div class="link-text-3">Melléklet(ek)</div>
+                          <div class="link-text-small">Melléklet(ek)</div>
                           <div class="trailing-icon">
                             <i class="ri-arrow-right-line"></i>
                           </div>
@@ -609,23 +610,23 @@
                         <div class="gasette-link">Magyar Közlöny 2025. évi 70. szám</div>
                       </div>
                       <div class="bodysmallregular">2025. június 20.</div>
-                      <a href="#" class="button-outline w-inline-block">
+                      <a href="#" class="button-outline inline-block">
                         <div class="button-label">PDF letöltése</div>
                         <div class="high-contrast-mode-border-2"></div>
                       </a>
                     </div>
                     <div class="kozlonyszam-secondary-intertactions">
-                      <div class="frame-1171276819">
+                      <div class="flex-row">
                         <div class="link-style-2">
-                          <div class="link-text-3">Indoklás(ok)</div>
+                          <div class="link-text-small">Indoklás(ok)</div>
                           <div class="trailing-icon">
                             <i class="ri-arrow-right-line"></i>
                           </div>
                         </div>
                       </div>
-                      <div class="frame-1171276820">
+                      <div class="flex-row">
                         <div class="link-style-2">
-                          <div class="link-text-3">Melléklet(ek)</div>
+                          <div class="link-text-small">Melléklet(ek)</div>
                           <div class="trailing-icon">
                             <i class="ri-arrow-right-line"></i>
                           </div>
@@ -653,17 +654,17 @@
                       </div>
                     </div>
                     <div class="kozlonyszam-secondary-intertactions">
-                      <div class="frame-1171276819">
+                      <div class="flex-row">
                         <div class="link-style-2">
-                          <div class="link-text-3">Indoklás(ok)</div>
+                          <div class="link-text-small">Indoklás(ok)</div>
                           <div class="trailing-icon">
                             <i class="ri-arrow-right-line"></i>
                           </div>
                         </div>
                       </div>
-                      <div class="frame-1171276820">
+                      <div class="flex-row">
                         <div class="link-style-2">
-                          <div class="link-text-3">Melléklet(ek)</div>
+                          <div class="link-text-small">Melléklet(ek)</div>
                           <div class="trailing-icon">
                             <i class="ri-arrow-right-line"></i>
                           </div>
@@ -691,17 +692,17 @@
                       </div>
                     </div>
                     <div class="kozlonyszam-secondary-intertactions">
-                      <div class="frame-1171276819">
+                      <div class="flex-row">
                         <div class="link-style-2">
-                          <div class="link-text-3">Indoklás(ok)</div>
+                          <div class="link-text-small">Indoklás(ok)</div>
                           <div class="trailing-icon">
                             <i class="ri-arrow-right-line"></i>
                           </div>
                         </div>
                       </div>
-                      <div class="frame-1171276820">
+                      <div class="flex-row">
                         <div class="link-style-2">
-                          <div class="link-text-3">Melléklet(ek)</div>
+                          <div class="link-text-small">Melléklet(ek)</div>
                           <div class="trailing-icon">
                             <i class="ri-arrow-right-line"></i>
                           </div>
@@ -729,17 +730,17 @@
                       </div>
                     </div>
                     <div class="kozlonyszam-secondary-intertactions">
-                      <div class="frame-1171276819">
+                      <div class="flex-row">
                         <div class="link-style-2">
-                          <div class="link-text-3">Indoklás(ok)</div>
+                          <div class="link-text-small">Indoklás(ok)</div>
                           <div class="trailing-icon">
                             <i class="ri-arrow-right-line"></i>
                           </div>
                         </div>
                       </div>
-                      <div class="frame-1171276820">
+                      <div class="flex-row">
                         <div class="link-style-2">
-                          <div class="link-text-3">Melléklet(ek)</div>
+                          <div class="link-text-small">Melléklet(ek)</div>
                           <div class="trailing-icon">
                             <i class="ri-arrow-right-line"></i>
                           </div>
@@ -759,101 +760,61 @@
         <div class="sidebar">
           <!-- Callout 1 -->
           <div class="callout green">
-            <div class="icon-container-2">
-              <i class="ri-file-pdf-fill icon"></i>
-            </div>
-            <div class="content-style">
-              <div class="text-3">
-                <div class="text-4">
-                  A PDF formátumú közlönyök megjelenítéséhez az ingyenesen letölthető 
-                  Adobe Acrobat Reader használatát javasoljuk.
-                </div>
-              </div>
-              <div class="actions">
-                <div class="primary-action">
-                  <div class="link-text-4">Letöltés</div>
-                </div>
-              </div>
+            <i class="ri-file-pdf-fill callout-icon"></i>
+            <div class="callout-content">
+              <p class="callout-text">
+                A PDF formátumú közlönyök megjelenítéséhez az ingyenesen letölthető 
+                Adobe Acrobat Reader használatát javasoljuk.
+              </p>
+              <a href="#" class="callout-action">Letöltés</a>
             </div>
           </div>
 
           <!-- Callout 2 -->
           <div class="callout green">
-            <div class="icon-container-2">
-              <i class="ri-information-fill icon"></i>
-            </div>
-            <div class="content-style">
-              <div class="text-3">
-                <div class="text-4">
-                  A PDF formátumú közlönyök megjelenítéséhez az ingyenesen letölthető 
-                  Adobe Acrobat Reader használatát javasoljuk.
-                </div>
-              </div>
-              <div class="actions">
-                <div class="primary-action">
-                  <div class="link-text-4">Letöltés</div>
-                </div>
-              </div>
+            <i class="ri-information-fill callout-icon"></i>
+            <div class="callout-content">
+              <p class="callout-text">
+                A PDF formátumú közlönyök megjelenítéséhez az ingyenesen letölthető 
+                Adobe Acrobat Reader használatát javasoljuk.
+              </p>
+              <a href="#" class="callout-action">Letöltés</a>
             </div>
           </div>
 
           <!-- Callout 3 -->
           <div class="callout green">
-            <div class="icon-container-2">
-              <i class="ri-menu-fill icon"></i>
-            </div>
-            <div class="content-style">
-              <div class="text-3">
-                <div class="text-4">
-                  A PDF formátumú közlönyök megjelenítéséhez az ingyenesen letölthető 
-                  Adobe Acrobat Reader használatát javasoljuk.
-                </div>
-              </div>
-              <div class="actions">
-                <div class="primary-action">
-                  <div class="link-text-4">Letöltés</div>
-                </div>
-              </div>
+            <i class="ri-menu-fill callout-icon"></i>
+            <div class="callout-content">
+              <p class="callout-text">
+                A PDF formátumú közlönyök megjelenítéséhez az ingyenesen letölthető 
+                Adobe Acrobat Reader használatát javasoljuk.
+              </p>
+              <a href="#" class="callout-action">Letöltés</a>
             </div>
           </div>
 
           <!-- Callout 4 -->
           <div class="callout green">
-            <div class="icon-container-2">
-              <i class="ri-information-fill icon"></i>
-            </div>
-            <div class="content-style">
-              <div class="text-3">
-                <div class="text-4">
-                  A PDF formátumú közlönyök megjelenítéséhez az ingyenesen letölthető 
-                  Adobe Acrobat Reader használatát javasoljuk.
-                </div>
-              </div>
-              <div class="actions">
-                <div class="primary-action">
-                  <div class="link-text-4">Letöltés</div>
-                </div>
-              </div>
+            <i class="ri-information-fill callout-icon"></i>
+            <div class="callout-content">
+              <p class="callout-text">
+                A PDF formátumú közlönyök megjelenítéséhez az ingyenesen letölthető 
+                Adobe Acrobat Reader használatát javasoljuk.
+              </p>
+              <a href="#" class="callout-action">Letöltés</a>
             </div>
           </div>
 
           <!-- Callout 5 -->
           <div class="callout green">
-            <div class="icon-container-2">
-              <i class="ri-information-fill icon"></i>
-            </div>
-            <div class="content-style">
-              <div class="text-3">
-                <div class="text-4">
-                  A PDF formátumú közlönyök megjelenítéséhez az ingyenesen letölthető 
-                  Adobe Acrobat Reader használatát javasoljuk.
-                </div>
-              </div>
-              <div class="actions">
-                <div class="primary-action">
-                  <div class="link-text-4">Letöltés</div>
-                </div>
-              </div>
+            <i class="ri-information-fill callout-icon"></i>
+            <div class="callout-content">
+              <p class="callout-text">
+                A PDF formátumú közlönyök megjelenítéséhez az ingyenesen letölthető 
+                Adobe Acrobat Reader használatát javasoljuk.
+              </p>
+              <a href="#" class="callout-action">Letöltés</a>
             </div>
           </div>
         </div>
@@ -894,11 +855,11 @@
     </div>
 
     <!-- Footer Content -->
-    <div class="w-layout-vflex container">
+    <div class="flex-column container">
       <div class="footer-inner">
         <div class="container-2">
           <!-- Footer Logo -->
-          <a href="index.html" class="logo w-inline-block">
+          <a href="index.html" class="logo inline-block">
             <img 
               src="src/images/magyar-kozlony-footer.svg" 
               loading="lazy" 
@@ -912,18 +873,10 @@
           <!-- Footer Links & Copyright -->
           <div class="footer-text-wrapper">
             <div class="impressum-links">
-              <div class="link-style-3">
-                <div class="link-text-5">Impresszum</div>
-              </div>
-              <div class="link-style-3">
-                <div class="link-text-5">Felhasználási feltételek</div>
-              </div>
-              <div class="link-style-3">
-                <div class="link-text-5">Akadálymentesítési nyilatkozat</div>
-              </div>
-              <div class="link-style-3">
-                <div class="link-text-5">Adatkezelési tájékoztató</div>
-              </div>
+              <a href="impresszum.html" class="link-text-5">Impresszum</a>
+              <a href="kapcsolat.html" class="link-text-5">Kapcsolat</a>
+              <a href="jogszabalyi-hatter.html" class="link-text-5">Jogszabályi háttér</a>
+              <a href="akadalymentesitesi-nyilatkozat.html" class="link-text-5">Akadálymentesítési nyilatkozat</a>
             </div>
             <div class="text-5">
               © A Nemzeti Jogszabálytárban elérhető szövegek tekintetében az MKIFK 

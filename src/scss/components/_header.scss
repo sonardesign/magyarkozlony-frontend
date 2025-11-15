@@ -22,8 +22,10 @@
   align-items: center;
   position: relative;
   width: 100%;
+  height: 100%;
   text-decoration: none;
   display: flex;
+  padding-bottom: $spacing-80;
 }
 
 .main-nav {
