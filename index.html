@@ -20,7 +20,7 @@
   <meta name="bingbot" content="noindex, nofollow" />
   
   <!-- Stylesheets -->
-  <link href="src/css/main.css?v=1763216945060" rel="stylesheet" type="text/css" />
+  <link href="src/css/main.css?v=1763410710067" rel="stylesheet" type="text/css" />
   
   <!-- Font Preconnects -->
   <link href="https://fonts.googleapis.com" rel="preconnect" />
@@ -263,7 +263,7 @@
       <div class="search">
         <div class="search-form">
           <div class="form-wrapper">
-            <div class="form-block w-form">
+            <div class="form-block form">
               <form 
                 id="email-form" 
                 name="email-form" 
@@ -283,7 +283,7 @@
                         <button 
                           type="button"
                           id="year-dropdown-trigger" 
-                          class="input-field w-select dropdown-trigger" 
+                          class="input-field select dropdown-trigger" 
                           data-dropdown="year-dropdown"
                           aria-haspopup="true"
                           aria-expanded="false"
@@ -331,7 +331,7 @@
                         <button 
                           type="button"
                           id="month-dropdown-trigger" 
-                          class="input-field w-select dropdown-trigger" 
+                          class="input-field select dropdown-trigger" 
                           data-dropdown="month-dropdown"
                           aria-haspopup="true"
                           aria-expanded="false"
@@ -360,7 +360,7 @@
                     <div class="flex-column input-group _140">
                       <label for="number" class="label inverted">Közlönyszám</label>
                       <input 
-                        class="input-field w-input" 
+                        class="input-field input" 
                         maxlength="256" 
                         name="number" 
                         data-name="Number" 
@@ -379,7 +379,7 @@
                         <button 
                           type="button"
                           id="publication-dropdown-trigger" 
-                          class="input-field w-select dropdown-trigger" 
+                          class="input-field select dropdown-trigger" 
                           data-dropdown="publication-dropdown"
                           aria-haspopup="true"
                           aria-expanded="false"
@@ -397,7 +397,7 @@
                     <div class="flex-column input-group _370">
                       <label for="keyword" class="label inverted">Kulcsszó</label>
                       <input 
-                        class="input-field w-input" 
+                        class="input-field input" 
                         maxlength="256" 
                         name="keyword" 
                         data-name="Keyword" 
@@ -411,18 +411,20 @@
 
                 <!-- Submit Buttons -->
                 <div class="search-buttons">
-                  <input 
+                  <button 
                     type="submit" 
                     data-wait="Please wait..." 
-                    class="link-button-inverse w-button" 
-                    value="Beállítások törlése"
-                  />
-                  <input 
+                    class="link-button-inverse"
+                  >
+                    Beállítások törlése
+                  </button>
+                  <button 
                     type="submit" 
                     data-wait="Please wait..." 
-                    class="button-primary w-button" 
-                    value="Keresés"
-                  />
+                    class="button-primary button"
+                  >
+                    Keresés
+                  </button>
                 </div>
               </form>
 
@@ -473,7 +475,7 @@
         <div class="gasette-listing">
           <!-- Featured Gazette -->
           <div class="flex-column listing">
-            <h2 class="h2 inverse">Legfrisebb Közlöny</h2>
+            <h2 class="h2 inverse">Legfrissebb Közlöny</h2>
             
             <div class="new-gazettes-desktop flex-column list-items">
               <div class="card">

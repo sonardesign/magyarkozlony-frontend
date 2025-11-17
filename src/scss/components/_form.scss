@@ -4,23 +4,17 @@
 
 @use '../abstracts' as *;
 
+// ============================================
+// Form Layout
+// ============================================
+
 .form-block {
   width: 100%;
   display: flex;
 }
 
-.search-buttons{
-  display: flex;
-  flex-flow: row;
-
-  @include respond-to-small {
-    flex-flow: column;
-    width: 100%;
-
-    input{
-      width: 100%;
-    }
-  }
+.form {
+  margin: 0 0 $spacing-16;
 }
 
 .main-search {
@@ -34,8 +28,8 @@
 }
 
 .form-inputs {
-  grid-column-gap: 16px;
-  grid-row-gap: 16px;
+  grid-column-gap: $spacing-16;
+  grid-row-gap: $spacing-16;
   flex-flow: row;
   width: 100%;
 }
@@ -71,6 +65,14 @@
   }
 }
 
+.flex-block {
+  flex-flow: row;
+}
+
+// ============================================
+// Form Fields
+// ============================================
+
 .input-field {
   border: 1px solid $color-border;
   border-radius: $border-radius-m;
@@ -92,18 +94,26 @@
   }
 }
 
-// Input field text styling (matches dropdown text)
-.w-input {
+// Unified input and select styles
+.input,
+.select {
   font-family: $font-primary;
   font-size: $font-size-16;
   font-weight: 400;
   color: $color-font-primary;
+  background-color: $color-white;
+  border: 1px solid $color-border;
+  width: 100%;
+  height: 48px;
+  padding: 0 12px;
+  line-height: 1.5;
+  display: block;
   
   &::placeholder {
     font-family: $font-primary;
     font-size: $font-size-16;
     font-weight: 400;
-    color: $color-gray-medium; // Lighter color for placeholder
+    color: $color-gray-medium;
     opacity: 1; // Ensure opacity is set for Firefox
   }
   
@@ -128,6 +138,54 @@
     font-weight: 400;
     color: $color-gray-medium;
   }
+  
+  &:focus {
+    outline-color: $color-accent-500;
+    outline-offset: 2px;
+    outline-width: 2px;
+    outline-style: solid;
+    border-color: $color-accent-500;
+  }
+  
+  &[disabled],
+  &[readonly] {
+    cursor: not-allowed;
+    background-color: #eee;
+  }
+}
+
+fieldset[disabled] .input,
+fieldset[disabled] .select {
+  cursor: not-allowed;
+  
+  &:not(.input-disabled) {
+    background-color: #eee;
+  }
+}
+
+textarea.input,
+textarea.select {
+  height: auto;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.select {
+  background-color: $color-white;
+  
+  &[multiple] {
+    height: auto;
+  }
+}
+
+// ============================================
+// Labels
+// ============================================
+
+label {
+  margin-bottom: 5px;
+  font-weight: bold;
+  display: block;
 }
 
 .label {
@@ -141,11 +199,57 @@
   }
 }
 
-.flex-block {
+// ============================================
+// Buttons
+// ============================================
+
+.search-buttons {
+  display: flex;
   flex-flow: row;
+  gap: $spacing-16;
+
+  @include respond-to-small {
+    flex-flow: column;
+    width: 100%;
+
+    input,
+    button {
+      width: 100%;
+    }
+  }
 }
 
+// ============================================
+// Form States
+// ============================================
+
+.form-success {
+  text-align: center;
+  background-color: #ddd;
+  padding: 20px;
+  display: none;
+}
+
+.form-error {
+  background-color: #ffdede;
+  margin-top: 10px;
+  padding: 10px;
+  display: none;
+}
+
+// Legacy support - keep for backward compatibility during migration
+.form-done {
+  @extend .form-success;
+}
+
+.form-fail {
+  @extend .form-error;
+}
+
+// ============================================
 // Responsive
+// ============================================
+
 @include respond-to-medium {
   .main-search,
   .form-inputs {
@@ -172,4 +276,3 @@
     flex-flow: column;
   }
 }
-
