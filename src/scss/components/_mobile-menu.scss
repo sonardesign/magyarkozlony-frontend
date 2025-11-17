@@ -10,8 +10,8 @@
   justify-content: flex-start;
   align-items: flex-start;
   width: 100%;
-  max-width: 393px;
-  height: 951px;
+  max-width: 100%;
+  height: 100%;
   text-decoration: none;
   display: none;
   position: absolute;
@@ -25,7 +25,7 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  height: 60px;
+  height: 90px;
   padding: 8px 16px;
   display: flex;
 }
@@ -92,6 +92,17 @@
     color: $color-teal-1600;
   }
 }
+
+.close-button {
+  cursor: pointer;
+  color: white;
+
+  &:hover {
+    color: $color-accent-500;
+  } 
+}
+
+
 
 .menu-item-01,
 .menu-item-04,
@@ -192,7 +203,7 @@
   }
   
   .mobile-menu-header {
-    height: $spacing-80;
+    height: 90px;
   }
 }
 

@@ -11450,6 +11450,7 @@ ul, ol {
   grid-column-gap: 32px;
   z-index: 1;
   gap: 16px;
+  width: 100%;
 }
 
 .content-wrapper {
@@ -11534,6 +11535,24 @@ ul, ol {
   padding-left: 4px;
   padding-right: 4px;
   text-decoration: none;
+}
+
+.desktop-only {
+  display: block;
+}
+@media screen and (max-width: 768px) {
+  .desktop-only {
+    display: none;
+  }
+}
+
+.mobile-only {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .mobile-only {
+    display: block;
+  }
 }
 
 .btn, .button-subtle, .button-outline, .button-primary {
@@ -12002,8 +12021,7 @@ ul, ol {
 }
 
 .main-search {
-  grid-column-gap: 16px;
-  grid-row-gap: 16px;
+  gap: 16px;
   flex-flow: column;
   justify-content: flex-end;
   align-items: flex-end;
@@ -12012,29 +12030,25 @@ ul, ol {
 }
 
 .form-inputs {
-  grid-column-gap: 16px;
-  grid-row-gap: 16px;
+  gap: 16px;
   flex-flow: row;
   width: 100%;
 }
 
 .input-blocks-1st {
-  grid-column-gap: 16px;
-  grid-row-gap: 16px;
+  gap: 16px;
   flex-flow: row;
   width: 40%;
 }
 
 .input-blocks-2nd {
-  grid-column-gap: 16px;
-  grid-row-gap: 16px;
+  gap: 16px;
   flex-flow: row;
   width: 60%;
 }
 
 .input-group {
-  grid-column-gap: 8px;
-  grid-row-gap: 8px;
+  gap: 8px;
 }
 .input-group._140 {
   width: 40%;
@@ -12091,28 +12105,6 @@ ul, ol {
   font-weight: 400;
   color: #606b7a;
   opacity: 1;
-}
-.input::-webkit-input-placeholder,
-.select::-webkit-input-placeholder {
-  font-family: Inter, sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  color: #606b7a;
-}
-.input::-moz-placeholder,
-.select::-moz-placeholder {
-  font-family: Inter, sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  color: #606b7a;
-  opacity: 1;
-}
-.input:-ms-input-placeholder,
-.select:-ms-input-placeholder {
-  font-family: Inter, sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  color: #606b7a;
 }
 .input:focus,
 .select:focus {
@@ -12182,6 +12174,10 @@ label {
   .search-buttons button {
     width: 100%;
   }
+}
+.search-buttons.tanusitvanyok {
+  justify-content: flex-end;
+  width: 100%;
 }
 
 .form-success, .form-done {
@@ -12603,8 +12599,8 @@ label {
   justify-content: flex-start;
   align-items: flex-start;
   width: 100%;
-  max-width: 393px;
-  height: 951px;
+  max-width: 100%;
+  height: 100%;
   text-decoration: none;
   display: none;
   position: absolute;
@@ -12618,7 +12614,7 @@ label {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  height: 60px;
+  height: 90px;
   padding: 8px 16px;
   display: flex;
 }
@@ -12682,6 +12678,14 @@ label {
 .menu-item-mobile.active {
   background-color: #38e0b1;
   color: #0b3d3e;
+}
+
+.close-button {
+  cursor: pointer;
+  color: white;
+}
+.close-button:hover {
+  color: #38e0b1;
 }
 
 .menu-item-01,
@@ -12776,7 +12780,7 @@ label {
     opacity: 1;
   }
   .mobile-menu-header {
-    height: 80px;
+    height: 90px;
   }
 }
 .dropdown-wrapper {
@@ -13092,64 +13096,64 @@ label {
   }
 }
 .content {
-  grid-column-gap: 32px;
-  grid-row-gap: 32px;
+  gap: 32px;
   flex-flow: row;
   width: 100%;
   margin-top: -82px;
 }
 
 .new-gazettes-mobile {
-  display: none;
-  grid-row-gap: 16px;
   flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
   width: 100%;
   margin-top: 32px;
   margin-bottom: 32px;
   position: relative;
   z-index: 1;
+  display: none;
 }
 
 .new-gazettes-desktop {
   display: flex;
-  flex-flow: column;
+  flex-direction: column;
+  align-items: flex-start;
   width: 100%;
   position: relative;
   z-index: 1;
 }
 
 .gasette-listing {
-  grid-column-gap: 16px;
-  grid-row-gap: 16px;
-  flex-flow: column;
-  width: 70%;
   display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  width: 70%;
 }
 
 .list-items {
-  grid-column-gap: 16px;
-  grid-row-gap: 16px;
-  flex-flow: column;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
   width: 100%;
 }
 
 .intro-text-wrapper {
-  grid-row-gap: 12px;
+  display: flex;
   flex-direction: column;
-  justify-content: flex-start;
   align-items: flex-start;
+  gap: 12px;
   width: 100%;
   text-decoration: none;
-  display: flex;
 }
 
 .intro-text {
-  grid-row-gap: 32px;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  text-decoration: none;
   display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 32px;
+  text-decoration: none;
 }
 @media screen and (min-width: 479px), (min-width: 767px) {
   .intro-text {
@@ -13163,30 +13167,33 @@ label {
 }
 
 .gazette-card-content, .kozlonszam-content {
-  grid-row-gap: 8px;
+  display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: flex-start;
+  gap: 8px;
+  justify-content: center;
   width: 100%;
   height: 73px;
-  display: flex;
 }
 
 .gazette-card-header, .kozlonyszam-texts {
-  justify-content: space-between;
+  display: flex;
+  flex-direction: row;
   align-items: center;
+  justify-content: space-between;
   width: 100%;
   text-decoration: none;
-  display: flex;
 }
 
 .gazette-card-actions, .kozlonyszam-secondary-intertactions {
-  grid-column-gap: 16px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
   flex: 0 auto;
   justify-content: flex-start;
   align-items: flex-start;
   text-decoration: none;
-  display: flex;
 }
 
 .gazette-title-link, .gasette-link {
@@ -13204,20 +13211,22 @@ label {
 }
 
 .gazette-action-link, .link-style-2 {
-  grid-column-gap: 4px;
-  justify-content: flex-start;
-  align-items: center;
-  text-decoration: none;
   display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 4px;
+  justify-content: flex-start;
+  text-decoration: none;
 }
 
 .action-icon, .trailing-icon {
-  grid-column-gap: 8px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
   flex: 0 auto;
   justify-content: center;
-  align-items: center;
   text-decoration: none;
-  display: flex;
 }
 
 .kozlonyszam-wrapper {
@@ -13225,13 +13234,14 @@ label {
 }
 
 .link-style {
-  grid-column-gap: 4px;
-  justify-content: flex-start;
+  display: flex;
+  flex-direction: row;
   align-items: center;
+  gap: 4px;
+  justify-content: flex-start;
   width: 100%;
   max-width: 320px;
   text-decoration: none;
-  display: flex;
 }
 
 @media screen and (max-width: 991px) {
@@ -13248,13 +13258,28 @@ label {
     text-align: left;
   }
 }
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .new-gazettes-mobile {
+    display: none;
+  }
+  .new-gazettes-desktop {
+    display: flex;
+  }
+}
+@media screen and (min-width: 992px) {
+  .new-gazettes-mobile {
+    display: none;
+  }
+  .new-gazettes-desktop {
+    display: flex;
+  }
+}
 @media screen and (max-width: 767px) {
   .gazette-card-content, .kozlonszam-content {
     height: 100%;
   }
   .gazette-card-header, .kozlonyszam-texts {
-    grid-column-gap: 8px;
-    grid-row-gap: 8px;
+    gap: 8px;
     flex-flow: column;
     justify-content: space-between;
     align-items: flex-start;
@@ -13273,8 +13298,7 @@ label {
     height: 100%;
   }
   .kozlonyszam-texts {
-    grid-column-gap: 8px;
-    grid-row-gap: 8px;
+    gap: 8px;
     flex-flow: column;
     justify-content: space-between;
     align-items: flex-start;
@@ -13308,32 +13332,17 @@ label {
 }
 
 .tanusitvanyok-inputs {
-  grid-row-gap: 8px;
+  display: flex;
   flex-direction: column;
-  justify-content: flex-start;
   align-items: flex-start;
+  gap: 8px;
   width: 100%;
-  display: flex;
-}
-
-.layout-hflex {
-  display: flex;
-  flex-direction: row;
-}
-
-.layout-vflex {
-  display: flex;
-  flex-direction: column;
-}
-
-.button-wrapper-tanusitvanyok {
-  width: 100%;
-  justify-content: flex-end;
 }
 
 .tanusitvany-listing {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   width: 100%;
   border-radius: 8px;
   overflow: hidden;
@@ -13345,6 +13354,7 @@ label {
   padding: 16px 32px;
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   gap: 32px;
   align-items: flex-end;
   width: 100%;
@@ -13355,8 +13365,9 @@ label {
 
 .tanusitvany-inner {
   display: flex;
-  justify-content: space-between;
+  flex-direction: row;
   align-items: center;
+  justify-content: space-between;
   width: 100%;
   gap: 16px;
 }
@@ -13364,6 +13375,7 @@ label {
 .tanusitvany-text-wrapper {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   gap: 8px;
   flex: 1;
   min-width: 0;
@@ -13385,8 +13397,10 @@ label {
 
 .tanusitvany-validity {
   display: flex;
-  gap: 8px;
+  flex-direction: row;
+  align-items: center;
   align-items: flex-start;
+  gap: 8px;
   font-family: Inter, sans-serif;
   font-size: 14px;
   font-weight: 500;
@@ -13400,11 +13414,11 @@ label {
 }
 
 .certificate-listing {
-  grid-column-gap: 32px;
-  grid-row-gap: 32px;
-  flex-flow: column;
-  width: 70%;
   display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 32px;
+  width: 70%;
 }
 
 @media screen and (max-width: 991px) {
@@ -13414,7 +13428,7 @@ label {
 }
 @media screen and (max-width: 767px) {
   .tanusitvanyok-form {
-    grid-row-gap: 12px;
+    gap: 12px;
   }
   .tanusitvanyok-inputs-1,
   .tanusitvanyok-inputs-2 {

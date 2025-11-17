@@ -11,8 +11,7 @@
 // ============================================
 
 .content {
-  grid-column-gap: 32px;
-  grid-row-gap: 32px;
+  gap: $spacing-32;
   flex-flow: row;
   width: 100%;
   margin-top: -82px; // Overlap with search section
@@ -23,22 +22,23 @@
 // ============================================
 
 .new-gazettes-mobile {
-  display: none; // Hidden by default on large screens
-  grid-row-gap: $spacing-16;
+  // Hidden by default on large screens
   flex-direction: column;
+  align-items: flex-start;
+  gap: $spacing-16;
   width: 100%;
   margin-top: $spacing-32;
   margin-bottom: $spacing-32;
   position: relative;
   z-index: $z-index-listing;
+  display: none; // Must be last to ensure it's not overridden
 }
 
-.new-gazettes-desktop{
-    display: flex;
-    flex-flow: column;
-    width: 100%;
-    position: relative;
-    z-index: $z-index-listing;
+.new-gazettes-desktop {
+  @include flex-column;
+  width: 100%;
+  position: relative;
+  z-index: $z-index-listing;
 }
 
 // ============================================
@@ -46,18 +46,14 @@
 // ============================================
 
 .gasette-listing {
-  grid-column-gap: $spacing-16;
-  grid-row-gap: $spacing-16;
-  flex-flow: column;
+  @include flex-column;
+  gap: $spacing-16;
   width: 70%;
-  display: flex;
 }
 
-
 .list-items {
-  grid-column-gap: 16px;
-  grid-row-gap: 16px;
-  flex-flow: column;
+  @include flex-column;
+  gap: $spacing-16;
   width: 100%;
 }
 
@@ -66,22 +62,16 @@
 // ============================================
 
 .intro-text-wrapper {
-  grid-row-gap: $spacing-12;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
+  @include flex-column;
+  gap: $spacing-12;
   width: 100%;
   text-decoration: none;
-  display: flex;
 }
 
 .intro-text {
-  grid-row-gap: $spacing-32;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
+  @include flex-column;
+  gap: $spacing-32;
   text-decoration: none;
-  display: flex;
 
   @media screen and (min-width: $breakpoint-tiny), (min-width: $breakpoint-small) {
     max-width: 100%;
@@ -99,30 +89,27 @@
 // ============================================
 
 .gazette-card-content {
-  grid-row-gap: 8px;
-  flex-direction: column;
+  @include flex-column;
+  gap: $spacing-8;
   justify-content: center;
-  align-items: flex-start;
   width: 100%;
   height: 73px;
-  display: flex;
 }
 
 .gazette-card-header {
+  @include flex-row;
   justify-content: space-between;
-  align-items: center;
   width: 100%;
   text-decoration: none;
-  display: flex;
 }
 
 .gazette-card-actions {
-  grid-column-gap: 16px;
+  @include flex-row;
+  gap: $spacing-16;
   flex: 0 auto;
   justify-content: flex-start;
   align-items: flex-start;
   text-decoration: none;
-  display: flex;
 }
 
 .gazette-title-link {
@@ -140,20 +127,18 @@
 }
 
 .gazette-action-link {
-  grid-column-gap: 4px;
+  @include flex-row;
+  gap: 4px;
   justify-content: flex-start;
-  align-items: center;
   text-decoration: none;
-  display: flex;
 }
 
 .action-icon {
-  grid-column-gap: 8px;
+  @include flex-row;
+  gap: $spacing-8;
   flex: 0 auto;
   justify-content: center;
-  align-items: center;
   text-decoration: none;
-  display: flex;
 }
 
 // Legacy support - keep for rss.html and segitseg.html compatibility
@@ -179,13 +164,12 @@
 }
 
 .link-style {
-  grid-column-gap: 4px;
+  @include flex-row;
+  gap: 4px;
   justify-content: flex-start;
-  align-items: center;
   width: 100%;
   max-width: 320px;
   text-decoration: none;
-  display: flex;
 }
 
 .link-style-2 {
@@ -219,14 +203,35 @@
   }
 }
 
+// Medium screens only (768px-991px) - between small and large
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .new-gazettes-mobile {
+    display: none;
+  }
+
+  .new-gazettes-desktop {
+    display: flex;
+  }
+}
+
+// Large screens (≥992px)
+@media screen and (min-width: 992px) {
+  .new-gazettes-mobile {
+    display: none;
+  }
+
+  .new-gazettes-desktop {
+    display: flex;
+  }
+}
+
 @include respond-to-small {
   .gazette-card-content {
     height: 100%;
   }
   
   .gazette-card-header {
-    grid-column-gap: $spacing-8;
-    grid-row-gap: $spacing-8;
+    gap: $spacing-8;
     flex-flow: column;
     justify-content: space-between;
     align-items: flex-start;
@@ -251,8 +256,7 @@
   }
   
   .kozlonyszam-texts {
-    grid-column-gap: $spacing-8;
-    grid-row-gap: $spacing-8;
+    gap: $spacing-8;
     flex-flow: column;
     justify-content: space-between;
     align-items: flex-start;

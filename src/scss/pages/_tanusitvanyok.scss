@@ -16,32 +16,11 @@
   gap: $spacing-16;
 }
 
-// First Input Row - Year Dropdown
+// Input styling for form fields
 .tanusitvanyok-inputs {
-  grid-row-gap: $spacing-8;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
+  @include flex-column;
+  gap: $spacing-8;
   width: 100%;
-  display: flex;
-}
-
-// Second Input Row - Month Dropdown
-
-.layout-hflex{
-  display: flex;
-  flex-direction:row;
-}
-
-.layout-vflex{
-  display: flex;
-  flex-direction:column;
-}
-
-
-.button-wrapper-tanusitvanyok{
-  width: 100%;
-  justify-content: flex-end;
 }
 
 // ============================================
@@ -49,8 +28,7 @@
 // ============================================
 
 .tanusitvany-listing {
-  display: flex;
-  flex-direction: column;
+  @include flex-column;
   width: 100%;
   border-radius: $border-radius-m;
   overflow: hidden;
@@ -60,8 +38,7 @@
   background-color: $color-white;
   border-bottom: 1px solid #dcdee1;
   padding: $spacing-16 $spacing-32;
-  display: flex;
-  flex-direction: column;
+  @include flex-column;
   gap: $spacing-32;
   align-items: flex-end;
   width: 100%;
@@ -72,16 +49,14 @@
 }
 
 .tanusitvany-inner {
-  display: flex;
+  @include flex-row;
   justify-content: space-between;
-  align-items: center;
   width: 100%;
   gap: $spacing-16;
 }
 
 .tanusitvany-text-wrapper {
-  display: flex;
-  flex-direction: column;
+  @include flex-column;
   gap: $spacing-8;
   flex: 1;
   min-width: 0;
@@ -104,9 +79,9 @@
 }
 
 .tanusitvany-validity {
-  display: flex;
-  gap: $spacing-8;
+  @include flex-row;
   align-items: flex-start;
+  gap: $spacing-8;
   font-family: $font-primary;
   font-size: $font-size-14;
   font-weight: 500;
@@ -126,11 +101,9 @@
 // ============================================
 
 .certificate-listing {
-  grid-column-gap: 32px;
-  grid-row-gap: 32px;
-  flex-flow: column;
+  @include flex-column;
+  gap: $spacing-32;
   width: 70%;
-  display: flex;
 }
 
 
@@ -143,7 +116,7 @@
 
 @include respond-to-small {
   .tanusitvanyok-form {
-    grid-row-gap: $spacing-12;
+    gap: $spacing-12;
   }
   
   .tanusitvanyok-inputs-1,

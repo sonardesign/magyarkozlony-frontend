@@ -18,8 +18,7 @@
 }
 
 .main-search {
-  grid-column-gap: $spacing-16;
-  grid-row-gap: $spacing-16;
+  gap: $spacing-16;
   flex-flow: column;
   justify-content: flex-end;
   align-items: flex-end;
@@ -28,29 +27,25 @@
 }
 
 .form-inputs {
-  grid-column-gap: $spacing-16;
-  grid-row-gap: $spacing-16;
+  gap: $spacing-16;
   flex-flow: row;
   width: 100%;
 }
 
 .input-blocks-1st {
-  grid-column-gap: $spacing-16;
-  grid-row-gap: $spacing-16;
+  gap: $spacing-16;
   flex-flow: row;
   width: 40%;
 }
 
 .input-blocks-2nd {
-  grid-column-gap: $spacing-16;
-  grid-row-gap: $spacing-16;
+  gap: $spacing-16;
   flex-flow: row;
   width: 60%;
 }
 
 .input-group {
-  grid-column-gap: $spacing-8;
-  grid-row-gap: $spacing-8;
+  gap: $spacing-8;
   
   &._140 {
     width: 40%;
@@ -109,34 +104,13 @@
   line-height: 1.5;
   display: block;
   
+  // Modern browsers support ::placeholder, vendor prefixes handled by autoprefixer
   &::placeholder {
     font-family: $font-primary;
     font-size: $font-size-16;
     font-weight: 400;
     color: $color-gray-medium;
-    opacity: 1; // Ensure opacity is set for Firefox
-  }
-  
-  &::-webkit-input-placeholder {
-    font-family: $font-primary;
-    font-size: $font-size-16;
-    font-weight: 400;
-    color: $color-gray-medium;
-  }
-  
-  &::-moz-placeholder {
-    font-family: $font-primary;
-    font-size: $font-size-16;
-    font-weight: 400;
-    color: $color-gray-medium;
     opacity: 1;
-  }
-  
-  &:-ms-input-placeholder {
-    font-family: $font-primary;
-    font-size: $font-size-16;
-    font-weight: 400;
-    color: $color-gray-medium;
   }
   
   &:focus {
@@ -216,6 +190,11 @@ label {
     button {
       width: 100%;
     }
+  }
+
+  &.tanusitvanyok {
+    justify-content: flex-end;
+    width: 100%;
   }
 }
 
