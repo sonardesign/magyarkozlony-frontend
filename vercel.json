@@ -13,5 +13,39 @@
         }
       ]
     }
+  ],
+  "rewrites": [
+    {
+      "source": "/page/:page",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/tanusitvanyok",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/segitseg",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/rss",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/impresszum",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/kapcsolat",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/jogszabalyi-hatter",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/akadalymentesitesi-nyilatkozat",
+      "destination": "/index.html"
+    }
   ]
 }

@@ -241,5 +241,25 @@ export class DatePicker {
       }
     });
   }
+
+  destroy() {
+    // Close all pickers
+    this.closeAll();
+    
+    // Remove all event listeners and clean up
+    this.pickers.forEach((picker) => {
+      if (picker.trigger) {
+        picker.trigger.replaceWith(picker.trigger.cloneNode(true));
+      }
+      if (picker.calendar) {
+        picker.calendar.remove();
+      }
+    });
+    
+    // Clear pickers array
+    this.pickers = [];
+    
+    console.log('🧹 Date pickers destroyed');
+  }
 }
 

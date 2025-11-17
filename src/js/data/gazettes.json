@@ -1,0 +1,23 @@
+{
+  "gazettes": [
+    {
+      "id": 1,
+      "title": "Magyar Közlöny 2025. évi 170. szám",
+      "date": "2025. június 20.",
+      "year": 2025,
+      "number": 170,
+      "pdfUrl": "#",
+      "reasonsUrl": "#",
+      "attachmentsUrl": "#"
+    }
+  ],
+  "metadata": {
+    "totalItems": 150,
+    "itemsPerPage": 10,
+    "totalPages": 15,
+    "startNumber": 21,
+    "endNumber": 170,
+    "year": 2025
+  }
+}
+

@@ -78,6 +78,19 @@ export class NavigationState {
   }
 
   /**
+   * Update active state based on current body data attribute
+   * Useful for SPA navigation where the data-current-page changes
+   */
+  updateActiveState() {
+    const newPage = document.body.getAttribute('data-current-page');
+    if (newPage && newPage !== this.currentPage) {
+      console.log(`🔄 Updating active state from "${this.currentPage}" to "${newPage}"`);
+      this.currentPage = newPage;
+      this.setActiveStates();
+    }
+  }
+
+  /**
    * Get the currently active page
    * @returns {string} Current page identifier
    */

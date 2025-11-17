@@ -34,28 +34,17 @@ function setupPaginator(paginator) {
   }
   
   // Add click event listeners to all page links
+  // NOTE: We don't prevent default here to allow the router to intercept the navigation
   pageLinks.forEach(link => {
     link.addEventListener('click', (e) => {
-      e.preventDefault();
-      
       // Don't do anything if clicking the already active page
       if (link.classList.contains('active')) {
+        e.preventDefault();
         return;
       }
       
-      // Remove active state from current active page
-      const currentActive = paginator.querySelector('.paginator-page.active');
-      if (currentActive) {
-        currentActive.classList.remove('active');
-        currentActive.removeAttribute('aria-current');
-      }
-      
-      // Add active state to clicked page
-      link.classList.add('active');
-      link.setAttribute('aria-current', 'page');
-      
-      // Update prev/next button states
-      updateNavigationButtons(paginator, pageLinks, link);
+      // Let the router handle navigation by NOT preventing default
+      // The visual state will be updated after navigation completes
       
       // Optional: Trigger custom event for external listeners
       const event = new CustomEvent('paginatorChange', {
@@ -81,6 +70,12 @@ function setupPaginator(paginator) {
       navigateToNextPage(paginator, pageLinks);
     });
   }
+  
+  // Set initial button states based on currently active page
+  const currentActive = paginator.querySelector('.paginator-page.active');
+  if (currentActive) {
+    updateNavigationButtons(paginator, pageLinks, currentActive);
+  }
 }
 
 /**
@@ -89,15 +84,26 @@ function setupPaginator(paginator) {
  * @param {NodeList} pageLinks - All page link elements
  */
 function navigateToPreviousPage(paginator, pageLinks) {
-  const currentActive = paginator.querySelector('.paginator-page.active');
-  if (!currentActive) return;
+  const prevButton = paginator.querySelector('.paginator-button[aria-label*="Previous"]');
   
-  const pageLinksArray = Array.from(pageLinks);
-  const currentIndex = pageLinksArray.indexOf(currentActive);
+  if (!prevButton || prevButton.disabled) {
+    return;
+  }
   
-  if (currentIndex > 0) {
-    // Trigger click on previous page
-    pageLinksArray[currentIndex - 1].click();
+  // Get the page number from the button's data attribute
+  const targetPage = prevButton.getAttribute('data-page');
+  
+  if (targetPage) {
+    // Navigate using the router
+    const targetUrl = targetPage === '1' ? '/' : `/page/${targetPage}`;
+    
+    // Use router to navigate (it will handle everything)
+    if (window.app && window.app.router) {
+      window.app.router.navigate(targetUrl);
+    } else {
+      // Fallback: update URL directly
+      window.location.href = targetUrl;
+    }
   }
 }
 
@@ -107,15 +113,26 @@ function navigateToPreviousPage(paginator, pageLinks) {
  * @param {NodeList} pageLinks - All page link elements
  */
 function navigateToNextPage(paginator, pageLinks) {
-  const currentActive = paginator.querySelector('.paginator-page.active');
-  if (!currentActive) return;
+  const nextButton = paginator.querySelector('.paginator-button[aria-label*="Next"]');
   
-  const pageLinksArray = Array.from(pageLinks);
-  const currentIndex = pageLinksArray.indexOf(currentActive);
+  if (!nextButton || nextButton.disabled) {
+    return;
+  }
   
-  if (currentIndex < pageLinksArray.length - 1) {
-    // Trigger click on next page
-    pageLinksArray[currentIndex + 1].click();
+  // Get the page number from the button's data-attribute
+  const targetPage = nextButton.getAttribute('data-page');
+  
+  if (targetPage) {
+    // Navigate using the router
+    const targetUrl = targetPage === '1' ? '/' : `/page/${targetPage}`;
+    
+    // Use router to navigate (it will handle everything)
+    if (window.app && window.app.router) {
+      window.app.router.navigate(targetUrl);
+    } else {
+      // Fallback: update URL directly
+      window.location.href = targetUrl;
+    }
   }
 }
 
