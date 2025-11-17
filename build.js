@@ -55,7 +55,7 @@ htmlFiles.forEach(file => {
 console.log('📦 Copying src directory...');
 const srcDir = join(__dirname, 'src');
 const destSrcDir = join(DIST_DIR, 'src');
-const excludeDirs = ['scss', 'styles-legacy'];
+const excludeDirs = ['scss'];
 
 // Copy with exclusions
 function copyWithExclusions(src, dest) {
