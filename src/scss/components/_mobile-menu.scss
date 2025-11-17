@@ -3,7 +3,7 @@
 // ============================================
 
 @use '../abstracts' as *;
-@use '../layout/container' as *;
+@use '../layout/layout' as *;
 
 .mobile-menu {
   flex-direction: column;

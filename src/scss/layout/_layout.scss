@@ -1,8 +1,13 @@
 // ============================================
-// Container & Layout
+// Layout & Container System
 // ============================================
 
+@use 'sass:math';
 @use '../abstracts' as *;
+
+// ============================================
+// Container & Layout Components
+// ============================================
 
 .container {
   flex-direction: column;
@@ -87,6 +92,24 @@
   width: 100%;
 }
 
+.sidebar {
+  grid-column-gap: 16px;
+  grid-row-gap: 16px;
+  flex-flow: column;
+  display: flex;
+  position: relative;
+  z-index: 1;
+
+  @media screen and (min-width: $breakpoint-tiny), (min-width: $breakpoint-small) {
+    width: 100%;
+  }
+
+  @media screen and (min-width: $breakpoint-medium), (min-width: $breakpoint-large) {
+    width: 30%;
+  }
+}
+
+
 // Content wrapper for subpages
 .content-wrapper {
   width: 100%;
@@ -126,9 +149,79 @@
   }
 }
 
+// ============================================
+// Grid System (from Webflow Base)
+// ============================================
 
+// Grid system
+.row {
+  @include clearfix;
+  
+  .row {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
 
-// Responsive
+.col {
+  float: left;
+  width: 100%;
+  min-height: 1px;
+  padding-left: 10px;
+  padding-right: 10px;
+  position: relative;
+  
+  .col {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+// Column widths
+@for $i from 1 through 12 {
+  .col-#{$i} {
+    width: math.percentage(math.div($i, 12));
+  }
+}
+
+// ============================================
+// Animations (from Webflow Base)
+// ============================================
+
+@keyframes spin {
+  0% {
+    transform: rotate(0);
+  }
+  
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+// ============================================
+// Dynamic Content (from Webflow Base)
+// ============================================
+
+.dyn-empty {
+  background-color: #ddd;
+  padding: 10px;
+}
+
+.dyn-hide,
+.dyn-bind-empty,
+.condition-invisible {
+  display: none !important;
+}
+
+// IX empty fix
+.ix-emptyfix:after {
+  content: "";
+}
+
+// ============================================
+// Responsive Layout Adjustments
+// ============================================
+
 @include respond-to-medium {
   .container {
     padding-right: $spacing-16;

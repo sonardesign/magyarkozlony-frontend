@@ -7,6 +7,7 @@ import { MobileMenu } from './modules/mobile-menu.js';
 import { Dropdown } from './modules/dropdown.js';
 import { DatePicker } from './modules/date-picker.js';
 import { NavigationState } from './modules/navigation-state.js';
+import { initPaginator } from './modules/paginator.js';
 
 class App {
   constructor() {
@@ -37,6 +38,9 @@ class App {
     
     // Initialize Navigation State Management
     this.modules.navigationState = new NavigationState();
+    
+    // Initialize Paginator
+    initPaginator();
 
     console.log('✅ All modules initialized successfully');
   }

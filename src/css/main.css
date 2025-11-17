@@ -368,103 +368,6 @@ ul, ol {
   text-decoration: underline;
 }
 
-.row:before, .row:after {
-  content: " ";
-  grid-area: 1/1/2/2;
-  display: table;
-}
-.row:after {
-  clear: both;
-}
-.row .row {
-  margin-left: 0;
-  margin-right: 0;
-}
-
-.col {
-  float: left;
-  width: 100%;
-  min-height: 1px;
-  padding-left: 10px;
-  padding-right: 10px;
-  position: relative;
-}
-.col .col {
-  padding-left: 0;
-  padding-right: 0;
-}
-
-.col-1 {
-  width: 8.3333333333%;
-}
-
-.col-2 {
-  width: 16.6666666667%;
-}
-
-.col-3 {
-  width: 25%;
-}
-
-.col-4 {
-  width: 33.3333333333%;
-}
-
-.col-5 {
-  width: 41.6666666667%;
-}
-
-.col-6 {
-  width: 50%;
-}
-
-.col-7 {
-  width: 58.3333333333%;
-}
-
-.col-8 {
-  width: 66.6666666667%;
-}
-
-.col-9 {
-  width: 75%;
-}
-
-.col-10 {
-  width: 83.3333333333%;
-}
-
-.col-11 {
-  width: 91.6666666667%;
-}
-
-.col-12 {
-  width: 100%;
-}
-
-@keyframes spin {
-  0% {
-    transform: rotate(0);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-.dyn-empty {
-  background-color: #ddd;
-  padding: 10px;
-}
-
-.dyn-hide,
-.dyn-bind-empty,
-.condition-invisible {
-  display: none !important;
-}
-
-.ix-emptyfix:after {
-  content: "";
-}
-
 /*
 * Remix Icon v4.0.0
 * https://remixicon.com
@@ -11453,6 +11356,25 @@ ul, ol {
   width: 100%;
 }
 
+.sidebar {
+  grid-column-gap: 16px;
+  grid-row-gap: 16px;
+  flex-flow: column;
+  display: flex;
+  position: relative;
+  z-index: 1;
+}
+@media screen and (min-width: 479px), (min-width: 767px) {
+  .sidebar {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 991px), (min-width: 1200px) {
+  .sidebar {
+    width: 30%;
+  }
+}
+
 .content-wrapper {
   width: 100%;
   padding: 32px;
@@ -11481,6 +11403,103 @@ ul, ol {
 }
 .content-wrapper .page-header h1, .content-wrapper .page-header h2 {
   margin-bottom: 0;
+}
+
+.row:before, .row:after {
+  content: " ";
+  grid-area: 1/1/2/2;
+  display: table;
+}
+.row:after {
+  clear: both;
+}
+.row .row {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.col {
+  float: left;
+  width: 100%;
+  min-height: 1px;
+  padding-left: 10px;
+  padding-right: 10px;
+  position: relative;
+}
+.col .col {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.col-1 {
+  width: 8.3333333333%;
+}
+
+.col-2 {
+  width: 16.6666666667%;
+}
+
+.col-3 {
+  width: 25%;
+}
+
+.col-4 {
+  width: 33.3333333333%;
+}
+
+.col-5 {
+  width: 41.6666666667%;
+}
+
+.col-6 {
+  width: 50%;
+}
+
+.col-7 {
+  width: 58.3333333333%;
+}
+
+.col-8 {
+  width: 66.6666666667%;
+}
+
+.col-9 {
+  width: 75%;
+}
+
+.col-10 {
+  width: 83.3333333333%;
+}
+
+.col-11 {
+  width: 91.6666666667%;
+}
+
+.col-12 {
+  width: 100%;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.dyn-empty {
+  background-color: #ddd;
+  padding: 10px;
+}
+
+.dyn-hide,
+.dyn-bind-empty,
+.condition-invisible {
+  display: none !important;
+}
+
+.ix-emptyfix:after {
+  content: "";
 }
 
 @media screen and (max-width: 991px) {
@@ -12387,23 +12406,6 @@ label {
   text-decoration: none;
 }
 
-.sidebar {
-  grid-column-gap: 16px;
-  grid-row-gap: 16px;
-  flex-flow: column;
-  display: flex;
-}
-@media screen and (min-width: 479px), (min-width: 767px) {
-  .sidebar {
-    width: 100%;
-  }
-}
-@media screen and (min-width: 991px), (min-width: 1200px) {
-  .sidebar {
-    width: 30%;
-  }
-}
-
 .footer {
   flex-direction: column;
   justify-content: center;
@@ -12952,6 +12954,8 @@ label {
   gap: 4px;
   justify-content: flex-start;
   padding: 16px 0;
+  position: relative;
+  z-index: 10;
 }
 
 .paginator-button {
@@ -13399,7 +13403,6 @@ label {
   display: flex;
   flex-direction: row;
   align-items: center;
-  align-items: flex-start;
   gap: 8px;
   font-family: Inter, sans-serif;
   font-size: 14px;

@@ -5,7 +5,7 @@
 // Support for color variants (green, blue, yellow, etc.)
 
 @use '../abstracts' as *;
-@use '../layout/container' as *;
+@use '../layout/layout' as *;
 
 // Base Callout - Color Agnostic
 .callout {
